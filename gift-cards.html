@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards | Tom Wahl's - The Perfect Gift for Burger Lovers</title>
+    <meta name="description" content="Give the gift of Rochester's Best Cheeseburgers! Purchase Tom Wahl's physical gift cards or send an eGift card instantly. Available in any amount from $20-$500.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --red: #C8102E;
+            --red-dark: #a00d24;
+            --red-light: #ffeaee;
+            --dark: #1a1a1a;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e8e8e8;
+            --gray-400: #999;
+            --gray-600: #666;
+            --green: #1a8d1a;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ── NAV ── */
+        .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 52px; width: auto; }
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
+        .nav-links a:hover { background: var(--gray-100); }
+        .nav-links a.active { background: var(--red); color: var(--white); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; border-radius: 2px; }
+        .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 20px; }
+        .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
+        .mobile-menu a.active { color: var(--red); }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
+
+        /* ── HERO ── */
+        .page-hero {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--white);
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 12px; letter-spacing: -0.02em; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
+
+        /* ── TYPE TOGGLE ── */
+        .toggle-section {
+            max-width: 520px;
+            margin: -32px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .toggle-card {
+            background: var(--white);
+            border-radius: 60px;
+            box-shadow: var(--shadow-lg);
+            padding: 6px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+        .toggle-btn {
+            padding: 14px 20px;
+            border-radius: 54px;
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--gray-600);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .toggle-btn.active {
+            background: var(--red);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(200, 16, 46, 0.3);
+        }
+        .toggle-btn svg { width: 20px; height: 20px; }
+
+        /* ── PANELS ── */
+        .panel { display: none; }
+        .panel.active { display: block; }
+
+        /* ── PHYSICAL CARD SECTION ── */
+        .card-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 20px 60px;
+        }
+        .card-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        @media (max-width: 700px) {
+            .card-layout { grid-template-columns: 1fr; }
+        }
+
+        /* Card preview */
+        .card-preview {
+            position: sticky;
+            top: 100px;
+        }
+        .card-image-wrap {
+            background: linear-gradient(135deg, #fff 0%, var(--gray-100) 100%);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        .card-image-wrap img {
+            max-width: 320px;
+            margin: 0 auto;
+            border-radius: var(--radius);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+        .card-image-wrap .card-caption {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--gray-600);
+        }
+        .card-features {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .card-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--gray-600);
+        }
+        .card-feature svg { width: 16px; height: 16px; color: var(--green); }
+
+        /* Order form */
+        .order-form h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .form-group { margin-bottom: 24px; }
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--gray-600);
+            margin-bottom: 10px;
+        }
+
+        /* Amount presets */
+        .amount-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        .amount-btn {
+            padding: 14px 8px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            background: var(--white);
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--dark);
+        }
+        .amount-btn:hover { border-color: var(--red); color: var(--red); }
+        .amount-btn.selected {
+            border-color: var(--red);
+            background: var(--red-light);
+            color: var(--red);
+        }
+
+        .custom-amount-wrap {
+            position: relative;
+        }
+        .custom-amount-wrap .dollar-sign {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--gray-400);
+        }
+        .custom-input {
+            width: 100%;
+            padding: 14px 16px 14px 32px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: border-color 0.2s;
+            background: var(--white);
+        }
+        .custom-input:focus {
+            outline: none;
+            border-color: var(--red);
+        }
+        .custom-hint {
+            font-size: 0.8rem;
+            color: var(--gray-400);
+            margin-top: 6px;
+        }
+
+        /* Quantity */
+        .qty-control {
+            display: inline-flex;
+            align-items: center;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .qty-btn {
+            width: 48px;
+            height: 48px;
+            border: none;
+            background: var(--gray-100);
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            color: var(--dark);
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .qty-btn:hover { background: var(--gray-200); }
+        .qty-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+        .qty-value {
+            width: 56px;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 700;
+            background: var(--white);
+            border: none;
+            font-family: inherit;
+        }
+
+        /* Gift message */
+        .gift-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--dark);
+            resize: vertical;
+            min-height: 80px;
+            transition: border-color 0.2s;
+        }
+        .gift-textarea:focus { outline: none; border-color: var(--red); }
+        .char-count { font-size: 0.8rem; color: var(--gray-400); text-align: right; margin-top: 4px; }
+
+        /* Summary */
+        .order-summary {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            font-size: 0.95rem;
+        }
+        .summary-row.total {
+            border-top: 2px solid var(--gray-200);
+            margin-top: 8px;
+            padding-top: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        /* CTA button */
+        .btn-purchase {
+            width: 100%;
+            padding: 16px 28px;
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-family: inherit;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-purchase:hover { background: var(--red-dark); }
+        .btn-purchase svg { width: 20px; height: 20px; }
+
+        /* ── EGIFT PANEL ── */
+        .egift-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 48px 20px 60px;
+            text-align: center;
+        }
+        .egift-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            padding: 48px 36px;
+        }
+        .egift-icon {
+            width: 80px; height: 80px;
+            background: var(--red-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .egift-icon svg { width: 36px; height: 36px; color: var(--red); }
+        .egift-card h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+        .egift-card p { color: var(--gray-600); max-width: 420px; margin: 0 auto 8px; font-size: 1rem; }
+        .egift-perks {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 28px 0 32px;
+        }
+        .egift-perk {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        .egift-perk svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+        .btn-egift {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--red);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+        }
+        .btn-egift:hover { background: var(--red-dark); }
+        .btn-egift svg { width: 20px; height: 20px; }
+
+        /* ── BALANCE CHECK ── */
+        .balance-section {
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            padding: 48px 20px;
+            text-align: center;
+        }
+        .balance-inner { max-width: 500px; margin: 0 auto; }
+        .balance-inner h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
+        .balance-inner p { color: var(--gray-600); margin-bottom: 24px; }
+        .btn-balance {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: var(--dark);
+            color: var(--white);
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        .btn-balance:hover { opacity: 0.85; }
+        .btn-balance svg { width: 18px; height: 18px; }
+
+        /* ── INFO STRIP ── */
+        .info-strip {
+            background: var(--gray-100);
+            padding: 40px 20px;
+            border-top: 1px solid var(--gray-200);
+        }
+        .info-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            text-align: center;
+        }
+        .info-item .info-icon {
+            width: 48px; height: 48px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        .info-item .info-icon svg { width: 24px; height: 24px; color: var(--red); }
+        .info-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
+        .info-item p { font-size: 0.85rem; color: var(--gray-600); }
+
+        /* ── FOOTER ── */
+        .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
+        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
+        .footer a:hover { color: var(--white); }
+        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
+        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
+        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
+        .social-icons a img:hover { opacity: 1; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
+            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+        </a>
+        <div class="nav-links">
+            <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+            <a href="https://mmcke4.github.io/gift-cards.html" class="active">Gift Cards</a>
+        </div>
+        <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <div class="mobile-menu">
+        <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+        <a href="https://mmcke4.github.io/gift-cards.html" class="active">Gift Cards</a>
+        <a href="https://mmcke4.github.io/check-balance.html">Check Gift Card Balance</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+    <h1>Gift Cards</h1>
+    <p>The perfect gift for the burger lovers in your life. Available as a physical card shipped to your door, or as an instant eGift!</p>
+</section>
+
+<!-- TYPE TOGGLE -->
+<div class="toggle-section">
+    <div class="toggle-card">
+        <button class="toggle-btn active" id="togglePhysical" onclick="switchPanel('physical')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            Physical Card
+        </button>
+        <button class="toggle-btn" id="toggleEgift" onclick="switchPanel('egift')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            eGift Card
+        </button>
+    </div>
+</div>
+
+<!-- PHYSICAL CARD PANEL -->
+<div class="panel active" id="panelPhysical">
+    <section class="card-section">
+        <div class="card-layout">
+            <!-- Left: Card preview -->
+            <div class="card-preview">
+                <div class="card-image-wrap">
+                    <img src="https://www.tomwahls.com/images_products/TW_Gift_Card.png" alt="Tom Wahl's Gift Card">
+                    <p class="card-caption">Physical gift card shipped via USPS</p>
+                    <div class="card-features">
+                        <div class="card-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Never expires
+                        </div>
+                        <div class="card-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            All locations
+                        </div>
+                        <div class="card-feature">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Earn rewards
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Order form -->
+            <div class="order-form">
+                <h2>Order a Gift Card</h2>
+
+                <!-- Amount -->
+                <div class="form-group">
+                    <label class="form-label">Select Amount</label>
+                    <div class="amount-grid">
+                        <button class="amount-btn" onclick="selectAmount(25, this)">$25</button>
+                        <button class="amount-btn selected" onclick="selectAmount(50, this)">$50</button>
+                        <button class="amount-btn" onclick="selectAmount(75, this)">$75</button>
+                        <button class="amount-btn" onclick="selectAmount(100, this)">$100</button>
+                    </div>
+                    <div class="custom-amount-wrap">
+                        <span class="dollar-sign">$</span>
+                        <input type="number" class="custom-input" id="customAmount" placeholder="Custom amount (20–500)" min="20" max="500" step="5" onfocus="clearPresets()" oninput="updateCustomAmount()">
+                    </div>
+                    <p class="custom-hint">Min $20 · Max $500 · $5 increments</p>
+                </div>
+
+                <!-- Quantity -->
+                <div class="form-group">
+                    <label class="form-label">Quantity</label>
+                    <div class="qty-control">
+                        <button class="qty-btn" id="qtyMinus" onclick="changeQty(-1)" disabled>−</button>
+                        <input type="text" class="qty-value" id="qtyValue" value="1" readonly>
+                        <button class="qty-btn" id="qtyPlus" onclick="changeQty(1)">+</button>
+                    </div>
+                </div>
+
+                <!-- Gift message -->
+                <div class="form-group">
+                    <label class="form-label">Gift Message <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
+                    <textarea class="gift-textarea" id="giftMessage" maxlength="200" placeholder="Add a personal message..." oninput="updateCharCount()"></textarea>
+                    <div class="char-count"><span id="charCount">0</span>/200</div>
+                </div>
+
+                <!-- Summary -->
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Gift Card</span>
+                        <span id="summaryCard">$50.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Quantity</span>
+                        <span id="summaryQty">× 1</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$1.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="summaryTotal">$51.00</span>
+                    </div>
+                </div>
+
+                <!-- Purchase button links to the existing purchase system -->
+                <a href="https://www.tomwahls.com/gift_card_new.cfm" class="btn-purchase" target="_blank" rel="noopener">
+                    Purchase Gift Card
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- EGIFT PANEL -->
+<div class="panel" id="panelEgift">
+    <section class="egift-section">
+        <div class="egift-card">
+            <div class="egift-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h2>Send an eGift Card</h2>
+            <p>Skip the shipping! Send a Tom Wahl's eGift card directly to someone's inbox. Perfect for last-minute gifts and celebrations.</p>
+
+            <div class="egift-perks">
+                <div class="egift-perk">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Instant delivery
+                </div>
+                <div class="egift-perk">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Custom message
+                </div>
+                <div class="egift-perk">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Schedule delivery date
+                </div>
+            </div>
+
+            <!-- UPDATE THIS HREF to the actual eGift platform URL -->
+            <a href="https://tomwahls.myguestaccount.com" class="btn-egift" target="_blank" rel="noopener">
+                Send an eGift
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </section>
+</div>
+
+<!-- CHECK BALANCE -->
+<section class="balance-section">
+    <div class="balance-inner">
+        <h2>Check Your Balance</h2>
+        <p>Already have a Tom Wahl's gift card? Check your remaining balance here.</p>
+        <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance" class="btn-balance" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Check Balance
+        </a>
+    </div>
+</section>
+
+<!-- INFO STRIP -->
+<section class="info-strip">
+    <div class="info-inner">
+        <div class="info-item">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <h4>Great for Any Occasion</h4>
+            <p>Birthdays, holidays, thank-yous, or just because!</p>
+        </div>
+        <div class="info-item">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h4>No Expiration</h4>
+            <p>Gift card balances never expire. Use at your own pace.</p>
+        </div>
+        <div class="info-item">
+            <div class="info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h4>Good Everywhere</h4>
+            <p>Accepted at all 7 Tom Wahl's locations across Western NY.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <h4>Who We Are</h4>
+            <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div>
+            <h4>Locations</h4>
+            <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: 11AM-9PM Daily</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
+                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
+                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+    </div>
+</footer>
+
+    <!-- Sienna Accessibility Widget -->
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+
+
+<script>
+// ── Panel Toggle ──
+function switchPanel(panel) {
+    document.getElementById('panelPhysical').classList.toggle('active', panel === 'physical');
+    document.getElementById('panelEgift').classList.toggle('active', panel === 'egift');
+    document.getElementById('togglePhysical').classList.toggle('active', panel === 'physical');
+    document.getElementById('toggleEgift').classList.toggle('active', panel === 'egift');
+}
+
+// ── Amount Selection ──
+let selectedAmount = 50;
+let quantity = 1;
+
+function selectAmount(amt, btn) {
+    selectedAmount = amt;
+    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('customAmount').value = '';
+    updateSummary();
+}
+
+function clearPresets() {
+    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+}
+
+function updateCustomAmount() {
+    let val = parseInt(document.getElementById('customAmount').value);
+    if (!isNaN(val)) {
+        val = Math.max(20, Math.min(500, val));
+        selectedAmount = val;
+        updateSummary();
+    }
+}
+
+// ── Quantity ──
+function changeQty(delta) {
+    quantity = Math.max(1, Math.min(100, quantity + delta));
+    document.getElementById('qtyValue').value = quantity;
+    document.getElementById('qtyMinus').disabled = quantity <= 1;
+    document.getElementById('qtyPlus').disabled = quantity >= 100;
+    updateSummary();
+}
+
+// ── Summary ──
+function updateSummary() {
+    const cardTotal = selectedAmount * quantity;
+    const shipping = 1.00;
+    const total = cardTotal + shipping;
+    document.getElementById('summaryCard').textContent = '$' + selectedAmount.toFixed(2);
+    document.getElementById('summaryQty').textContent = '× ' + quantity;
+    document.getElementById('summaryTotal').textContent = '$' + total.toFixed(2);
+}
+
+// ── Char count ──
+function updateCharCount() {
+    const len = document.getElementById('giftMessage').value.length;
+    document.getElementById('charCount').textContent = len;
+}
+</script>
+
+</body>
+</html>

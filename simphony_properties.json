@@ -1,0 +1,359 @@
+[
+    {
+        "locRef": "000010",
+        "name": "Webster",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000020",
+        "name": "Henrietta",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000040",
+        "name": "Penfield",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000050",
+        "name": "Seabreeze",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            },
+            {
+                "rvcRef": 4,
+                "name": "Marge's Beach Bar"
+            }
+        ]
+    },
+    {
+        "locRef": "000060",
+        "name": "Strong Museum",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000070",
+        "name": "Chili",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000080",
+        "name": "Greece (Latta Rd)",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000090",
+        "name": "Brockport",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000100",
+        "name": "Avon",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000120",
+        "name": "Irondequoit",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000135",
+        "name": "Gates",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000140",
+        "name": "Clarence",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "000170",
+        "name": "Ontario",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000190",
+        "name": "Regional Iceplex",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000200",
+        "name": "FL LAB",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "Bar"
+            }
+        ]
+    },
+    {
+        "locRef": "000210",
+        "name": "North Greece",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000220",
+        "name": "Port",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            }
+        ]
+    },
+    {
+        "locRef": "000300",
+        "name": "Flaherty's Macedon",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "Bar"
+            }
+        ]
+    },
+    {
+        "locRef": "001000",
+        "name": "Food Truck",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "002000",
+        "name": "Basin",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "003000",
+        "name": "Canandaigua",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "006000",
+        "name": "Newark",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "006500",
+        "name": "Fairport",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "007000",
+        "name": "Eastview",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "008500",
+        "name": "Greece Ridge",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "009000",
+        "name": "Cookout Rig",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "009500",
+        "name": "Brighton",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "010500",
+        "name": "Greece (Maiden Ln)",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    },
+    {
+        "locRef": "bg lab",
+        "name": "BG LAB",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            },
+            {
+                "rvcRef": 2,
+                "name": "TapRoom"
+            },
+            {
+                "rvcRef": 3,
+                "name": "Drive Thru"
+            }
+        ]
+    },
+    {
+        "locRef": "heg",
+        "name": "WWS",
+        "revenueCenters": []
+    },
+    {
+        "locRef": "tw lab",
+        "name": "TW LAB",
+        "revenueCenters": [
+            {
+                "rvcRef": 1,
+                "name": "Restaurant"
+            }
+        ]
+    }
+]
