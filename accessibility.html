@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Tom Wahl's</title>
+    <meta name="description" content="Tom Wahl's privacy policy. Learn how we collect, use, and protect your personal information when you visit our website.">
+    <link rel="canonical" href="https://mmcke4.github.io/privacy.html">
+    <meta name="robots" content="index, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --red: #C8102E; --red-dark: #a00d24; --dark: #1a1a1a; --cream: #faf8f5;
+            --white: #ffffff; --gray-100: #f5f5f5; --gray-200: #e8e8e8; --gray-400: #999; --gray-600: #666;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px; --radius-lg: 20px;
+        }
+        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; } a:hover { color: var(--red); }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 52px; width: auto; }
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
+        .nav-links a:hover { background: var(--gray-100); color: var(--dark); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; border-radius: 2px; }
+        .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 20px; }
+        .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
+
+        .page-hero { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: var(--white); padding: 60px 20px 50px; text-align: center; }
+        .page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 12px; }
+
+        .content-section { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
+        .content-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px 36px; box-shadow: var(--shadow-sm); }
+        .content-card h2 { font-size: 1.2rem; font-weight: 700; margin: 28px 0 12px; color: var(--dark); }
+        .content-card h2:first-child { margin-top: 0; }
+        .content-card p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.75; }
+        .content-card a { color: var(--red); font-weight: 600; }
+
+        .breadcrumb { margin-bottom: 12px; font-size: 0.85rem; opacity: 0.7; }
+        .breadcrumb a { color: white; text-decoration: underline; }
+
+        .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
+        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
+        .footer a:hover { color: var(--white); }
+        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
+        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
+        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
+        .social-icons a img:hover { opacity: 1; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 4px; }
+    </style>
+</head>
+<body>
+
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
+            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+        </a>
+        <div class="nav-links">
+            <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+            <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+        </div>
+        <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <div class="mobile-menu">
+        <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+        <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+    </div>
+</nav>
+
+<header class="page-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="https://mmcke4.github.io/">Home</a> &rsaquo; Privacy Policy
+    </nav>
+    <h1>Privacy Policy</h1>
+</header>
+
+<section class="content-section">
+    <div class="content-card">
+        <p>The information provided in this Privacy Policy covers your interactions on all areas of the Tom Wahl's website (excludes outside web page links). We strongly believe in protecting your privacy, and it is our goal to allow visitors to provide as much or as little information as they feel comfortable with providing. This Privacy Policy governs our use of the information, which you provide to us or we otherwise obtain in providing our services to you. This policy may change from time to time, so please check back periodically for the most current information. Information you provide today will only be used in accordance with the policy that is in effect as of this date.</p>
+
+        <h2>Types of Information</h2>
+
+        <h2>Your Personal Information</h2>
+        <p>This website collects personal information when voluntarily submitted by visitors in our surveys, registration and/or contact forms. Personal information is requested in order to process the request. This information may include your name, mailing address, phone number, e-mail address and other information. Any and all information collected by Tom Wahl's is used for internal purposes only!</p>
+
+        <h2>General Information</h2>
+        <p>We collect general data including your domain name, the name of the web page from which you entered our site, which pages you visit on our site, and how much time you spend on each page. This general information does not include specific identifying information about you. We also use "cookie" technology to obtain non-personal information from online visitors. For example, the website logs IP addresses for systems administration purposes. IP addresses are logged to track a user's session. This gives us an idea of which parts of the site users may be visiting and does not link IP addresses to anything personally identifiable. We use this information to monitor and improve our sites, and we do not provide this information to any outside parties.</p>
+
+        <h2>Use of Information</h2>
+        <p>Under no circumstances will we provide or disclose any collected information. We will at no time allow collected information to be sold, traded, or otherwise viewed by any third parties. Tom Wahl's makes every effort to respect the privacy of our online visitors and members.</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <h4>Who We Are</h4>
+            <p>Rochester's favorite burger destination since 1955. Home of the Wahlburger&reg;, ground steak cheeseburgers, homemade root beer &amp; the 55 Junker Plate.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div>
+            <h4>Our Menu</h4>
+            <ul class="footer-links">
+                <li><a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Full Menu</a></li>
+                <li><a href="https://mmcke4.github.io/gluten-free.html">Gluten Free Menu</a></li>
+                <li><a href="https://mmcke4.github.io/nutrition.html">Nutrition Info</a></li>
+                <li><a href="https://mmcke4.github.io/allergy.html">Allergy Info</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: 11AM–9PM Daily</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
+                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
+                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
+                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
+                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+    </div>
+</footer>
+
+</body>
+</html>

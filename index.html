@@ -3,153 +3,567 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tom Wahl's: Rochester's iconic 50's themed burger chain specializing in ground steak burgers and the legendary 55 Junker Plate. Join Rewards, find coupons, and order online today!">
-    <meta name="keywords" content="Tom Wahl's, Rochester NY, burgers, ground steak, 55 Junker Plate, Garbage Plate, diner, online ordering, rewards, rewards program">
-    <title>Tom Wahl's - Rochester's Best Cheesburgers - Western New York</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <link rel="stylesheet" href="styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">-->
-    <!-- Favicon and other SEO elements -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Tom Wahl's — Rochester's Best Cheeseburgers | Western New York Since 1955</title>
+    <meta name="description" content="Tom Wahl's — home of Rochester's Best Cheeseburgers, ground steak burgers, homemade root beer & crispy fries since 1955. Order online for pickup or delivery from 7 Western New York locations. Join Rewards and earn free food!">
+    <meta name="keywords" content="Tom Wahl's, Tom Wahls, Rochester best cheeseburger, Western New York burgers, Wahlburger, homemade root beer, Rochester NY restaurant, ground steak burger, 55 Junker Plate, Tom Wahls menu, Tom Wahls locations">
+    <link rel="canonical" href="https://mmcke4.github.io/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tom Wahl's — Rochester's Best Cheeseburgers Since 1955">
+    <meta property="og:description" content="Ground steak cheeseburgers, crispy fries & homemade root beer. Order online, find coupons, or join rewards at 7 Western NY locations.">
+    <meta property="og:url" content="https://mmcke4.github.io/">
+    <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta property="og:site_name" content="Tom Wahl's">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tom Wahl's — Rochester's Best Cheeseburgers">
+    <meta name="twitter:description" content="Home of the Wahlburger since 1955. Order online, earn rewards, find deals at 7 Western NY locations.">
+    <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tom Wahl's",
+        "url": "https://mmcke4.github.io/",
+        "logo": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
+        "foundingDate": "1955",
+        "description": "Rochester's favorite burger destination since 1955. Home of the Wahlburger, ground steak cheeseburgers, homemade root beer, and the 55 Junker Plate.",
+        "telephone": "+1-585-787-0150",
+        "email": "feedback@tomwahls.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "NY",
+            "addressCountry": "US"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 43.1566, "longitude": -77.6088},
+            "geoRadius": "50000"
+        },
+        "sameAs": [
+            "https://facebook.com/tomwahls",
+            "https://instagram.com/tomwahls",
+            "https://twitter.com/tomwahls"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tom Wahl's",
+        "url": "https://mmcke4.github.io/",
+        "description": "Rochester's Best Cheeseburgers, ground steak burgers, homemade root beer & crispy fries since 1955. 7 locations across Western New York."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --red: #C8102E;
+            --red-dark: #a00d24;
+            --red-light: #ffeaee;
+            --dark: #1a1a1a;
+            --cream: #faf8f5;
+            --white: #ffffff;
+            --gray-100: #f5f5f5;
+            --gray-200: #e8e8e8;
+            --gray-400: #999;
+            --gray-600: #666;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* ── NAV ── */
+        .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 52px; width: auto; }
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
+        .nav-links a:hover { background: var(--gray-100); }
+        .nav-links a.active { background: var(--red); color: var(--white); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; border-radius: 2px; }
+        .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 20px; }
+        .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
+        .mobile-menu a.active { color: var(--red); }
+        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+            color: var(--white);
+            padding: 64px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.06) 0%, transparent 50%);
+        }
+        .hero-title-img {
+            max-width: 520px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+        .hero p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.92;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .hero-ctas {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 700; font-size: 1rem;
+            transition: all 0.2s;
+            border: none; cursor: pointer;
+        }
+        .btn-white { background: var(--white); color: var(--red); }
+        .btn-white:hover { background: var(--gray-100); }
+        .btn-ghost { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.35); }
+        .btn-ghost:hover { border-color: var(--white); }
+        .btn-red { background: var(--red); color: var(--white); }
+        .btn-red:hover { background: var(--red-dark); }
+        .btn-dark { background: var(--dark); color: var(--white); }
+        .btn-dark:hover { opacity: 0.85; }
+
+        /* ── FOOD IMAGE SHOWCASE ── */
+        .showcase {
+            max-width: 800px;
+            margin: -48px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .showcase img {
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+        }
+
+        /* ── FEATURE CARDS ── */
+        .features {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 56px 20px 64px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 900px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 500px) {
+            .features-grid { grid-template-columns: 1fr; }
+        }
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 32px 24px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+        .feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .feature-icon {
+            width: 56px; height: 56px;
+            background: var(--red-light);
+            border-radius: 14px;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon svg { width: 28px; height: 28px; color: var(--red); }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: gap 0.2s;
+        }
+        .feature-link:hover { gap: 10px; }
+        .feature-link svg { width: 16px; height: 16px; }
+
+        /* ── APP BANNER ── */
+        .app-banner {
+            background: var(--dark);
+            color: var(--white);
+            padding: 48px 20px;
+        }
+        .app-banner-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .app-banner-text h2 {
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .app-banner-text p {
+            opacity: 0.7;
+            font-size: 0.95rem;
+            max-width: 420px;
+        }
+        .app-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+        .app-buttons a img { height: 48px; }
+        @media (max-width: 600px) {
+            .app-banner-inner { justify-content: center; text-align: center; }
+            .app-banner-text p { margin: 0 auto; }
+        }
+
+        /* ── LOCATIONS STRIP ── */
+        .locations-strip {
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            padding: 48px 20px;
+        }
+        .locations-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .locations-inner h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .locations-inner > p {
+            color: var(--gray-600);
+            margin-bottom: 32px;
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .loc-chip {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .loc-chip:hover { background: var(--red-light); }
+        .loc-chip svg { width: 18px; height: 18px; color: var(--red); flex-shrink: 0; }
+        .loc-chip .loc-name { font-weight: 600; font-size: 0.95rem; }
+        .loc-chip .loc-hours { font-size: 0.8rem; color: var(--gray-600); }
+        .locations-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--red);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .locations-cta svg { width: 18px; height: 18px; }
+
+        /* ── FOOTER ── */
+        .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
+        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
+        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
+        .footer a:hover { color: var(--white); }
+        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
+        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
+        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
+        .social-icons a img:hover { opacity: 1; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 4px; }
+    </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/TomWahlsLogo.png" alt="Tom Wahl's Logo" class="logo-img">
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
+            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo — Rochester's Best Cheeseburgers Since 1955">
+        </a>
+        <div class="nav-links">
+            <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+            <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+        </div>
+        <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+    <div class="mobile-menu">
+        <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
+        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
+        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
+        <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+        <a href="https://mmcke4.github.io/check-balance.html">Check Gift Card Balance</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <img class="hero-title-img" src="https://mmcke4.github.io/assets/hero_title.png" alt="Tom Wahl's — Old School Quality, Served with a Smile!">
+    <p>Savor Rochester's Best Cheeseburgers with Hot n' Crispy Fries. Wash it Down with a Frosted Mug of our famous Homemade Root Beer — Fresh, Fast &amp; Full of Flavor!</p>
+    <div class="hero-ctas">
+        <a href="https://mmcke4.github.io/order-online.html" class="btn btn-white">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Order Online
+        </a>
+        <a href="https://mmcke4.github.io/coupons.html" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            Find Coupons
+        </a>
+        <a href="https://mmcke4.github.io/rewards.html" class="btn btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Join Rewards
+        </a>
+    </div>
+</header>
+
+<!-- FOOD SHOWCASE -->
+<div class="showcase">
+    <img src="https://mmcke4.github.io/assets/TableSetting.png" alt="Hot & Fresh Cheeseburger, fries, medium twist ice cream and our famous Root Beer — at Tom Wahl's 50s diner">
+</div>
+
+<!-- FEATURE CARDS -->
+<section class="features">
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
+            </div>
+            <h3>Tom Wahl's Rewards</h3>
+            <p>Earn points on every purchase &amp; unlock exclusive offers. Sign up today and earn a FREE Cheeseburger reward!</p>
+            <a href="https://mmcke4.github.io/rewards.html" class="feature-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <ul class="nav-menu">
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Our Food</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Food Menu</a></li>
-                        <li><a href="gluten-free.html">Gluten Free Menu</a></li>
-                        <li><a href="nutrition.html">Nutrition Info</a></li>
-                        <li><a href="allergy.html">Allergy Info</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="order-online.html" class="nav-link">Order Online</a>
-                </li>
-                <li class="nav-item">
-                    <a href="rewards.html" class="nav-link">Rewards</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Coupons and Gift Cards</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="coupons.html">Coupons</a></li>
-                        <li><a href="gift-cards.html">Purchase Gift Cards</a></li>
-                        <li><a href="check-balance.html">Check Gift Card Balance</a></li>
-                    </ul>
-                </li>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <line x1="2" y1="10" x2="22" y2="10"/>
+                </svg>
+            </div>
+            <h3>Gift Cards</h3>
+            <p>The perfect gift for all the burger lovers in your life. Buy online or in-store at any Tom Wahl's location.</p>
+            <a href="https://mmcke4.github.io/gift-cards.html" class="feature-link">
+                Purchase
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                </svg>
+            </div>
+            <h3>Host a Fundraiser</h3>
+            <p>We want to help you reach your goals! 15% of sales you bring in will be donated to your organization.</p>
+            <a href="https://mmcke4.github.io/fundraiser.html" class="feature-link">
+                Learn More
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                    <circle cx="8.5" cy="7" r="4"/>
+                    <line x1="20" y1="8" x2="20" y2="14"/>
+                    <line x1="23" y1="11" x2="17" y2="11"/>
+                </svg>
+            </div>
+            <h3>Careers</h3>
+            <p>Join our team! We're always looking for grill masters, fry experts &amp; friendly team members!</p>
+            <a href="https://mmcke4.github.io/careers.html" class="feature-link">
+                Apply Today
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- APP DOWNLOAD BANNER -->
+<section class="app-banner">
+    <div class="app-banner-inner">
+        <div class="app-banner-text">
+            <h2>Download the Tom Wahl's App</h2>
+            <p>Order ahead, earn rewards, and get exclusive deals — all from your phone.</p>
+        </div>
+        <div class="app-buttons">
+            <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790"><img src="https://mmcke4.github.io/assets/app-logo1.png" alt="Download on the App Store"></a>
+            <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1"><img src="https://mmcke4.github.io/assets/app-logo2.png" alt="Get it on Google Play"></a>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATIONS -->
+<section class="locations-strip">
+    <div class="locations-inner">
+        <h2>7 Locations Across Western New York</h2>
+        <p>Find a Tom Wahl's near you — open daily 11AM–9PM</p>
+        <div class="locations-grid">
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Avon</div>
+                    <div class="loc-hours">283 E Main St</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Brighton</div>
+                    <div class="loc-hours">2545 Monroe Ave</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Bushnell's Basin</div>
+                    <div class="loc-hours">643 Pittsford-Victor Rd</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Canandaigua</div>
+                    <div class="loc-hours">2510 Rochester Rd</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Fairport</div>
+                    <div class="loc-hours">1333 Fairport Rd</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Greece</div>
+                    <div class="loc-hours">671 Maiden Ln</div>
+                </div>
+            </a>
+            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                    <div class="loc-name">Newark</div>
+                    <div class="loc-hours">585 W Union St</div>
+                </div>
+            </a>
+        </div>
+        <a href="https://mmcke4.github.io/order-online.html" class="locations-cta">
+            Order from the nearest location
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div>
+            <h4>Who We Are</h4>
+            <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates &amp; Homemade Root Beer!</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+            </div>
+        </div>
+        <div>
+            <h4>Locations</h4>
+            <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
+                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
-    </nav>
+        <div>
+            <h4>Contact</h4>
+            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: 11AM-9PM Daily</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
+                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
+                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+    </div>
+</footer>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <img src="assets/hero_title.png" alt="Tom Wahl's - Old School Quality, Served with a Smile!"class="hero-title"> <!-- Tom Wahl's - Old School Quality, Served with a Smile! / Step Back to the 50s at Tom Wahl's! -->
-            <p class="hero-subtitle">Savor Rochester's Best Cheeseburgers with Hot n' Crispy Fries. Wash it Down with a Frosted Mug of our famous Homemade Root Beer - Fresh, Fast & Full of Flavor!</p>
-            <div class="hero-buttons">
-                <a href="order-online.html" class="btn btn-primary">Order Online</a>
-                <a href="coupons.html" class="btn btn-secondary">Find Coupons</a>
-                <a href="rewards.html" class="btn btn-secondary">Join Rewards</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="assets/TableSetting.png" alt="Hot & Fresh Cheeseburger, fries, medium twist ice cream and our famous Root Beer - at Tom Wahl's 50s diner" class="hero-img">
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-        <div class="cta-container">
-            <div class="cta-item">
-                <h3>Tom Wahl's Rewards</h3>
-                <p>Earn points on every purchase & unlock exclusive offers. Sign up today and earn a FREE Cheeseburger reward!</p>
-                <a href="rewards.html" class="btn btn-primary">Learn More</a>
-            </div>
-            <div class="cta-item">
-                <h3>Gift Cards</h3>
-                <p>The perfect gift for all the burger lovers in your life. Buy online or in-store at any Tom Wahl's location.</p>
-                <a href="gift-cards.html" class="btn btn-primary">Purchase</a>
-            </div>
-            <div class="cta-item">
-                <h3>Host a Fundraiser</h3>
-                <p>We want to help you reach your goals! 15% of sales you bring in will be donated to your organization.</p>
-                <a href="fundraiser.html" class="btn btn-primary">Learn More</a>
-            </div>
-            <div class="cta-item">
-                <h3>Careers</h3>
-                <p>Join our team! We're always looking for grill masters, fry experts & friendly team members!</p>
-                <a href="careers.html" class="btn btn-primary">Apply Today</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Who We Are</h4>
-                <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
-                <div class="social-links">
-                    <a href="https://facebook.com/tomwahls" aria-label="Facebook">
-                        <img src="assets/facebook.png" alt="Facebook Icon" class="social-icon">
-                    </a>
-                    <a href="https://instagram.com/tomwahls" aria-label="Instagram">
-                        <img src="assets/instagram.png" alt="Instagram Icon" class="social-icon">
-                    </a>
-                    <a href="https://twitter.com/tomwahls" aria-label="Twitter">
-                        <img src="assets/twitter.png" alt="Twitter Icon" class="social-icon">
-                    </a>
-                    <a href="https://twitter.com/tomwahls" aria-label="Twitter">
-                        <img src="assets/tiktok.png" alt="TikTok Icon" class="social-icon">
-                    </a>
-            </div>
-            </div>
-            <div class="footer-section">
-                <h4>Locations</h4>
-                <ul>
-                    <li><a href="locations.html#webster">Avon</a></li>
-                    <li><a href="locations.html#basin">Bushnell's Basin</a></li>
-                    <li><a href="locations.html#brighton">Brighton</a></li>
-                    <li><a href="locations.html#canandaigua">Canandaigua</a></li>
-                    <li><a href="locations.html#fairport">Fairport</a></li>
-                    <li><a href="locations.html#greece">Greece</a></li>
-                    <li><a href="locations.html#newark">Newark</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Contact</h4>
-                <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-                <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-                <p>Store Hours: 11AM-9PM Daily</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.</p>
-        </div>
-    </footer>
-
-<!-- Sienna Accessibility Widget -->
+    <!-- Sienna Accessibility Widget -->
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
-    <script src="script.js"></script>
 </body>
 </html>
