@@ -6,6 +6,7 @@
     <title>Web Accessibility Statement | Tom Wahl's</title>
     <meta name="description" content="Tom Wahl's web accessibility statement. We are committed to ensuring our website is accessible to all users, including persons with disabilities.">
     <link rel="canonical" href="https://mmcke4.github.io/accessibility.html">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -129,9 +130,9 @@
         </div>
         <div>
             <h4>Contact</h4>
-            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-            <p>Store Hours: 11AM–9PM Daily</p>
+            <p>Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: <span id="footerHours">11AM–9PM Daily</span></p>
         </div>
         <div>
             <h4>Quick Links</h4>
@@ -140,15 +141,21 @@
                 <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
                 <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
                 <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
+                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
                 <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
                 <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
     </div>
 </footer>
+    <!-- Sienna Accessibility Widget -->
+    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    <!-- Hours JS -->
+    <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+    <script>twRenderFooterHours('footerHours');</script>
 
 </body>
 </html>

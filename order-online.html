@@ -7,6 +7,7 @@
     <meta name="description" content="Order Tom Wahl's online for pickup or delivery from 7 Western New York locations. Rochester's Best Cheeseburgers, ground steak burgers, homemade root beer & crispy fries — ready in minutes. Find the nearest Tom Wahl's and order now!">
     <meta name="keywords" content="Tom Wahl's order online, Rochester burger delivery, Tom Wahls pickup, order food near me Rochester NY, Western New York burger chain, Wahlburger order, Tom Wahls menu, best cheeseburger Rochester order online">
     <link rel="canonical" href="https://mmcke4.github.io/order-online.html">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
@@ -47,7 +48,7 @@
                     "priceRange": "$",
                     "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "3553"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
-                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsavon#value-meals"}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp"]}
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsavon/menu"}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp"]}
                 }
             },
             {
@@ -64,7 +65,7 @@
                     "priceRange": "$",
                     "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1266"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
-                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsbrighton#value-meals"}}
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu"}}
                 }
             },
             {
@@ -351,7 +352,7 @@
     <nav aria-label="Breadcrumb" style="margin-bottom:12px;font-size:0.85rem;opacity:0.7;">
         <a href="https://mmcke4.github.io/" style="color:white;text-decoration:underline;">Home</a> &rsaquo; Order Online
     </nav>
-    <h1>Order Tom Wahl's Online</h1>
+    <h1>Order for Pick Up or Delivery, <br> or Dine In - Online!</h1>
     <p>Pick your nearest location for pickup or delivery. Rochester's best cheeseburgers, ground steak burgers, crispy fries & homemade root beer — ready in minutes!</p>
 </header>
 
@@ -423,15 +424,18 @@
         </div>
         <div>
             <h4>Contact</h4>
-            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-            <p>Store Hours: 11AM-9PM Daily</p>
+            <p>Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: <span id="footerHours">11AM–9PM Daily</span></p>
         </div>
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
+                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
+                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
                 <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
                 <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
@@ -443,55 +447,58 @@
 
     <!-- Sienna Accessibility Widget -->
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
-
+    <!-- Hours JS -->
+    <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+    <script>twRenderFooterHours('footerHours');</script>
+    
 <script>
 const locations = [
     {
         name: "Avon", address: "283 E Main St, Avon, NY 14414", phone: "585-226-2420",
         lat: 42.9097, lng: -77.7323, rating: 4.6, reviews: 3553,
-        url: "https://order.myguestaccount.com/menu/tomwahlsavon#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsavon/menu",
         placeId: "ChIJfeUhN6VE0YkRwbghSiNMf-U",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Brighton", address: "2545 Monroe Ave, Rochester, NY 14618", phone: "585-441-9620",
         lat: 43.1174, lng: -77.5553, rating: 4.4, reviews: 1266,
-        url: "https://order.myguestaccount.com/menu/tomwahlsbrighton#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu",
         placeId: "ChIJZSAYxa7K1okR6SFysaZu4lY",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Bushnell's Basin", address: "643 Pittsford-Victor Rd, Pittsford, NY 14534", phone: "585-586-4920",
         lat: 43.0613, lng: -77.4780, rating: 4.4, reviews: 929,
-        url: "https://order.myguestaccount.com/menu/tomwahlsbushnellsbasin#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsbushnellsbasin/menu",
         placeId: "ChIJ40rcrX000YkRjidZhLYdxtg",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Canandaigua", address: "2510 Rochester Rd, Canandaigua, NY 14424", phone: "585-393-9170",
         lat: 42.9093, lng: -77.2987, rating: 4.4, reviews: 1732,
-        url: "https://order.myguestaccount.com/menu/tomwahlscanandaigua#value-meals",
+        url: "https://tomwahls.orderexperience.net/61450d0295b7018c168b459b/menu#value-meals",
         placeId: "ChIJEUVku8Il0YkRqqsrKuX-CaQ",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Fairport", address: "1333 Fairport Rd, Fairport, NY 14450", phone: "585-377-8420",
         lat: 43.1007, lng: -77.4609, rating: 4.4, reviews: 1078,
-        url: "https://order.myguestaccount.com/menu/tomwahlsfairport#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsfairport/menu",
         placeId: "ChIJ_8sNLa3M1okR8yNd933sq9k",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Greece", address: "671 Maiden Ln, Rochester, NY 14616", phone: "585-504-7470",
         lat: 43.2234, lng: -77.6602, rating: 3.9, reviews: 379,
-        url: "https://order.myguestaccount.com/menu/tomwahlsgreece#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsgreece/menu",
         placeId: "ChIJ-WBYjVWx1okRhOUwLPdv614",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     },
     {
         name: "Newark", address: "585 W Union St, Newark, NY 14513", phone: "315-331-9112",
         lat: 43.0471, lng: -77.1115, rating: 4.3, reviews: 1126,
-        url: "https://order.myguestaccount.com/menu/tomwahlsnewark#value-meals",
+        url: "https://tomwahls.orderexperience.net/tomwahlsnewark/menu",
         placeId: "ChIJ1UsPa6TU0IkR6sTeoPWJ8pI",
         hours: { mon:"11AM–9PM", tue:"11AM–9PM", wed:"11AM–9PM", thu:"11AM–9PM", fri:"11AM–9PM", sat:"11AM–9PM", sun:"11AM–9PM" }
     }

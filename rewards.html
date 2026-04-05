@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rewards Program | Earn Free Cheeseburgers & More | Tom Wahl's - Rochester, NY</title>
-    <meta name="description" content="Join Tom Wahl's Rewards and earn 2 points per dollar at all 7 Western NY locations. Get a FREE cheeseburger after your first $10 purchase! Redeem points for free menu items, enjoy birthday rewards & exclusive member deals. Download the app today.">
+    <meta name="description" content="Join Tom Wahl's Rewards and earn 2 points per dollar at all 7 Rochster, NY area locations. Get a FREE cheeseburger after your first $10 purchase! Redeem points for free menu items, enjoy birthday rewards & exclusive member deals. Download the app today.">
     <meta name="keywords" content="Tom Wahl's rewards, Tom Wahls loyalty program, free cheeseburger Rochester, Tom Wahls app, Tom Wahl's points, Tom Wahls free food, Rochester burger rewards, Western New York restaurant rewards, Tom Wahls birthday reward">
     <link rel="canonical" href="https://mmcke4.github.io/rewards.html">
     <meta name="robots" content="index, follow">
@@ -258,6 +258,7 @@
             top: -50%; left: -50%;
             width: 200%; height: 200%;
             background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.06) 0%, transparent 50%);
+            pointer-events: none;
         }
         .hero-badge {
             display: inline-flex; align-items: center; gap: 6px;
@@ -276,14 +277,20 @@
             letter-spacing: -0.03em;
             margin-bottom: 16px;
             line-height: 1.1;
+            position: relative;
+            z-index: 2;
         }
         .rewards-hero p {
             font-size: 1.15rem;
             opacity: 0.9;
             max-width: 520px;
             margin: 0 auto 28px;
+            position: relative;
+            z-index: 2;
         }
         .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .hero-ctas a:hover img { transform: scale(1.05); opacity: 0.9; }
+        .hero-ctas a img { transition: transform .2s, opacity .2s; }
         .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 50px; font-weight: 700; font-size: 1rem; transition: all 0.2s; border: none; cursor: pointer; }
         .btn-white { background: var(--white); color: var(--red); }
         .btn-white:hover { background: var(--gray-100); }
@@ -406,13 +413,16 @@
             background: var(--white);
             padding: 56px 20px;
         }
-        .tier-inner { max-width: 1000px; margin: 0 auto; }
+        .tier-inner { max-width: 1200px; margin: 0 auto; }
         .tier-inner h2 { text-align: center; font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
         .tier-subtitle { text-align: center; color: var(--gray-600); margin-bottom: 40px; }
         .tier-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(5, 1fr);
             gap: 20px;
+        }
+        @media (max-width: 700px) {
+            .tier-grid { grid-template-columns: repeat(2, 1fr); }
         }
         .tier-item {
             text-align: center;
@@ -423,9 +433,9 @@
         }
         .tier-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); background: var(--white); }
         .tier-item img {
-            width: 72px; height: 72px;
+            width: 200px; height: 200px;
             object-fit: contain;
-            margin: 0 auto 12px;
+            margin: 0 auto 14px;
         }
         .tier-points {
             display: inline-block;
@@ -584,18 +594,18 @@
         Tom Wahl's Rewards Program
     </div>
     <h1>Eat More.<br>Earn More.<br>Get Free Food.</h1>
-    <p>Join today and earn a <strong>FREE Cheeseburger</strong> after your first $10 purchase at any of our 7 Western New York locations. Earn 2 points for every dollar you spend on Rochester's best ground steak burgers, homemade root beer & more!</p>
+    <p>Join today and earn a <strong>FREE Cheeseburger</strong> after your first $10 purchase at any of our 7 Rochester, NY area. Earn 2 points for every dollar spent!</p>
     <p style="font-size:0.9rem;opacity:0.75;margin-bottom:16px;">Download the app to get started — it's the fastest way to join!</p>
     <div class="hero-ctas">
-        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790" class="btn btn-white">
+        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790" class="btn btn-white" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             App Store
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1" class="btn btn-white">
+        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1" class="btn btn-white" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.67c-.38-.53-.55-1.29-.55-2.28V2.61c0-.99.17-1.75.55-2.28L14.1 11.7 3.18 23.67zm1.72 1.1L17.37 13.5l-3.1-3.1L4.9 24.77zm17.28-11.63c.49.28.82.77.82 1.36 0 .59-.33 1.08-.82 1.36l-3.2 1.85-3.43-3.43 3.43-3.43 3.2 1.85v.44zM4.9-.77L14.27 13.6l3.1-3.1L4.9-.77z"/></svg>
             Google Play
         </a>
-        <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k&template=1" class="btn btn-ghost">Or Enroll Online</a>
+        <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k&template=1" class="btn btn-ghost" target="_blank" rel="noopener">Or Enroll Online</a>
     </div>
 </header>
 
@@ -685,52 +695,52 @@
         <p class="tier-subtitle">Redeem your points for these delicious rewards</p>
         <div class="tier-grid">
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward1-image-outline-black.png" alt="Hot Dog">
+                <img src="assets/rewards/reward-hot-dog.png" alt="Hot Dog">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Hot Dog</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward2-image-outline-black.png" alt="French Fry">
+                <img src="assets/rewards/reward-fries.png" alt="French Fry">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Regular Fry</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward3-image-outline-black.png" alt="Ice Cream">
+                <img src="assets/rewards/reward-ice-cream.png" alt="Ice Cream">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Ice Cream</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward5-image-outline-black.png" alt="Cheeseburger">
+                <img src="assets/rewards/reward-cheeseburger.png" alt="Cheeseburger">
                 <div class="tier-points">250 PTS</div>
                 <h4>FREE Cheeseburger</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward6-image-outline-black.png" alt="Wahlburger">
+                <img src="assets/rewards/reward-wahlburger.png" alt="Wahlburger">
                 <div class="tier-points">250 PTS</div>
                 <h4>FREE Wahlburger</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward-grilled-chicken.png" alt="Chicken Sandwich">
+                <img src="assets/rewards/reward-grilled-chicken.png" alt="Chicken Sandwich">
                 <div class="tier-points">250 PTS</div>
-                <h4>FREE Chicken</h4>
+                <h4>FREE Chicken Sandwich</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward-chicken-fingers.png" alt="5pc Tenders">
+                <img src="assets/rewards/reward-chicken-fingers.png" alt="5pc Tenders">
                 <div class="tier-points">300 PTS</div>
                 <h4>FREE 5pc Tenders</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward-fun-meal-cb-core.png" alt="Fun Meal">
+                <img src="assets/rewards/reward-fun-meal-cb-core.png" alt="Fun Meal">
                 <div class="tier-points">300 PTS</div>
-                <h4>FREE Fun Meal</h4>
+                <h4>FREE Kid's Meal</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward-junker-core-reward.png" alt="55 Junker Plate">
+                <img src="assets/rewards/reward-junker-core-reward.png" alt="55 Junker Plate">
                 <div class="tier-points">400 PTS</div>
                 <h4>FREE Junker Plate</h4>
             </div>
             <div class="tier-item">
-                <img src="https://mmcke4.github.io/assets/reward-fish-dinner.png" alt="Fish Dinner">
+                <img src="assets/rewards/reward-fish-dinner.png" alt="Fish Dinner">
                 <div class="tier-points">500 PTS</div>
                 <h4>FREE Fish Dinner</h4>
             </div>
@@ -940,8 +950,8 @@
     <h2>Get the Tom Wahl's App</h2>
     <p>The best way to join, earn rewards, order ahead, and get exclusive deals — all from your phone.</p>
     <div class="app-buttons">
-        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790"><img src="https://mmcke4.github.io/assets/app-logo1.png" alt="Download on the App Store"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1"><img src="https://mmcke4.github.io/assets/app-logo2.png" alt="Get it on Google Play"></a>
+        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790"><img src="assets/Download_on_the_App_Store.png" alt="Download on the App Store"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1"><img src="assets/Get_ It_ On_Google_Play.webp" alt="Get it on Google Play"></a>
     </div>
     <p style="margin-top:20px;opacity:0.5;font-size:0.9rem;">Already a member? <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--white);text-decoration:underline;">Log in here</a></p>
 </section>
@@ -973,25 +983,29 @@
         </div>
         <div>
             <h4>Contact</h4>
-            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-            <p>Store Hours: 11AM-9PM Daily</p>
+            <p>Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: <span id="footerHours">11AM–9PM Daily</span></p>
         </div>
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
+                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
+                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
                 <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
                 <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
     </div>
 </footer>
-    <!-- Sienna Accessibility Widget -->
-    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
 
-</body> 
+<script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+<script>twRenderFooterHours('footerHours');</script>
+
+</body>
 </html>

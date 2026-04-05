@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coupons & Deals | Save on Rochester's Best Cheeseburgers | Tom Wahl's</title>
-    <meta name="description" content="Find current Tom Wahl's coupons, promo codes and deals. Save on Rochester's best cheeseburgers, ground steak burgers, homemade root beer & more at all 7 Western New York locations. Print or show on your phone!">
+    <meta name="description" content="Find current Tom Wahl's coupons, promo codes and deals. Save on Rochester's best cheeseburgers, ground steak burgers, homemade root beer & more at all 7 Rochster, NY area locations. Print or show on your phone!">
     <meta name="keywords" content="Tom Wahl's coupons, Tom Wahls deals, Rochester burger coupons, Tom Wahls promo code, Western New York restaurant coupons, Tom Wahls discount, burger deals Rochester NY, Tom Wahl's specials">
     <link rel="canonical" href="https://mmcke4.github.io/coupons.html">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tom Wahl's Coupons & Deals — Save on Rochester's Best Burgers">
-    <meta property="og:description" content="Current coupons and promo codes for Tom Wahl's. Save on cheeseburgers, Wahlburgers, fries & homemade root beer at all Western NY locations.">
+    <meta property="og:description" content="Current coupons and promo codes for Tom Wahl's. Save on cheeseburgers, Wahlburgers, fries & homemade root beer at all Rochster, NY area locations.">
     <meta property="og:url" content="https://mmcke4.github.io/coupons.html">
     <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
     <meta property="og:site_name" content="Tom Wahl's">
@@ -387,7 +388,7 @@
 <!-- COUPONS -->
 <section class="coupons-section">
     <div class="section-label">Current Offers</div>
-    <h2 class="section-title">This Month's Coupons</h2>
+    <h2 class="section-title">Coupons & Deals</h2>
     <p class="section-subtitle">Simply click a coupon to view full size. Show it on your phone or print it out!</p>
 
     <div class="coupon-grid" id="couponGrid">
@@ -396,7 +397,7 @@
              Add or remove coupon-card divs as needed. -->
 
         <div class="coupon-card" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="https://www.tomwahls.com/Images_Content/Site2/Images/Coupons/TW_CouponQR%200426.jpg" alt="Tom Wahl's Coupon - April 2026">
+            <img src="https://www.tomwahls.com/Images_Content/Site2/Images/Coupons/TW_CouponQR%200426.jpg" alt="Tom Wahl's BOGO Hot Dog Coupon - April 2026">
             <div class="coupon-card-footer">
                 <span>April 2026</span>
                 <div class="coupon-action">
@@ -470,26 +471,32 @@
         </div>
         <div>
             <h4>Contact</h4>
-            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-            <p>Store Hours: 11AM-9PM Daily</p>
+            <p>Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: <span id="footerHours">11AM–9PM Daily</span></p>
         </div>
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
+                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
+                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
+                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
                 <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
                 <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
     </div>
-</footer> 
+</footer>
 
     <!-- Sienna Accessibility Widget -->
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    <!-- Hours JS -->
+    <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+    <script>twRenderFooterHours('footerHours');</script>
 
 <!-- LIGHTBOX -->
 <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">

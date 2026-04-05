@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Cards | Tom Wahl's - The Perfect Gift for Burger Lovers</title>
-    <meta name="description" content="Give the gift of Rochester's Best Cheeseburgers! Purchase Tom Wahl's physical gift cards or send an eGift card instantly. Available in any amount from $20-$500.">
+    <meta name="description" content="Give the gift of Rochester's Best Cheeseburgers! Purchase Tom Wahl's physical gift cards or send an eGift card instantly. Available in any amount from $10-$500.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -45,415 +45,146 @@
         .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
         .mobile-menu a.active { color: var(--red); }
         @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
+/* HERO */
+        .page-hero{background:linear-gradient(135deg,var(--red),var(--red-dark));color:var(--white);padding:60px 20px 80px;text-align:center;position:relative;overflow:hidden}
+        .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.06) 0%,transparent 50%);pointer-events:none}
+        .page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:12px;position:relative}.page-hero p{font-size:1.1rem;opacity:.9;max-width:500px;margin:0 auto;position:relative}
 
-        /* ── HERO ── */
-        .page-hero {
-            background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
-            color: var(--white);
-            padding: 60px 20px 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        .page-hero::before {
-            content: '';
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%);
-        }
-        .page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 12px; letter-spacing: -0.02em; }
-        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
+        /* TOGGLE */
+        .toggle-section{max-width:520px;margin:-32px auto 0;padding:0 20px;position:relative;z-index:10}
+        .toggle-card{background:var(--white);border-radius:60px;box-shadow:var(--shadow-lg);padding:6px;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+        .toggle-btn{padding:14px 20px;border-radius:54px;border:none;background:transparent;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;color:var(--gray-600);transition:.3s;display:flex;align-items:center;justify-content:center;gap:8px}
+        .toggle-btn.active{background:var(--red);color:var(--white);box-shadow:0 4px 16px rgba(200,16,46,.3)}
+        .toggle-btn svg{width:20px;height:20px}
 
-        /* ── TYPE TOGGLE ── */
-        .toggle-section {
-            max-width: 520px;
-            margin: -32px auto 0;
-            padding: 0 20px;
-            position: relative;
-            z-index: 10;
-        }
-        .toggle-card {
-            background: var(--white);
-            border-radius: 60px;
-            box-shadow: var(--shadow-lg);
-            padding: 6px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px;
-        }
-        .toggle-btn {
-            padding: 14px 20px;
-            border-radius: 54px;
-            border: none;
-            background: transparent;
-            font-family: inherit;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            color: var(--gray-600);
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .toggle-btn.active {
-            background: var(--red);
-            color: var(--white);
-            box-shadow: 0 4px 16px rgba(200, 16, 46, 0.3);
-        }
-        .toggle-btn svg { width: 20px; height: 20px; }
+        /* PANELS */
+        .panel{display:none}.panel.active{display:block}
 
-        /* ── PANELS ── */
-        .panel { display: none; }
-        .panel.active { display: block; }
+        /* STEPS BAR */
+        .steps-bar{display:flex;align-items:center;justify-content:center;max-width:500px;margin:0 auto 32px}
+        .step-indicator{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--gray-400);white-space:nowrap;transition:.3s}
+        .step-indicator.active{color:var(--red)}.step-indicator.done{color:var(--dark)}
+        .step-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;background:var(--gray-200);color:var(--gray-400);transition:.3s}
+        .step-indicator.active .step-dot{background:var(--red);color:var(--white)}.step-indicator.done .step-dot{background:var(--dark);color:var(--white)}
+        .step-line{flex:1;height:2px;background:var(--gray-200);margin:0 12px;transition:.3s}.step-line.done{background:var(--dark)}
+        .form-step{display:none}.form-step.active{display:block}
 
-        /* ── PHYSICAL CARD SECTION ── */
-        .card-section {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 48px 20px 60px;
-        }
-        .card-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
-        @media (max-width: 700px) {
-            .card-layout { grid-template-columns: 1fr; }
-        }
+        /* CARD SECTION */
+        .card-section{max-width:900px;margin:0 auto;padding:48px 20px 60px}
+        .card-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+        @media(max-width:700px){.card-layout{grid-template-columns:1fr}}
+        .card-preview{position:sticky;top:100px}
+        .card-image-wrap{background:linear-gradient(135deg,#fff,var(--gray-100));border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-sm);text-align:center}
+        .card-image-wrap img{max-width:320px;margin:0 auto;border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.15)}
+        .card-caption{margin-top:16px;font-size:.85rem;color:var(--gray-600)}
+        .card-features{display:flex;gap:20px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+        .card-feature{display:flex;align-items:center;gap:6px;font-size:.82rem;font-weight:500;color:var(--gray-600)}
+        .card-feature svg{width:16px;height:16px;color:var(--green)}
+        .order-form h2{font-size:1.5rem;font-weight:800;margin-bottom:24px}
+        .form-group{margin-bottom:24px}
+        .form-label{display:block;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-600);margin-bottom:10px}
 
-        /* Card preview */
-        .card-preview {
-            position: sticky;
-            top: 100px;
-        }
-        .card-image-wrap {
-            background: linear-gradient(135deg, #fff 0%, var(--gray-100) 100%);
-            border-radius: var(--radius-lg);
-            padding: 32px;
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-        .card-image-wrap img {
-            max-width: 320px;
-            margin: 0 auto;
-            border-radius: var(--radius);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-        }
-        .card-image-wrap .card-caption {
-            margin-top: 16px;
-            font-size: 0.85rem;
-            color: var(--gray-600);
-        }
-        .card-features {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .card-feature {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: var(--gray-600);
-        }
-        .card-feature svg { width: 16px; height: 16px; color: var(--green); }
+        /* AMOUNT */
+        .amount-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+        .amount-btn{padding:14px 8px;border:2px solid var(--gray-200);border-radius:var(--radius);background:var(--white);font-family:inherit;font-size:1.05rem;font-weight:700;cursor:pointer;transition:.2s;color:var(--dark)}
+        .amount-btn:hover{border-color:var(--red);color:var(--red)}
+        .amount-btn.selected{border-color:var(--red);background:var(--red-light);color:var(--red)}
+        .custom-amount-wrap{position:relative}.dollar-sign{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:1.1rem;font-weight:700;color:var(--gray-400)}
+        .custom-input{width:100%;padding:14px 16px 14px 32px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:1rem;font-weight:600;color:var(--dark);transition:.2s;background:var(--white)}
+        .custom-input:focus{outline:none;border-color:var(--red)}
+        .custom-hint{font-size:.8rem;color:var(--gray-400);margin-top:6px}
 
-        /* Order form */
-        .order-form h2 {
-            font-size: 1.5rem;
-            font-weight: 800;
-            margin-bottom: 24px;
-        }
+        /* QTY */
+        .qty-control{display:inline-flex;align-items:center;border:2px solid var(--gray-200);border-radius:var(--radius);overflow:hidden}
+        .qty-btn{width:48px;height:48px;border:none;background:var(--gray-100);font-size:1.3rem;font-weight:700;cursor:pointer;color:var(--dark);transition:.2s;display:flex;align-items:center;justify-content:center}
+        .qty-btn:hover{background:var(--gray-200)}.qty-btn:disabled{opacity:.3;cursor:not-allowed}
+        .qty-value{width:56px;text-align:center;font-size:1.15rem;font-weight:700;background:var(--white);border:none;font-family:inherit}
 
-        .form-group { margin-bottom: 24px; }
-        .form-label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--gray-600);
-            margin-bottom: 10px;
-        }
+        /* TEXTAREA */
+        .gift-textarea{width:100%;padding:14px 16px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:.95rem;color:var(--dark);resize:vertical;min-height:80px;transition:.2s}
+        .gift-textarea:focus{outline:none;border-color:var(--red)}
+        .char-count{font-size:.8rem;color:var(--gray-400);text-align:right;margin-top:4px}
 
-        /* Amount presets */
-        .amount-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-        .amount-btn {
-            padding: 14px 8px;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            background: var(--white);
-            font-family: inherit;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-            color: var(--dark);
-        }
-        .amount-btn:hover { border-color: var(--red); color: var(--red); }
-        .amount-btn.selected {
-            border-color: var(--red);
-            background: var(--red-light);
-            color: var(--red);
-        }
+        /* SUMMARY */
+        .order-summary{background:var(--gray-100);border-radius:var(--radius);padding:20px;margin-bottom:20px}
+        .summary-row{display:flex;justify-content:space-between;padding:6px 0;font-size:.95rem}
+        .summary-row.total{border-top:2px solid var(--gray-200);margin-top:8px;padding-top:12px;font-weight:800;font-size:1.1rem}
 
-        .custom-amount-wrap {
-            position: relative;
-        }
-        .custom-amount-wrap .dollar-sign {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--gray-400);
-        }
-        .custom-input {
-            width: 100%;
-            padding: 14px 16px 14px 32px;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            font-family: inherit;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--dark);
-            transition: border-color 0.2s;
-            background: var(--white);
-        }
-        .custom-input:focus {
-            outline: none;
-            border-color: var(--red);
-        }
-        .custom-hint {
-            font-size: 0.8rem;
-            color: var(--gray-400);
-            margin-top: 6px;
-        }
+        /* BUTTONS */
+        .btn-purchase{width:100%;padding:16px 28px;background:var(--red);color:var(--white);border:none;border-radius:50px;font-family:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;transition:.2s;display:flex;align-items:center;justify-content:center;gap:8px}
+        .btn-purchase:hover{background:var(--red-dark)}
+        .btn-purchase svg{width:20px;height:20px}
+        .btn-back{width:100%;padding:10px;background:none;border:2px solid var(--gray-200);border-radius:50px;font-family:inherit;font-size:.85rem;font-weight:600;color:var(--gray-600);cursor:pointer;margin-top:12px;transition:.2s}
+        .btn-back:hover{border-color:var(--red);color:var(--red)}
 
-        /* Quantity */
-        .qty-control {
-            display: inline-flex;
-            align-items: center;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            overflow: hidden;
-        }
-        .qty-btn {
-            width: 48px;
-            height: 48px;
-            border: none;
-            background: var(--gray-100);
-            font-size: 1.3rem;
-            font-weight: 700;
-            cursor: pointer;
-            color: var(--dark);
-            transition: background 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .qty-btn:hover { background: var(--gray-200); }
-        .qty-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-        .qty-value {
-            width: 56px;
-            text-align: center;
-            font-size: 1.15rem;
-            font-weight: 700;
-            background: var(--white);
-            border: none;
-            font-family: inherit;
-        }
+        /* CHECKOUT */
+        .checkout-form-wrap{display:grid;grid-template-columns:280px 1fr;gap:32px;max-width:900px;margin:0 auto}
+        @media(max-width:700px){.checkout-form-wrap{grid-template-columns:1fr}.checkout-sidebar{order:2}.checkout-main{order:1}}
+        .checkout-sidebar{position:sticky;top:100px;align-self:start}
+        .form-section-header{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1rem;color:var(--dark);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--gray-200)}
+        .form-section-header svg{width:20px;height:20px}
+        .form-row-gc{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+        .form-row-gc.full-row{grid-template-columns:1fr}
+        .form-row-gc.three-col{grid-template-columns:1fr 1fr 1fr}
+        @media(max-width:500px){.form-row-gc,.form-row-gc.three-col{grid-template-columns:1fr}}
+        .form-group-gc label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px;color:var(--dark)}
+        .form-group-gc .req{color:var(--red)}
+        .form-group-gc input,.form-group-gc select{width:100%;padding:11px 14px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:.9rem;color:var(--dark);transition:.2s;background:var(--white)}
+        .form-group-gc input:focus,.form-group-gc select:focus{outline:none;border-color:var(--red)}
+        .form-group-gc select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
 
-        /* Gift message */
-        .gift-textarea {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--gray-200);
-            border-radius: var(--radius);
-            font-family: inherit;
-            font-size: 0.95rem;
-            color: var(--dark);
-            resize: vertical;
-            min-height: 80px;
-            transition: border-color 0.2s;
-        }
-        .gift-textarea:focus { outline: none; border-color: var(--red); }
-        .char-count { font-size: 0.8rem; color: var(--gray-400); text-align: right; margin-top: 4px; }
+        /* EGIFT */
+        .egift-section{max-width:700px;margin:0 auto;padding:48px 20px 60px;text-align:center}
+        .egift-card{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow-md);padding:48px 36px}
+        .egift-icon{width:80px;height:80px;background:var(--red-light);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+        .egift-icon svg{width:36px;height:36px;color:var(--red)}
+        .egift-card h2{font-size:1.6rem;font-weight:800;margin-bottom:12px}
+        .egift-card p{color:var(--gray-600);max-width:420px;margin:0 auto 8px;font-size:1rem}
+        .egift-perks{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:28px 0 32px}
+        .egift-perk{display:flex;align-items:center;gap:8px;font-size:.9rem;font-weight:600;color:var(--dark)}
+        .egift-perk svg{width:18px;height:18px;color:var(--green);flex-shrink:0}
+        .btn-egift{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:var(--red);color:var(--white);border-radius:50px;font-weight:800;font-size:1.1rem;transition:.2s}
+        .btn-egift:hover{background:var(--red-dark)}
+        .btn-egift svg{width:20px;height:20px}
 
-        /* Summary */
-        .order-summary {
-            background: var(--gray-100);
-            border-radius: var(--radius);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-        .summary-row {
-            display: flex;
-            justify-content: space-between;
-            padding: 6px 0;
-            font-size: 0.95rem;
-        }
-        .summary-row.total {
-            border-top: 2px solid var(--gray-200);
-            margin-top: 8px;
-            padding-top: 12px;
-            font-weight: 800;
-            font-size: 1.1rem;
-        }
+        /* BALANCE */
+        .balance-section{background:var(--white);border-top:1px solid var(--gray-200);padding:48px 20px;text-align:center}
+        .balance-inner{max-width:500px;margin:0 auto}
+        .balance-inner h2{font-size:1.4rem;font-weight:800;margin-bottom:8px}
+        .balance-inner p{color:var(--gray-600);margin-bottom:24px}
+        .btn-balance{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:var(--dark);color:var(--white);border-radius:50px;font-weight:700;font-size:1rem;transition:.2s}
+        .btn-balance:hover{opacity:.85}
+        .btn-balance svg{width:18px;height:18px}
 
-        /* CTA button */
-        .btn-purchase {
-            width: 100%;
-            padding: 16px 28px;
-            background: var(--red);
-            color: var(--white);
-            border: none;
-            border-radius: 50px;
-            font-family: inherit;
-            font-size: 1.1rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: background 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        .btn-purchase:hover { background: var(--red-dark); }
-        .btn-purchase svg { width: 20px; height: 20px; }
+        /* INFO STRIP */
+        .info-strip{background:var(--gray-100);padding:40px 20px;border-top:1px solid var(--gray-200)}
+        .info-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center}
+        .info-item .info-icon{width:48px;height:48px;background:var(--white);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:var(--shadow-sm)}
+        .info-item .info-icon svg{width:24px;height:24px;color:var(--red)}
+        .info-item h4{font-size:.95rem;font-weight:700;margin-bottom:4px}
+        .info-item p{font-size:.85rem;color:var(--gray-600)}
 
-        /* ── EGIFT PANEL ── */
-        .egift-section {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 48px 20px 60px;
-            text-align: center;
-        }
-        .egift-card {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-            padding: 48px 36px;
-        }
-        .egift-icon {
-            width: 80px; height: 80px;
-            background: var(--red-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 24px;
-        }
-        .egift-icon svg { width: 36px; height: 36px; color: var(--red); }
-        .egift-card h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
-        .egift-card p { color: var(--gray-600); max-width: 420px; margin: 0 auto 8px; font-size: 1rem; }
-        .egift-perks {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 28px 0 32px;
-        }
-        .egift-perk {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        .egift-perk svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
-        .btn-egift {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
-            background: var(--red);
-            color: var(--white);
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.1rem;
-            transition: background 0.2s;
-        }
-        .btn-egift:hover { background: var(--red-dark); }
-        .btn-egift svg { width: 20px; height: 20px; }
+        /* FOOTER */
+        .footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 20px 24px}
+        .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px}
+        .footer h4{color:var(--white);font-size:1rem;margin-bottom:16px;font-weight:600}
+        .footer p, .footer a{font-size:.9rem;line-height:1.8}
+        .footer a:hover{color:var(--white)}
+        .footer-bottom{max-width:1200px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}
+        .social-icons{display:flex;gap:12px;margin-top:8px}
+        .social-icons a img{width:28px;height:28px;opacity:.7;transition:opacity .2s}
+        .social-icons a img:hover{opacity:1}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:4px}
 
-        /* ── BALANCE CHECK ── */
-        .balance-section {
-            background: var(--white);
-            border-top: 1px solid var(--gray-200);
-            padding: 48px 20px;
-            text-align: center;
-        }
-        .balance-inner { max-width: 500px; margin: 0 auto; }
-        .balance-inner h2 { font-size: 1.4rem; font-weight: 800; margin-bottom: 8px; }
-        .balance-inner p { color: var(--gray-600); margin-bottom: 24px; }
-        .btn-balance {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: var(--dark);
-            color: var(--white);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: opacity 0.2s;
-        }
-        .btn-balance:hover { opacity: 0.85; }
-        .btn-balance svg { width: 18px; height: 18px; }
-
-        /* ── INFO STRIP ── */
-        .info-strip {
-            background: var(--gray-100);
-            padding: 40px 20px;
-            border-top: 1px solid var(--gray-200);
-        }
-        .info-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
-            text-align: center;
-        }
-        .info-item .info-icon {
-            width: 48px; height: 48px;
-            background: var(--white);
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 12px;
-            box-shadow: var(--shadow-sm);
-        }
-        .info-item .info-icon svg { width: 24px; height: 24px; color: var(--red); }
-        .info-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-        .info-item p { font-size: 0.85rem; color: var(--gray-600); }
-
-        /* ── FOOTER ── */
-        .footer { background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
-        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
-        .footer a:hover { color: var(--white); }
-        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
-        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
-        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
-        .social-icons a img:hover { opacity: 1; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 4px; }
+        /* VALIDATION */
+        .form-group-gc input.invalid, .form-group-gc select.invalid { border-color: var(--red) !important; background: var(--red-light); }
+        .invalid-msg { color: var(--red); font-size: .78rem; margin-top: 5px; display: none; }
+        .invalid-msg.show { display: block; }
+        .amount-invalid .amount-grid { outline: 2px solid var(--red); border-radius: var(--radius); background: var(--red-light); padding: 4px; }
+        .amount-invalid .custom-input { border-color: var(--red) !important; background: var(--red-light); }
+        .amount-invalid-msg { color: var(--red); font-size: .82rem; margin-top: 8px; display: none; }
+        .amount-invalid-msg.show { display: block; }
     </style>
 </head>
 <body>
@@ -494,11 +225,11 @@
 <!-- TYPE TOGGLE -->
 <div class="toggle-section">
     <div class="toggle-card">
-        <button class="toggle-btn active" id="togglePhysical" onclick="switchPanel('physical')">
+        <button type="button" class="toggle-btn active" id="togglePhysical" onclick="switchPanel('physical')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
             Physical Card
         </button>
-        <button class="toggle-btn" id="toggleEgift" onclick="switchPanel('egift')">
+        <button type="button" class="toggle-btn" id="toggleEgift" onclick="switchPanel('egift')">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             eGift Card
         </button>
@@ -508,91 +239,211 @@
 <!-- PHYSICAL CARD PANEL -->
 <div class="panel active" id="panelPhysical">
     <section class="card-section">
-        <div class="card-layout">
-            <!-- Left: Card preview -->
-            <div class="card-preview">
-                <div class="card-image-wrap">
-                    <img src="https://www.tomwahls.com/images_products/TW_Gift_Card.png" alt="Tom Wahl's Gift Card">
-                    <p class="card-caption">Physical gift card shipped via USPS</p>
-                    <div class="card-features">
-                        <div class="card-feature">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Never expires
-                        </div>
-                        <div class="card-feature">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            All locations
-                        </div>
-                        <div class="card-feature">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                            Earn rewards
+        <!-- Step indicators -->
+        <div class="steps-bar">
+            <div class="step-indicator active" id="stepInd1"><span class="step-dot">1</span> Select Card</div>
+            <div class="step-line" id="stepLine1"></div>
+            <div class="step-indicator" id="stepInd2"><span class="step-dot">2</span> Shipping</div>
+            <div class="step-line" id="stepLine2"></div>
+            <div class="step-indicator" id="stepInd3"><span class="step-dot">3</span> Payment</div>
+        </div>
+
+        <!-- STEP 1: Card Selection -->
+        <div class="form-step active" id="step1">
+            <div class="card-layout">
+                <div class="card-preview">
+                    <div class="card-image-wrap">
+                        <img src="https://www.tomwahls.com/images_products/TW_Gift_Card.png" alt="Tom Wahl's Gift Card">
+                        <p class="card-caption">Physical gift card shipped via USPS</p>
+                        <div class="card-features">
+                            <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Never expires</div>
+                            <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All locations</div>
+                            <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Earn rewards</div>
                         </div>
                     </div>
+                </div>
+                <div class="order-form">
+                    <h2>Order a Gift Card</h2>
+
+                    <div class="form-group">
+                        <label class="form-label">Select Amount</label>
+                        <div class="amount-grid">
+                            <button type="button" class="amount-btn" onclick="selectAmount(25,this)">$25</button>
+                            <button type="button" class="amount-btn selected" onclick="selectAmount(50,this)">$50</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(75,this)">$75</button>
+                            <button type="button" class="amount-btn" onclick="selectAmount(100,this)">$100</button>
+                        </div>
+                        <div class="custom-amount-wrap">
+                            <span class="dollar-sign">$</span>
+                            <input type="number" class="custom-input" id="customAmount" placeholder="Custom amount (10–500)" min="10" max="500" step="5" onfocus="clearPresets()" oninput="updateCustomAmount()">
+                        </div>
+                        <p class="custom-hint">Min $10 · Max $500 · $5 increments</p>
+                        <p class="amount-invalid-msg" id="amountErrorMsg">Please select or enter a gift card amount.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Quantity</label>
+                        <div class="qty-control">
+                            <button class="qty-btn" id="qtyMinus" onclick="changeQty(-1)" disabled>−</button>
+                            <input type="text" class="qty-value" id="qtyValue" value="1" readonly>
+                            <button class="qty-btn" id="qtyPlus" onclick="changeQty(1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Gift Message <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
+                        <textarea class="gift-textarea" id="giftMessage" maxlength="200" placeholder="Add a personal message..." oninput="updateCharCount()"></textarea>
+                        <div class="char-count"><span id="charCount">0</span>/200</div>
+                    </div>
+
+                    <div class="order-summary">
+                        <div class="summary-row"><span>Gift Card</span><span id="summaryCard">$50.00</span></div>
+                        <div class="summary-row"><span>Quantity</span><span id="summaryQty">× 1</span></div>
+                        <div class="summary-row"><span>Shipping</span><span>$1.00</span></div>
+                        <div class="summary-row total"><span>Total</span><span id="summaryTotal">$51.00</span></div>
+                    </div>
+
+                    <button type="button" class="btn-purchase" onclick="goToStep(2)">
+                        Continue to Shipping
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <!-- Right: Order form -->
-            <div class="order-form">
-                <h2>Order a Gift Card</h2>
-
-                <!-- Amount -->
-                <div class="form-group">
-                    <label class="form-label">Select Amount</label>
-                    <div class="amount-grid">
-                        <button class="amount-btn" onclick="selectAmount(25, this)">$25</button>
-                        <button class="amount-btn selected" onclick="selectAmount(50, this)">$50</button>
-                        <button class="amount-btn" onclick="selectAmount(75, this)">$75</button>
-                        <button class="amount-btn" onclick="selectAmount(100, this)">$100</button>
+        <!-- STEP 2: Shipping -->
+        <div class="form-step" id="step2">
+            <div class="checkout-form-wrap">
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px;">Order Summary</h3>
+                        <div class="summary-row"><span>Gift Card</span><span id="summaryCard2">$50.00</span></div>
+                        <div class="summary-row"><span>Quantity</span><span id="summaryQty2">× 1</span></div>
+                        <div class="summary-row"><span>Shipping</span><span>$1.00</span></div>
+                        <div class="summary-row total"><span>Total</span><span id="summaryTotal2">$51.00</span></div>
                     </div>
-                    <div class="custom-amount-wrap">
-                        <span class="dollar-sign">$</span>
-                        <input type="number" class="custom-input" id="customAmount" placeholder="Custom amount (20–500)" min="20" max="500" step="5" onfocus="clearPresets()" oninput="updateCustomAmount()">
-                    </div>
-                    <p class="custom-hint">Min $20 · Max $500 · $5 increments</p>
+                    <button class="btn-back" onclick="goToStep(1)">← Back to Card Selection</button>
                 </div>
-
-                <!-- Quantity -->
-                <div class="form-group">
-                    <label class="form-label">Quantity</label>
-                    <div class="qty-control">
-                        <button class="qty-btn" id="qtyMinus" onclick="changeQty(-1)" disabled>−</button>
-                        <input type="text" class="qty-value" id="qtyValue" value="1" readonly>
-                        <button class="qty-btn" id="qtyPlus" onclick="changeQty(1)">+</button>
+                <div class="checkout-main">
+                    <div class="form-section-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Contact Information
                     </div>
+                    <div class="form-row-gc full-row">
+                        <div class="form-group-gc"><label>Your Email Address <span class="req">*</span></label><input type="email" id="shipEmail" required placeholder="you@email.com"></div>
+                    </div>
+                    <div class="form-row-gc full-row">
+                        <div class="form-group-gc"><label>Confirm Email Address <span class="req">*</span></label><input type="email" id="shipEmailConfirm" required placeholder="Confirm email"><p class="invalid-msg" id="emailMismatchMsg">Email addresses do not match.</p></div>
+                    </div>
+
+                    <div class="form-section-header" style="margin-top:24px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Shipping Information
+                    </div>
+                    <div class="form-row-gc">
+                        <div class="form-group-gc"><label>First Name <span class="req">*</span></label><input type="text" id="shipFirstName" required placeholder="First name"></div>
+                        <div class="form-group-gc"><label>Last Name <span class="req">*</span></label><input type="text" id="shipLastName" required placeholder="Last name"></div>
+                    </div>
+                    <div class="form-row-gc full-row">
+                        <div class="form-group-gc"><label>Company <span style="font-weight:400;color:var(--gray-400);">(if applicable)</span></label><input type="text" placeholder="Company name"></div>
+                    </div>
+                    <div class="form-row-gc">
+                        <div class="form-group-gc"><label>Street Address <span class="req">*</span></label><input type="text" id="shipStreet" required placeholder="Street address"></div>
+                        <div class="form-group-gc"><label>Apt/Bldg/Floor</label><input type="text" placeholder="Apt, suite, etc."></div>
+                    </div>
+                    <div class="form-row-gc">
+                        <div class="form-group-gc"><label>City <span class="req">*</span></label><input type="text" id="shipCity" required placeholder="City"></div>
+                        <div class="form-group-gc"><label>State <span class="req">*</span></label><select id="shipState" required><option value="">Select</option><option>AK</option><option>AL</option><option>AR</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>DC</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>IA</option><option>ID</option><option>IL</option><option>IN</option><option>KS</option><option>KY</option><option>LA</option><option>MA</option><option>MD</option><option>ME</option><option>MI</option><option>MN</option><option>MO</option><option>MS</option><option>MT</option><option>NC</option><option>ND</option><option>NE</option><option>NH</option><option>NJ</option><option>NM</option><option>NV</option><option selected>NY</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VA</option><option>VT</option><option>WA</option><option>WI</option><option>WV</option><option>WY</option></select></div>
+                    </div>
+                    <div class="form-row-gc">
+                        <div class="form-group-gc"><label>Zip Code <span class="req">*</span></label><input type="text" id="shipZip" required placeholder="Zip code"></div>
+                        <div class="form-group-gc"><label>Country</label><select><option selected>USA</option></select></div>
+                    </div>
+                    <div class="form-row-gc full-row">
+                        <div class="form-group-gc"><label>Phone <span class="req">*</span></label><input type="tel" id="shipPhone" required placeholder="(XXX) XXX-XXXX" maxlength="14" oninput="formatPhone(this)"><p class="invalid-msg" id="phoneErrorMsg">Please enter a valid phone number: (XXX) XXX-XXXX</p></div>
+                    </div>
+
+                    <button type="button" class="btn-purchase" onclick="goToStep(3)">
+                        Continue to Payment
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
                 </div>
+            </div>
+        </div>
 
-                <!-- Gift message -->
-                <div class="form-group">
-                    <label class="form-label">Gift Message <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
-                    <textarea class="gift-textarea" id="giftMessage" maxlength="200" placeholder="Add a personal message..." oninput="updateCharCount()"></textarea>
-                    <div class="char-count"><span id="charCount">0</span>/200</div>
+        <!-- STEP 3: Billing & Payment -->
+        <div class="form-step" id="step3">
+            <div class="checkout-form-wrap">
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px;">Order Summary</h3>
+                        <div class="summary-row"><span>Gift Card</span><span id="summaryCard3">$50.00</span></div>
+                        <div class="summary-row"><span>Quantity</span><span id="summaryQty3">× 1</span></div>
+                        <div class="summary-row"><span>Shipping</span><span>$1.00</span></div>
+                        <div class="summary-row total"><span>Total</span><span id="summaryTotal3">$51.00</span></div>
+                    </div>
+                    <button class="btn-back" onclick="goToStep(2)">← Back to Shipping</button>
                 </div>
+                <div class="checkout-main">
+                    <div class="form-section-header">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Billing Information
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:flex;align-items:center;gap:8px;font-weight:400;font-size:.9rem;cursor:pointer;"><input type="checkbox" id="sameAsShipping" checked onchange="toggleBilling()"> Same as shipping address</label>
+                    </div>
+                    <div id="billingFields" style="display:none;">
+                        <div class="form-row-gc full-row">
+                            <div class="form-group-gc"><label>Billing Email Address <span class="req">*</span></label><input type="email" id="billEmail" placeholder="you@email.com"></div>
+                        </div>
+                        <div class="form-row-gc full-row">
+                            <div class="form-group-gc"><label>Confirm Billing Email <span class="req">*</span></label><input type="email" id="billEmailConfirm" placeholder="Confirm email"><p class="invalid-msg" id="billEmailMismatchMsg">Email addresses do not match.</p></div>
+                        </div>
+                        <div class="form-row-gc">
+                            <div class="form-group-gc"><label>First Name <span class="req">*</span></label><input type="text" id="billFirstName" placeholder="First name"></div>
+                            <div class="form-group-gc"><label>Last Name <span class="req">*</span></label><input type="text" id="billLastName" placeholder="Last name"></div>
+                        </div>
+                        <div class="form-row-gc full-row">
+                            <div class="form-group-gc"><label>Company <span style="font-weight:400;color:var(--gray-400);">(if applicable)</span></label><input type="text" placeholder="Company name"></div>
+                        </div>
+                        <div class="form-row-gc">
+                            <div class="form-group-gc"><label>Street Address <span class="req">*</span></label><input type="text" id="billStreet" placeholder="Street address"></div>
+                            <div class="form-group-gc"><label>Apt/Bldg/Floor</label><input type="text" placeholder="Apt, suite, etc."></div>
+                        </div>
+                        <div class="form-row-gc">
+                            <div class="form-group-gc"><label>City <span class="req">*</span></label><input type="text" id="billCity" placeholder="City"></div>
+                            <div class="form-group-gc"><label>State <span class="req">*</span></label><select id="billState"><option value="">Select</option><option>AK</option><option>AL</option><option>AR</option><option>AZ</option><option>CA</option><option>CO</option><option>CT</option><option>DC</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>IA</option><option>ID</option><option>IL</option><option>IN</option><option>KS</option><option>KY</option><option>LA</option><option>MA</option><option>MD</option><option>ME</option><option>MI</option><option>MN</option><option>MO</option><option>MS</option><option>MT</option><option>NC</option><option>ND</option><option>NE</option><option>NH</option><option>NJ</option><option>NM</option><option>NV</option><option selected>NY</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VA</option><option>VT</option><option>WA</option><option>WI</option><option>WV</option><option>WY</option></select></div>
+                        </div>
+                        <div class="form-row-gc">
+                            <div class="form-group-gc"><label>Zip Code <span class="req">*</span></label><input type="text" id="billZip" placeholder="Zip code"></div>
+                            <div class="form-group-gc"><label>Country</label><select><option selected>USA</option></select></div>
+                        </div>
+                    </div>
 
-                <!-- Summary -->
-                <div class="order-summary">
-                    <div class="summary-row">
-                        <span>Gift Card</span>
-                        <span id="summaryCard">$50.00</span>
+                    <div class="form-section-header" style="margin-top:24px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                        Payment Information
                     </div>
-                    <div class="summary-row">
-                        <span>Quantity</span>
-                        <span id="summaryQty">× 1</span>
+                    <div class="form-row-gc full-row">
+                        <div class="form-group-gc"><label>Credit Card Number <span class="req">*</span></label><input type="text" id="cardNumber" required placeholder="xxxx-xxxx-xxxx-xxxx" maxlength="19" inputmode="numeric" oninput="formatCard(this)"><p class="invalid-msg" id="cardNumberMsg">Please enter a valid 16-digit card number.</p></div>
                     </div>
-                    <div class="summary-row">
-                        <span>Shipping</span>
-                        <span>$1.00</span>
+                    <div class="form-row-gc three-col">
+                        <div class="form-group-gc"><label>CVV Code <span class="req">*</span></label><input type="text" id="cardCvv" required placeholder="•••" maxlength="4" inputmode="numeric" oninput="formatCvv(this)"></div>
+                        <div class="form-group-gc"><label>Exp Month <span class="req">*</span></label><select id="cardExpMonth" required><option value="">Month</option><option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option><option>08</option><option>09</option><option>10</option><option>11</option><option>12</option></select></div>
+                        <div class="form-group-gc"><label>Exp Year <span class="req">*</span></label><select id="cardExpYear" required><option value="">Year</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option><option>2032</option><option>2033</option><option>2034</option><option>2035</option><option>2036</option></select></div>
                     </div>
-                    <div class="summary-row total">
-                        <span>Total</span>
-                        <span id="summaryTotal">$51.00</span>
+
+                    <div class="order-summary" style="margin-top:24px;">
+                        <div class="summary-row"><span>Shipping</span><span>$1.00</span></div>
+                        <div class="summary-row total"><span>Total Due</span><span id="summaryTotal4">$51.00</span></div>
                     </div>
+
+                    <button type="button" class="btn-purchase" style="background:var(--green,#1a8d1a);" onclick="submitOrder()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Submit Order
+                    </button>
+                    <p style="text-align:center;font-size:.8rem;color:var(--gray-400);margin-top:12px;">Your payment is processed securely.</p>
                 </div>
-
-                <!-- Purchase button links to the existing purchase system -->
-                <a href="https://www.tomwahls.com/gift_card_new.cfm" class="btn-purchase" target="_blank" rel="noopener">
-                    Purchase Gift Card
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </a>
             </div>
         </div>
     </section>
@@ -624,7 +475,7 @@
             </div>
 
             <!-- UPDATE THIS HREF to the actual eGift platform URL -->
-            <a href="https://tomwahls.myguestaccount.com" class="btn-egift" target="_blank" rel="noopener">
+            <a href="https://tomwahls.myguestaccount.com/en-us/guest/egift" class="btn-egift" target="_blank" rel="noopener">
                 Send an eGift
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -666,7 +517,7 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h4>Good Everywhere</h4>
-            <p>Accepted at all 7 Tom Wahl's locations across Western NY.</p>
+            <p>Accepted at all 7 Rochester area locations.</p>
         </div>
     </div>
 </section>
@@ -698,86 +549,334 @@
         </div>
         <div>
             <h4>Contact</h4>
-            <p>Corp Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
-            <p>Corp Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
-            <p>Store Hours: 11AM-9PM Daily</p>
+            <p>Phone: <a href="tel:585-787-0150">585-787-0150</a></p>
+            <p>Email: <a href="mailto:feedback@tomwahls.com">feedback@tomwahls.com</a></p>
+            <p>Store Hours: <span id="footerHours">11AM–9PM Daily</span></p>
         </div>
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
+                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
+                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
+                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
                 <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/terms.html">Terms of Service</a></li>
                 <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2025 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
     </div>
 </footer>
 
-    <!-- Sienna Accessibility Widget -->
-    <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+<script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+<script>twRenderFooterHours('footerHours');</script>
 
+<script>
+(function() {
+    var amount = 50, qty = 1;
 
-<script> 
-// ── Panel Toggle ──
-function switchPanel(panel) {
-    document.getElementById('panelPhysical').classList.toggle('active', panel === 'physical');
-    document.getElementById('panelEgift').classList.toggle('active', panel === 'egift');
-    document.getElementById('togglePhysical').classList.toggle('active', panel === 'physical');
-    document.getElementById('toggleEgift').classList.toggle('active', panel === 'egift');
-}
-
-// ── Amount Selection ──
-let selectedAmount = 50;
-let quantity = 1;
-
-function selectAmount(amt, btn) {
-    selectedAmount = amt;
-    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    document.getElementById('customAmount').value = '';
-    updateSummary();
-}
-
-function clearPresets() {
-    document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
-}
-
-function updateCustomAmount() {
-    let val = parseInt(document.getElementById('customAmount').value);
-    if (!isNaN(val)) {
-        val = Math.max(20, Math.min(500, val));
-        selectedAmount = val;
-        updateSummary();
+    // ── Helpers ──
+    function updateSummaries() {
+        var total = amount * qty + 1;
+        var ids = [['summaryCard','summaryQty','summaryTotal'],['summaryCard2','summaryQty2','summaryTotal2'],['summaryCard3','summaryQty3','summaryTotal3']];
+        ids.forEach(function(set) {
+            var sc = document.getElementById(set[0]);
+            var sq = document.getElementById(set[1]);
+            var st = document.getElementById(set[2]);
+            if (sc) sc.textContent = '$' + amount.toFixed(2);
+            if (sq) sq.textContent = '× ' + qty;
+            if (st) st.textContent = '$' + total.toFixed(2);
+        });
+        var t4 = document.getElementById('summaryTotal4');
+        if (t4) t4.textContent = '$' + total.toFixed(2);
     }
-}
 
-// ── Quantity ──
-function changeQty(delta) {
-    quantity = Math.max(1, Math.min(100, quantity + delta));
-    document.getElementById('qtyValue').value = quantity;
-    document.getElementById('qtyMinus').disabled = quantity <= 1;
-    document.getElementById('qtyPlus').disabled = quantity >= 100;
-    updateSummary();
-}
+    // ── Validation helpers ──
+    function markInvalid(el) { el.classList.add('invalid'); }
+    function markValid(el) { el.classList.remove('invalid'); }
+    function clearInvalidOnChange(el) {
+        var evt = (el.tagName === 'SELECT' || el.type === 'checkbox') ? 'change' : 'input';
+        el.addEventListener(evt, function() { markValid(this); }, { once: false });
+    }
 
-// ── Summary ──
-function updateSummary() {
-    const cardTotal = selectedAmount * quantity;
-    const shipping = 1.00;
-    const total = cardTotal + shipping;
-    document.getElementById('summaryCard').textContent = '$' + selectedAmount.toFixed(2);
-    document.getElementById('summaryQty').textContent = '× ' + quantity;
-    document.getElementById('summaryTotal').textContent = '$' + total.toFixed(2);
-}
+    function validateFields(ids) {
+        var valid = true;
+        ids.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            if (!el.value.trim()) { markInvalid(el); clearInvalidOnChange(el); valid = false; }
+            else { markValid(el); }
+        });
+        return valid;
+    }
 
-// ── Char count ──
-function updateCharCount() {
-    const len = document.getElementById('giftMessage').value.length;
-    document.getElementById('charCount').textContent = len;
-}
+    function validateStep1() {
+        var hasPreset = !!document.querySelector('.amount-btn.selected');
+        var ci = document.getElementById('customAmount');
+        var customVal = ci ? parseFloat(ci.value) : NaN;
+        var hasCustom = !isNaN(customVal) && customVal >= 20 && customVal <= 500;
+        var amountOk = hasPreset || hasCustom;
+        var errMsg = document.getElementById('amountErrorMsg');
+        var amountGroup = document.querySelector('#step1 .form-group');
+        if (!amountOk) {
+            if (amountGroup) amountGroup.classList.add('amount-invalid');
+            if (errMsg) errMsg.classList.add('show');
+        } else {
+            if (amountGroup) amountGroup.classList.remove('amount-invalid');
+            if (errMsg) errMsg.classList.remove('show');
+        }
+        return amountOk;
+    }
+
+    function validateStep2() {
+        var valid = validateFields(['shipEmail','shipEmailConfirm','shipFirstName','shipLastName','shipStreet','shipCity','shipState','shipZip','shipPhone']);
+        var email = document.getElementById('shipEmail');
+        var emailConfirm = document.getElementById('shipEmailConfirm');
+        var mismatchMsg = document.getElementById('emailMismatchMsg');
+        var phoneEl = document.getElementById('shipPhone');
+        var phoneMsg = document.getElementById('phoneErrorMsg');
+
+        // Email format check
+        var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email && email.value.trim() && !emailRe.test(email.value.trim())) {
+            markInvalid(email); clearInvalidOnChange(email); valid = false;
+        }
+        if (emailConfirm && emailConfirm.value.trim() && !emailRe.test(emailConfirm.value.trim())) {
+            markInvalid(emailConfirm); clearInvalidOnChange(emailConfirm); valid = false;
+        }
+
+        // Email match check
+        if (email && emailConfirm && emailRe.test(email.value.trim()) && emailRe.test(emailConfirm.value.trim()) && email.value !== emailConfirm.value) {
+            markInvalid(emailConfirm);
+            if (mismatchMsg) mismatchMsg.classList.add('show');
+            clearInvalidOnChange(emailConfirm);
+            valid = false;
+        } else {
+            if (mismatchMsg) mismatchMsg.classList.remove('show');
+        }
+
+        // Phone format check: must be exactly (XXX) XXX-XXXX
+        var phoneRe = /^\(\d{3}\) \d{3}-\d{4}$/;
+        if (phoneEl) {
+            if (!phoneRe.test(phoneEl.value)) {
+                markInvalid(phoneEl);
+                if (phoneMsg) phoneMsg.classList.add('show');
+                clearInvalidOnChange(phoneEl);
+                valid = false;
+            } else {
+                markValid(phoneEl);
+                if (phoneMsg) phoneMsg.classList.remove('show');
+            }
+        }
+        return valid;
+    }
+
+    function validateStep3() {
+        var valid = validateFields(['cardExpMonth','cardExpYear']);
+        var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Card number: must be XXXX-XXXX-XXXX-XXXX (16 digits)
+        var cardEl = document.getElementById('cardNumber');
+        var cardMsg = document.getElementById('cardNumberMsg');
+        if (cardEl) {
+            if (!/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(cardEl.value)) {
+                markInvalid(cardEl); clearInvalidOnChange(cardEl);
+                if (cardMsg) cardMsg.classList.add('show');
+                valid = false;
+            } else {
+                markValid(cardEl);
+                if (cardMsg) cardMsg.classList.remove('show');
+            }
+        }
+
+        // CVV: must be 3–4 digits
+        var cvvEl = document.getElementById('cardCvv');
+        if (cvvEl) {
+            if (!/^\d{3,4}$/.test(cvvEl.value)) {
+                markInvalid(cvvEl); clearInvalidOnChange(cvvEl); valid = false;
+            } else { markValid(cvvEl); }
+        }
+
+        // Billing fields (only when not same as shipping)
+        var sameShip = document.getElementById('sameAsShipping');
+        if (sameShip && !sameShip.checked) {
+            var billOk = validateFields(['billEmail','billEmailConfirm','billFirstName','billLastName','billStreet','billCity','billState','billZip']);
+            if (!billOk) valid = false;
+
+            var bEmail = document.getElementById('billEmail');
+            var bEmailConfirm = document.getElementById('billEmailConfirm');
+            var bMismatchMsg = document.getElementById('billEmailMismatchMsg');
+
+            if (bEmail && bEmail.value.trim() && !emailRe.test(bEmail.value.trim())) {
+                markInvalid(bEmail); clearInvalidOnChange(bEmail); valid = false;
+            }
+            if (bEmailConfirm && bEmailConfirm.value.trim() && !emailRe.test(bEmailConfirm.value.trim())) {
+                markInvalid(bEmailConfirm); clearInvalidOnChange(bEmailConfirm); valid = false;
+            }
+            if (bEmail && bEmailConfirm && emailRe.test(bEmail.value.trim()) && emailRe.test(bEmailConfirm.value.trim()) && bEmail.value !== bEmailConfirm.value) {
+                markInvalid(bEmailConfirm);
+                if (bMismatchMsg) bMismatchMsg.classList.add('show');
+                clearInvalidOnChange(bEmailConfirm);
+                valid = false;
+            } else {
+                if (bMismatchMsg) bMismatchMsg.classList.remove('show');
+            }
+        }
+        return valid;
+    }
+
+    // ── Steps ──
+    window.goToStep = function(step) {
+        // Determine current step
+        var currentStep = 1;
+        for (var k = 1; k <= 3; k++) {
+            var cs = document.getElementById('step' + k);
+            if (cs && cs.classList.contains('active')) { currentStep = k; break; }
+        }
+        // Validate before advancing (not when going back)
+        if (step > currentStep) {
+            var ok = true;
+            if (currentStep === 1) ok = validateStep1();
+            if (currentStep === 2) ok = validateStep2();
+            if (currentStep === 3) ok = validateStep3();
+            if (!ok) return;
+        }
+        for (var i = 1; i <= 3; i++) {
+            var s = document.getElementById('step' + i);
+            if (s) s.classList.toggle('active', i === step);
+            var si = document.getElementById('stepInd' + i);
+            if (si) { si.classList.remove('active','done'); if (i === step) si.classList.add('active'); else if (i < step) si.classList.add('done'); }
+        }
+        for (var j = 1; j <= 2; j++) {
+            var sl = document.getElementById('stepLine' + j);
+            if (sl) sl.classList.toggle('done', j < step);
+        }
+        updateSummaries();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // ── Panel toggle ──
+    window.switchPanel = function(type) {
+        var panPhys = document.getElementById('panelPhysical');
+        var panEgift = document.getElementById('panelEgift');
+        var togPhys = document.getElementById('togglePhysical');
+        var togEgift = document.getElementById('toggleEgift');
+        if (type === 'physical') {
+            panPhys.classList.add('active'); panEgift.classList.remove('active');
+            togPhys.classList.add('active'); togEgift.classList.remove('active');
+        } else {
+            panEgift.classList.add('active'); panPhys.classList.remove('active');
+            togEgift.classList.add('active'); togPhys.classList.remove('active');
+        }
+    };
+
+    // ── Amount buttons ──
+    function clearAmountError() {
+        var amountGroup = document.querySelector('#step1 .form-group');
+        if (amountGroup) amountGroup.classList.remove('amount-invalid');
+        var errMsg = document.getElementById('amountErrorMsg');
+        if (errMsg) errMsg.classList.remove('show');
+    }
+
+    window.selectAmount = function(val, btn) {
+        amount = val;
+        document.querySelectorAll('.amount-btn').forEach(function(b) { b.classList.remove('selected'); });
+        btn.classList.add('selected');
+        var ci = document.getElementById('customAmount');
+        if (ci) ci.value = '';
+        clearAmountError();
+        updateSummaries();
+    };
+
+    window.clearPresets = function() {
+        document.querySelectorAll('.amount-btn').forEach(function(b) { b.classList.remove('selected'); });
+    };
+
+    window.updateCustomAmount = function() {
+        var ci = document.getElementById('customAmount');
+        if (!ci) return;
+        var val = parseFloat(ci.value);
+        if (!isNaN(val) && val >= 10 && val <= 500) { amount = val; clearAmountError(); updateSummaries(); }
+    };
+
+    // ── Submit ──
+    window.submitOrder = function() {
+        if (validateStep3()) {
+            alert('Order submitted! (This is a demo — integrate a payment processor here.)');
+        }
+    };
+
+    // ── Quantity ──
+    window.changeQty = function(delta) {
+        qty = Math.max(1, qty + delta);
+        var qv = document.getElementById('qtyValue');
+        if (qv) qv.value = qty;
+        var qm = document.getElementById('qtyMinus');
+        if (qm) qm.disabled = qty <= 1;
+        updateSummaries();
+    };
+
+    // ── Card formatters ──
+    window.formatCard = function(el) {
+        var digits = el.value.replace(/\D/g, '').slice(0, 16);
+        var parts = [];
+        for (var i = 0; i < digits.length; i += 4) { parts.push(digits.slice(i, i + 4)); }
+        el.value = parts.join('-');
+        var cardMsg = document.getElementById('cardNumberMsg');
+        if (/^\d{4}-\d{4}-\d{4}-\d{4}$/.test(el.value)) {
+            markValid(el);
+            if (cardMsg) cardMsg.classList.remove('show');
+        }
+    };
+
+    window.formatCvv = function(el) {
+        el.value = el.value.replace(/\D/g, '').slice(0, 4);
+        if (/^\d{3,4}$/.test(el.value)) { markValid(el); }
+    };
+
+    // ── Phone formatter ──
+    window.formatPhone = function(el) {
+        var digits = el.value.replace(/\D/g, '').slice(0, 10);
+        var formatted = '';
+        if (digits.length === 0) { formatted = ''; }
+        else if (digits.length <= 3) { formatted = '(' + digits; }
+        else if (digits.length <= 6) { formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3); }
+        else { formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6); }
+        el.value = formatted;
+        // Clear error live once valid
+        if (/^\(\d{3}\) \d{3}-\d{4}$/.test(formatted)) {
+            markValid(el);
+            var msg = document.getElementById('phoneErrorMsg');
+            if (msg) msg.classList.remove('show');
+        }
+    };
+
+    // ── Gift message ──
+    window.updateCharCount = function() {
+        var gm = document.getElementById('giftMessage');
+        var cc = document.getElementById('charCount');
+        if (gm && cc) cc.textContent = gm.value.length;
+    };
+
+    // ── Billing toggle ──
+    window.toggleBilling = function() {
+        var cb = document.getElementById('sameAsShipping');
+        var bf = document.getElementById('billingFields');
+        if (cb && bf) bf.style.display = cb.checked ? 'none' : 'block';
+    };
+
+    // ── Mobile menu ──
+    var hamb = document.querySelector('.hamburger');
+    var mobMenu = document.querySelector('.mobile-menu');
+    if (hamb && mobMenu) {
+        hamb.addEventListener('click', function(e) { e.preventDefault(); mobMenu.classList.toggle('open'); });
+    }
+
+    // ── Init ──
+    updateSummaries();
+})();
 </script>
 
 </body>
