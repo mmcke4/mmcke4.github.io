@@ -7,15 +7,15 @@
     <meta name="description" content="Find current Tom Wahl's coupons, promo codes and deals. Save on Rochester's best cheeseburgers, ground steak burgers, homemade root beer & more at all 7 Rochster, NY area locations. Print or show on your phone!">
     <meta name="keywords" content="Tom Wahl's coupons, Tom Wahls deals, Rochester burger coupons, Tom Wahls promo code, Western New York restaurant coupons, Tom Wahls discount, burger deals Rochester NY, Tom Wahl's specials">
     <link rel="canonical" href="https://mmcke4.github.io/coupons.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Tom Wahl's Coupons & Deals — Save on Rochester's Best Burgers">
     <meta property="og:description" content="Current coupons and promo codes for Tom Wahl's. Save on cheeseburgers, Wahlburgers, fries & homemade root beer at all Rochster, NY area locations.">
-    <meta property="og:url" content="https://mmcke4.github.io/coupons.html">
-    <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta property="og:url" content="/coupons.html">
+    <meta property="og:image" content="/assets/TomWahlsLogo.png">
     <meta property="og:site_name" content="Tom Wahl's">
     <meta property="og:locale" content="en_US">
 
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tom Wahl's Coupons — Rochester's Best Burger Deals">
     <meta name="twitter:description" content="Print or show current Tom Wahl's coupons on your phone. Save on Rochester's favorite cheeseburgers & homemade root beer!">
-    <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta name="twitter:image" content="/assets/TomWahlsLogo.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -60,6 +60,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -85,7 +86,7 @@
         /* ── NAV ── */
         .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
         .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 72px; width: auto; }
         .nav-links { display: flex; gap: 8px; align-items: center; }
         .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
         .nav-links a:hover { background: var(--gray-100); }
@@ -341,15 +342,15 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="nav-inner">
-        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
-            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+        <a href="/index.html" class="nav-logo">
+            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
         </a>
         <div class="nav-links">
             <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-            <a href="https://mmcke4.github.io/coupons.html" class="active">Coupons</a>
-            <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+            <a href="/order-online.html">Order Online</a>
+            <a href="/rewards.html">Rewards</a>
+            <a href="/coupons.html" class="active">Coupons</a>
+            <a href="/gift-cards.html">Gift Cards</a>
         </div>
         <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -357,11 +358,12 @@
     </div>
     <div class="mobile-menu">
         <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-        <a href="https://mmcke4.github.io/coupons.html" class="active">Coupons</a>
-        <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
-        <a href="https://mmcke4.github.io/gift-cards.html">Check Gift Card Balance</a>
+        <a href="/order-online.html">Order Online</a>
+        <a href="/rewards.html">Rewards</a>
+        <a href="/coupons.html" class="active">Coupons</a>
+        <a href="/fundraiser.html">Host a Fundraiser</a>
+        <a href="/gift-cards.html">Gift Cards</a>
+        <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance">Check Gift Card Balance</a>
     </div>
 </nav>
 
@@ -373,6 +375,7 @@
     <h1>Coupons & Deals</h1>
     <p>Save on Rochester's best cheeseburgers, Wahlburgers, crispy fries & homemade root beer. Click any coupon to enlarge, then print or show on your phone!</p>
 </header>
+<div class="checker-stripe"></div>
 
 <!-- ONLINE PROMO -->
 <div class="promo-banner">
@@ -397,7 +400,7 @@
              Add or remove coupon-card divs as needed. -->
 
         <div class="coupon-card" onclick="openLightbox(this.querySelector('img').src)">
-            <img src="https://www.tomwahls.com/Images_Content/Site2/Images/Coupons/TW_CouponQR%200426.jpg" alt="Tom Wahl's BOGO Hot Dog Coupon - April 2026">
+            <img src="/coupon-images\TW_CouponQR 0625.jpg" alt="Tom Wahl's BOGO Hot Dog Coupon - April 2026">
             <div class="coupon-card-footer">
                 <span>April 2026</span>
                 <div class="coupon-action">
@@ -433,14 +436,15 @@
         -->
     </div>
 </section>
+<div class="checker-stripe"></div>
 
 <!-- CTA BANNER -->
 <section class="cta-banner">
     <h2>Want Even More Deals?</h2>
     <p>Join Tom Wahl's Rewards and earn 2 points for every dollar spent. Unlock free menu items and exclusive member offers!</p>
     <div class="cta-buttons">
-        <a href="https://mmcke4.github.io/rewards.html" class="btn btn-red">Join Rewards</a>
-        <a href="https://mmcke4.github.io/order-online.html" class="btn btn-outline">Order Online</a>
+        <a href="/rewards.html" class="btn btn-red">Join Rewards</a>
+        <a href="/order-online.html" class="btn btn-outline">Order Online</a>
     </div>
 </section>
 
@@ -451,22 +455,22 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
         <div>
             <h4>Locations</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
+                <li><a href="/locations.html#avon">Avon</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="/locations.html#fairport">Fairport</a></li>
+                <li><a href="/locations.html#greece">Greece</a></li>
+                <li><a href="/locations.html#newark">Newark</a></li>
             </ul>
         </div>
         <div>
@@ -478,12 +482,12 @@
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
-                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
-                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
-                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
-                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+                <li><a href="/order-online.html">Order Online</a></li>
+                <li><a href="/rewards.html">Rewards Program</a></li>
+                <li><a href="/gift-cards.html">Gift Cards</a></li>
+                <li><a href="/fundraiser.html">Fundraisers</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
@@ -495,7 +499,7 @@
     <!-- Sienna Accessibility Widget -->
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     <!-- Hours JS -->
-    <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+    <script src="/assets/locations-data.js"></script>
     <script>twRenderFooterHours('footerHours');</script>
 
 <!-- LIGHTBOX -->

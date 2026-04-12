@@ -1,0 +1,276 @@
+/**
+ * Tom Wahl's — Shared 50s Diner Design System
+ * =============================================
+ * Classic 50s diner aesthetic inspired by Johnny Rockets:
+ * - Red checker stripe dividers
+ * - Chrome/metallic accents
+ * - Retro typography touches
+ * - Warm cream backgrounds with diner-style sections
+ * - Starburst and badge decorations
+ *
+ * USAGE: Add this to every page's <head>:
+ * <link rel="stylesheet" href="https://mmcke4.github.io/assets/shared-styles.css">
+ *
+ * Place AFTER your Google Fonts import, BEFORE page-specific <style> blocks.
+ * Page-specific styles will override these as needed.
+ */
+
+/* ── RED CHECKER STRIPE ── */
+/* Use: <div class="checker-stripe"></div> between any two sections */
+.checker-stripe {
+    width: 100%;
+    height: 24px;
+    background-image: url('/assets/RedChecker.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    flex-shrink: 0;
+    z-index: 9;
+}
+.checker-stripe.thick {
+    height: 36px;
+}
+.checker-stripe.thin {
+    height: 16px;
+}
+
+/* ── CHROME ACCENT LINE ── */
+/* A thin metallic-look separator */
+.chrome-line {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.1) 0%,
+        rgba(200,200,200,0.6) 25%,
+        rgba(255,255,255,0.9) 50%,
+        rgba(200,200,200,0.6) 75%,
+        rgba(255,255,255,0.1) 100%
+    );
+}
+
+/* ── RETRO SECTION DIVIDER (chrome + checker + chrome) ── */
+/* Full diner-style divider: <div class="diner-divider"></div> */
+.diner-divider {
+    display: flex;
+    flex-direction: column;
+}
+.diner-divider::before,
+.diner-divider::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        to bottom,
+        rgba(180,180,180,0.3) 0%,
+        rgba(255,255,255,0.8) 50%,
+        rgba(180,180,180,0.3) 100%
+    );
+}
+.diner-divider .checker-stripe {
+    height: 20px;
+}
+
+/* ── RETRO BADGE / STARBURST ── */
+/* Use for callout numbers or labels */
+.retro-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--red);
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.4rem;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 7px var(--red);
+    position: relative;
+}
+.retro-badge.small {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--red);
+}
+
+/* ── NEON GLOW TEXT (subtle) ── */
+.neon-text {
+    text-shadow: 0 0 10px rgba(200, 16, 46, 0.3), 0 0 40px rgba(200, 16, 46, 0.1);
+}
+
+/* ── DINER CARD STYLE ── */
+/* Cards with a subtle chrome border effect */
+.diner-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--gray-200);
+    position: relative;
+    overflow: hidden;
+}
+.diner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--red);
+}
+
+/* ── RETRO SECTION HEADER ── */
+.retro-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.retro-heading .eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--red);
+    margin-bottom: 8px;
+}
+.retro-heading h2 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 900;
+    color: var(--dark);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+.retro-heading .underline-accent {
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--red);
+    border-radius: 2px;
+    margin: 12px auto 0;
+}
+
+/* ── FOOTER CHECKER TOP BORDER ── */
+/* Automatically adds checker stripe above footer */
+.footer-with-checker {
+    position: relative;
+}
+.footer-with-checker::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 24px;
+    background-image: url('/assets/redchecker.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+/* ── NAV BOTTOM CHECKER ── */
+.nav-with-checker {
+    border-bottom: none !important;
+}
+.nav-with-checker::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: url('/assets/redchecker.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+/* ── HERO ADJUSTMENTS FOR 50s FEEL ── */
+/* Add class "diner-hero" alongside "page-hero" for the retro treatment */
+.diner-hero {
+    background: linear-gradient(160deg, var(--red) 0%, #8B0000 100%) !important;
+    position: relative;
+}
+.diner-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    background-image: url('/assets/redchecker.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+/* ── JUKEBOX-STYLE BUTTON ── */
+.btn-jukebox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: var(--red);
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 1rem;
+    box-shadow: 0 0 0 2px var(--red), 0 4px 16px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.btn-jukebox:hover {
+    background: #a00d24;
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 2px #a00d24, 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ── RETRO TILED BACKGROUND ── */
+/* For sections that need the classic diner floor look */
+.diner-floor-bg {
+    background-color: var(--cream);
+    background-image:
+        linear-gradient(45deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(0,0,0,0.02) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0,0,0,0.02) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(0,0,0,0.02) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0;
+}
+
+/* ── CLASSIC MARQUEE-STYLE SECTION ── */
+.marquee-section {
+    background: var(--dark);
+    color: #fff;
+    padding: 32px 20px;
+    text-align: center;
+    position: relative;
+}
+.marquee-section::before,
+.marquee-section::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: url('/assets/redchecker.jpg');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    position: absolute;
+    left: 0;
+}
+.marquee-section::before { top: 0; }
+.marquee-section::after { bottom: 0; }
+
+/* ── TYPOGRAPHY RETRO TOUCHES ── */
+.script-text {
+    font-style: italic;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+/* ── PRICE TAG STYLE ── */
+.price-tag {
+    display: inline-block;
+    background: var(--red);
+    color: #fff;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}

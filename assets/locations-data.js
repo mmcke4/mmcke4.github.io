@@ -33,13 +33,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsavon#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJfeUhN6VE0YkRwbghSiNMf-U",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -59,13 +59,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsbrighton#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJZSAYxa7K1okR6SFysaZu4lY",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -85,13 +85,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsbushnellsbasin#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ40rcrX000YkRjidZhLYdxtg",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -111,13 +111,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlscanandaigua#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJEUVku8Il0YkRqqsrKuX-CaQ",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -137,13 +137,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsfairport#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ_8sNLa3M1okR8yNd933sq9k",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -163,13 +163,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsgreece#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ-WBYjVWx1okRhOUwLPdv614",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     },
     {
@@ -189,13 +189,13 @@ const TW_LOCATIONS = [
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsnewark#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ1UsPa6TU0IkR6sTeoPWJ8pI",
         hours: {
-            mon: { open: "11:00 AM", close: "9:00 PM" },
-            tue: { open: "11:00 AM", close: "9:00 PM" },
-            wed: { open: "11:00 AM", close: "9:00 PM" },
-            thu: { open: "11:00 AM", close: "9:00 PM" },
-            fri: { open: "11:00 AM", close: "9:00 PM" },
-            sat: { open: "11:00 AM", close: "9:00 PM" },
-            sun: { open: "11:00 AM", close: "9:00 PM" }
+            mon: { open: "11:00 am", close: "9:00 pm" },
+            tue: { open: "11:00 am", close: "9:00 pm" },
+            wed: { open: "11:00 am", close: "9:00 pm" },
+            thu: { open: "11:00 am", close: "9:00 pm" },
+            fri: { open: "11:00 am", close: "9:00 pm" },
+            sat: { open: "11:00 am", close: "9:00 pm" },
+            sun: { open: "11:00 am", close: "9:00 pm" }
         }
     }
 ];

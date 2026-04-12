@@ -7,7 +7,7 @@
     <meta name="description" content="Join Tom Wahl's Rewards and earn 2 points per dollar at all 7 Rochster, NY area locations. Get a FREE cheeseburger after your first $10 purchase! Redeem points for free menu items, enjoy birthday rewards & exclusive member deals. Download the app today.">
     <meta name="keywords" content="Tom Wahl's rewards, Tom Wahls loyalty program, free cheeseburger Rochester, Tom Wahls app, Tom Wahl's points, Tom Wahls free food, Rochester burger rewards, Western New York restaurant rewards, Tom Wahls birthday reward">
     <link rel="canonical" href="https://mmcke4.github.io/rewards.html">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
@@ -204,6 +204,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -232,7 +233,7 @@
         /* ── NAV ── */
         .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
         .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 72px; width: auto; }
         .nav-links { display: flex; gap: 8px; align-items: center; }
         .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
         .nav-links a:hover { background: var(--gray-100); }
@@ -386,7 +387,7 @@
         }
         .earn-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns:repeat(3,1fr);
             gap: 20px;
         }
         .earn-card {
@@ -561,15 +562,15 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="nav-inner">
-        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
-            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+        <a href="/index.html" class="nav-logo">
+            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
         </a>
         <div class="nav-links">
             <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-            <a href="https://mmcke4.github.io/rewards.html" class="active">Rewards</a>
-            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-            <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+            <a href="/order-online.html">Order Online</a>
+            <a href="/rewards.html" class="active">Rewards</a>
+            <a href="/coupons.html">Coupons</a>
+            <a href="/gift-cards.html">Gift Cards</a>
         </div>
         <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -577,11 +578,12 @@
     </div>
     <div class="mobile-menu">
         <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-        <a href="https://mmcke4.github.io/rewards.html" class="active">Rewards</a>
-        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-        <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
-        <a href="https://mmcke4.github.io/gift-cards.html">Check Gift Card Balance</a>
+        <a href="/order-online.html">Order Online</a>
+        <a href="/rewards.html" class="active">Rewards</a>
+        <a href="/coupons.html">Coupons</a>
+        <a href="/fundraiser.html">Host a Fundraiser</a>
+        <a href="/gift-cards.html">Gift Cards</a>
+        <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance">Check Gift Card Balance</a>
     </div>
 </nav>
 
@@ -590,13 +592,13 @@
     <nav aria-label="Breadcrumb" style="margin-bottom:12px;font-size:0.85rem;opacity:0.7;">
         <a href="https://mmcke4.github.io/" style="color:white;text-decoration:underline;">Home</a> &rsaquo; Rewards Program
     </nav>
-    <div class="hero-badge">
+    <!--<div class="hero-badge">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         Tom Wahl's Rewards Program
-    </div>
+    </div>-->
     <h1>Eat More.<br>Earn More.<br>Get Free Food.</h1>
     <p>Join today and earn a <strong>FREE Cheeseburger</strong> after your first $10 purchase at any of our 7 Rochester, NY area. Earn 2 points for every dollar spent!</p>
-    <p style="font-size:0.9rem;opacity:0.75;margin-bottom:16px;">Download the app to get started — it's the fastest way to join!</p>
+    <p style="font-size:0.9rem;margin-bottom:16px;">Download the app to get started — it's the fastest way to join!</p>
     <div class="hero-ctas">
         <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790" class="btn btn-white" target="_blank" rel="noopener">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
@@ -608,7 +610,8 @@
         </a>
         <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k&template=1" class="btn btn-ghost" target="_blank" rel="noopener">Or Enroll Online</a>
     </div>
-</header>
+</header><div class="checker-stripe"></div>
+
 
 <!-- HOW IT WORKS -->
 <section class="how-section">
@@ -687,7 +690,8 @@
             <p>Place an order at tomwahls.com to earn rewards on your favorites.</p>
         </div>
     </div>
-</section>
+</section><div class="checker-stripe"></div>
+
 
 <!-- REWARD TIERS -->
 <section class="tier-section" id="rewards-tiers">
@@ -696,52 +700,52 @@
         <p class="tier-subtitle">Redeem your points for these delicious rewards</p>
         <div class="tier-grid">
             <div class="tier-item">
-                <img src="assets/rewards/reward-hot-dog.png" alt="Hot Dog">
+                <img src="/assets/rewards/reward-hot-dog.png" alt="Hot Dog">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Hot Dog</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-fries.png" alt="French Fry">
+                <img src="/assets/rewards/reward-fries.png" alt="French Fry">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Regular Fry</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-ice-cream.png" alt="Ice Cream">
+                <img src="/assets/rewards/reward-ice-cream.png" alt="Ice Cream">
                 <div class="tier-points">150 PTS</div>
                 <h4>FREE Ice Cream</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-cheeseburger.png" alt="Cheeseburger">
+                <img src="/assets/rewards/reward-cheeseburger.png" alt="Cheeseburger">
                 <div class="tier-points">250 PTS</div>
                 <h4>FREE Cheeseburger</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-wahlburger.png" alt="Wahlburger">
+                <img src="/assets/rewards/reward-wahlburger.png" alt="Wahlburger">
                 <div class="tier-points">250 PTS</div>
                 <h4>FREE Wahlburger</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-grilled-chicken.png" alt="Chicken Sandwich">
+                <img src="/assets/rewards/reward-grilled-chicken.png" alt="Chicken Sandwich">
                 <div class="tier-points">250 PTS</div>
                 <h4>FREE Chicken Sandwich</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-chicken-fingers.png" alt="5pc Tenders">
+                <img src="/assets/rewards/reward-chicken-fingers.png" alt="5pc Tenders">
                 <div class="tier-points">300 PTS</div>
                 <h4>FREE 5pc Tenders</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-fun-meal-cb-core.png" alt="Fun Meal">
+                <img src="/assets/rewards/reward-fun-meal-cb-core.png" alt="Fun Meal">
                 <div class="tier-points">300 PTS</div>
                 <h4>FREE Kid's Meal</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-junker-core-reward.png" alt="55 Junker Plate">
+                <img src="/assets/rewards/reward-junker-core-reward.png" alt="55 Junker Plate">
                 <div class="tier-points">400 PTS</div>
                 <h4>FREE Junker Plate</h4>
             </div>
             <div class="tier-item">
-                <img src="assets/rewards/reward-fish-dinner.png" alt="Fish Dinner">
+                <img src="/assets/rewards/reward-fish-dinner.png" alt="Fish Dinner">
                 <div class="tier-points">500 PTS</div>
                 <h4>FREE Fish Dinner</h4>
             </div>
@@ -796,7 +800,8 @@
             <p>Exclusive offers, new menu items, and insider info.</p>
         </div>
     </div>
-</section>
+</section><div class="checker-stripe"></div>
+
 
 <!-- FAQ -->
 <section class="faq-section">
@@ -808,7 +813,7 @@
                 How does Tom Wahl's Rewards Program Work?
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Once you become a member, you will earn 2 points per $1 spent at any Tom Wahl's location. Earn points automatically when you order in our app and online at <a href="https://www.tomwahls.com/" style="color:var(--red);font-weight:600;">tomwahls.com</a>. You must check in to earn points and redeem rewards, open your Tom Wahl's app &amp; tap the "CHECK-IN" icon, and scan your QR code at the register, or provide the phone number associated with your account at checkout.</div>
+            <div class="faq-answer">Once you become a member, you will earn 2 points per $1 spent at any Tom Wahl's location. Earn points automatically when you order in our app and online via tomwahls.com. You must check in to earn points and redeem rewards, open your Tom Wahl's app &amp; either; tap the "CHECK-IN" icon and share your code, scan your QR code at the register, or provide the phone number associated with your account at checkout.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -836,14 +841,14 @@
                 Do I need a smartphone to participate?
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Our mobile app is the best way to participate. To earn points in the restaurant without a mobile device, you will need to provide the phone number associated with the account. Non-App users can manage their account online using this link: click <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--red);font-weight:600;">here</a>.</div>
+            <div class="faq-answer">Our mobile app is the best way to participate. To earn points in the restaurant without a mobile device, you will need to provide the phone number associated with the account. Non-App users can manage their account online using this link: <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--red);font-weight:600;">click here</a>.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 What can I redeem points for?
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Points can be redeemed for most of your favorite menu items like Milkshakes, Cheeseburgers, Junker Plates, and more. To see the full list of current rewards, click <a href="#rewards-tiers" style="color:var(--red);font-weight:600;">here</a>. Or visit the Reward Yourself section in the app or online to redeem your points.</div>
+            <div class="faq-answer">Points can be redeemed for most of your favorite menu items like Milkshakes, Cheeseburgers, Junker Plates, and more. To see the full list of current rewards, <a href="#rewards-tiers" style="color:var(--red);font-weight:600;">click here</a>. Or visit the Reward Yourself section in the app or online to redeem your points.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -920,7 +925,7 @@
                 Can I use the Mobile App to Pay?
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">You can add a credit or debit card to your rewards account, and you can use this payment method for orders that you place, pick, and deliver in the mobile app or online. If you do, this will appear in the checkout flow.</div>
+            <div class="faq-answer">You can save a credit or debit card to your rewards account, and use this payment method for food orders  you place in the mobile app or online. Once added, this payment method will appear in the checkout flow.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
@@ -941,7 +946,7 @@
                 My Question Hasn't Been Answered. What Should I Do?
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Click on the menu icon in the upper left corner of the Mobile App welcome page. Select the <a href="https://www.tomwahls.com/contact_us.cfm" style="color:var(--red);font-weight:600;">"Contact Us"</a> link, and you will be taken to a feedback page, where you can ask a question or submit an inquiry, etc. You can also email us directly at <a href="mailto:rewards@tomwahls.com" style="color:var(--red);font-weight:600;">rewards@tomwahls.com</a>.</div>
+            <div class="faq-answer">Please reach out! Email us directly at <a href="mailto:rewards@tomwahls.com" style="color:var(--red);font-weight:600;">rewards@tomwahls.com</a>.</div>
         </div>
     </div>
 </section>
@@ -964,22 +969,22 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
         <div>
             <h4>Locations</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
+                <li><a href="/locations.html#avon">Avon</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="/locations.html#fairport">Fairport</a></li>
+                <li><a href="/locations.html#greece">Greece</a></li>
+                <li><a href="h/locations.html#newark">Newark</a></li>
             </ul>
         </div>
         <div>
@@ -991,12 +996,12 @@
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
-                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
-                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
-                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
-                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+                <li><a href="/order-online.html">Order Online</a></li>
+                <li><a href="/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="/gift-cards.html">Gift Cards</a></li>
+                <li><a href="/fundraiser.html">Fundraisers</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
@@ -1005,7 +1010,7 @@
     </div>
 </footer>
 
-<script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+<script src="/assets/locations-data.js"></script>
 <script>twRenderFooterHours('footerHours');</script>
 
 </body>

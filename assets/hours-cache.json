@@ -1,0 +1,22 @@
+{
+  "lastUpdated": "2026-04-11T11:00:00Z",
+  "regularHours": {
+    "mon": { "open": "11:00 am", "close": "9:00 pm" },
+    "tue": { "open": "11:00 am", "close": "9:00 pm" },
+    "wed": { "open": "11:00 am", "close": "9:00 pm" },
+    "thu": { "open": "11:00 am", "close": "9:00 pm" },
+    "fri": { "open": "11:00 am", "close": "9:00 pm" },
+    "sat": { "open": "11:00 am", "close": "9:00 pm" },
+    "sun": { "open": "11:00 am", "close": "9:00 pm" }
+  },
+  "specialDays": [],
+  "locations": [
+    { "id": "avon",        "businessStatus": "OPERATIONAL", "rating": 4.6, "reviews": 3553 },
+    { "id": "brighton",    "businessStatus": "OPERATIONAL", "rating": 4.4, "reviews": 1266 },
+    { "id": "basin",       "businessStatus": "OPERATIONAL", "rating": 4.4, "reviews": 929  },
+    { "id": "canandaigua", "businessStatus": "OPERATIONAL", "rating": 4.4, "reviews": 1732 },
+    { "id": "fairport",    "businessStatus": "OPERATIONAL", "rating": 4.4, "reviews": 1078 },
+    { "id": "greece",      "businessStatus": "OPERATIONAL", "rating": 3.9, "reviews": 379  },
+    { "id": "newark",      "businessStatus": "OPERATIONAL", "rating": 4.3, "reviews": 1126 }
+  ]
+}

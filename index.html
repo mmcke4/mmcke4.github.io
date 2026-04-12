@@ -7,7 +7,7 @@
     <meta name="description" content="Tom Wahl's — home of Rochester's Best Cheeseburgers, ground steak burgers, homemade root beer & crispy fries since 1955. Order online for pickup or delivery from 7 Rochester, NY area locations. Join Rewards and earn free food!">
     <meta name="keywords" content="Tom Wahl's, Tom Wahls, Rochester best cheeseburger, Western New York burgers, Wahlburger, homemade root beer, Rochester NY restaurant, ground steak burger, 55 Junker Plate, Tom Wahls menu, Tom Wahls locations">
     <link rel="canonical" href="https://mmcke4.github.io/">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Tom Wahl's — Rochester's Best Cheeseburgers Since 1955">
     <meta property="og:description" content="Ground steak cheeseburgers, crispy fries & homemade root beer. Order online, find coupons, or join rewards at 7 Rochester, NY area locations.">
     <meta property="og:url" content="https://mmcke4.github.io/">
-    <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta property="og:image" content="/assets/TomWahlsLogo.png">
     <meta property="og:site_name" content="Tom Wahl's">
     <meta property="og:locale" content="en_US">
 
@@ -23,7 +23,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tom Wahl's — Rochester's Best Cheeseburgers">
     <meta name="twitter:description" content="Home of the Wahlburger since 1955. Order online, earn rewards, find deals at 7 Rochster, NY area locations.">
-    <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta name="twitter:image" content="/assets/TomWahlsLogo.png">
 
     <!-- Structured Data: Organization -->
     <script type="application/ld+json">
@@ -68,6 +68,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -94,7 +95,7 @@
         /* ── NAV ── */
         .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
         .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 72px; width: auto; }
         .nav-links { display: flex; gap: 8px; align-items: center; }
         .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
         .nav-links a:hover { background: var(--gray-100); }
@@ -308,7 +309,7 @@
         }
         .loc-chip:hover { background: var(--red-light); }
         .loc-chip svg { width: 18px; height: 18px; color: var(--red); flex-shrink: 0; }
-        .loc-chip .loc-name { font-weight: 600; font-size: 0.95rem; }
+        .loc-chip .loc-name { font-weight: 600; font-size: 0.95rem; text-align: left;}
         .loc-chip .loc-hours { font-size: 0.8rem; color: var(--gray-600); }
         .locations-cta {
             display: inline-flex;
@@ -339,15 +340,15 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="nav-inner">
-        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
-            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo — Rochester's Best Cheeseburgers Since 1955">
+        <a href="/index.html" class="nav-logo">
+            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo — Rochester's Best Cheeseburgers Since 1955">
         </a>
         <div class="nav-links">
             <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-            <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
+            <a href="/order-online.html">Order Online</a>
+            <a href="/rewards.html">Rewards</a>
+            <a href="/coupons.html">Coupons</a>
+            <a href="/gift-cards.html">Gift Cards</a>
         </div>
         <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -355,12 +356,12 @@
     </div>
     <div class="mobile-menu">
         <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-        <a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a>
-        <a href="https://mmcke4.github.io/fundraiser.html">Host a Fundraiser</a>
-        <a href="https://mmcke4.github.io/check-balance.html">Check Gift Card Balance</a>
+        <a href="/order-online.html">Order Online</a>
+        <a href="/rewards.html">Rewards</a>
+        <a href="/coupons.html">Coupons</a>
+        <a href="/fundraiser.html">Host a Fundraiser</a>
+        <a href="/gift-cards.html">Gift Cards</a>
+        <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance">Check Gift Card Balance</a>
     </div>
 </nav>
 
@@ -369,28 +370,28 @@
     <h1> Tom Wahl's <br> Old School Quality <br> Served with a Smile! </h1>
     <p>Savor Rochester's Best Cheeseburgers with Hot n' Crispy Fries. Wash it all Down with a Frosted Mug of our Famous Homemade Root Beer — Fresh, Fast &amp; Full of Flavor!</p>
     <div class="hero-ctas">
-        <a href="https://mmcke4.github.io/order-online.html" class="btn btn-white">
+        <a href="/order-online.html" class="btn btn-white">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
             Order Online
         </a>
-        <a href="https://mmcke4.github.io/coupons.html" class="btn btn-ghost">
+        <a href="/coupons.html" class="btn btn-ghost">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
             Find Coupons
         </a>
-        <a href="https://mmcke4.github.io/rewards.html" class="btn btn-ghost">
+        <a href="/rewards.html" class="btn btn-ghost">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             Join Rewards
         </a>
     </div>
-</header>
+</header><div class="checker-stripe"></div>
 
 <!-- FOOD SHOWCASE -->
 <div class="showcase">
-    <img src="https://mmcke4.github.io/assets/TableSetting.png" alt="Hot & Fresh Cheeseburger, fries, medium twist ice cream and our famous Root Beer — at Tom Wahl's 50s diner">
+    <img src="assets/TableSetting.png" alt="Hot & Fresh Cheeseburger, fries, medium twist ice cream and our famous Root Beer — at Tom Wahl's 50s diner">
 </div>
 
 <!-- FEATURE CARDS -->
-<section class="features">
+<section class="features ">
     <div class="features-grid">
         <div class="feature-card">
             <div class="feature-icon">
@@ -400,7 +401,7 @@
             </div>
             <h3>Tom Wahl's Rewards</h3>
             <p>Earn points on every purchase &amp; unlock exclusive offers. Sign up today and earn a FREE Cheeseburger reward!</p>
-            <a href="https://mmcke4.github.io/rewards.html" class="feature-link">
+            <a href="/rewards.html" class="feature-link">
                 Learn More
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -414,7 +415,7 @@
             </div>
             <h3>Gift Cards</h3>
             <p>The perfect gift for all the burger lovers in your life. Buy online or in-store at any Tom Wahl's location.</p>
-            <a href="https://mmcke4.github.io/gift-cards.html" class="feature-link">
+            <a href="/gift-cards.html" class="feature-link">
                 Purchase
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -427,7 +428,7 @@
             </div>
             <h3>Host a Fundraiser</h3>
             <p>We want to help you reach your goals! 15% of sales you bring in will be donated to your organization.</p>
-            <a href="https://mmcke4.github.io/fundraiser.html" class="feature-link">
+            <a href="/fundraiser.html" class="feature-link">
                 Learn More
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -443,13 +444,13 @@
             </div>
             <h3>Careers</h3>
             <p>Join our team! We're always looking for grill masters, fry experts &amp; friendly team members!</p>
-            <a href="https://mmcke4.github.io/careers.html" class="feature-link">
+            <a href="/careers.html" class="feature-link">
                 Apply Today
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
         </div>
     </div>
-</section>
+</section><div class="checker-stripe"></div>
 
 <!-- APP DOWNLOAD BANNER -->
 <section class="app-banner">
@@ -471,49 +472,49 @@
         <h2>7 Locations Across Rochester, New York</h2>
         <p>Find a Tom Wahl's location near you</p>
         <div class="locations-grid">
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Avon</div>
                     <div class="loc-hours">283 E Main St</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Brighton</div>
                     <div class="loc-hours">2545 Monroe Ave</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Bushnell's Basin</div>
                     <div class="loc-hours">643 Pittsford-Victor Rd</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Canandaigua</div>
                     <div class="loc-hours">2510 Rochester Rd</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Fairport</div>
                     <div class="loc-hours">1333 Fairport Rd</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Greece</div>
                     <div class="loc-hours">671 Maiden Ln</div>
                 </div>
             </a>
-            <a href="https://mmcke4.github.io/order-online.html" class="loc-chip">
+            <a href="/order-online.html" class="loc-chip">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 <div>
                     <div class="loc-name">Newark</div>
@@ -521,7 +522,7 @@
                 </div>
             </a>
         </div>
-        <a href="https://mmcke4.github.io/order-online.html" class="locations-cta">
+        <a href="/order-online.html" class="locations-cta">
             Order from the nearest location
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -535,22 +536,22 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates &amp; Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="h/assets/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
         <div>
             <h4>Locations</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
+                <li><a href="/locations.html#avon">Avon</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="/locations.html#fairport">Fairport</a></li>
+                <li><a href="/locations.html#greece">Greece</a></li>
+                <li><a href="/locations.html#newark">Newark</a></li>
             </ul>
         </div>
         <div>
@@ -562,13 +563,13 @@
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
-                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
-                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
-                <li><a href="https://mmcke4.github.io/gift-cards.html">Gift Cards</a></li>
-                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
-                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+                <li><a href="/order-online.html">Order Online</a></li>
+                <li><a href="/rewards.html">Rewards Program</a></li>
+                <li><a href="/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="/gift-cards.html">Gift Cards</a></li>
+                <li><a href="/fundraiser.html">Fundraisers</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
@@ -580,7 +581,7 @@
     <!-- Sienna Accessibility Widget -->
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
     <!-- Hours JS -->
-    <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+    <script src="/locations-data.js"></script>
     <script>twRenderFooterHours('footerHours');</script>
 
 </body>

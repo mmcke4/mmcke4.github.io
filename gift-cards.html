@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Cards | Tom Wahl's - The Perfect Gift for Burger Lovers</title>
     <meta name="description" content="Give the gift of Rochester's Best Cheeseburgers! Purchase Tom Wahl's physical gift cards or send an eGift card instantly. Available in any amount from $10-$500.">
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="canonical" href="https://mmcke4.github.io/gift-cards.html">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_io/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
@@ -35,7 +37,7 @@
         /* ── NAV ── */
         .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
         .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 52px; width: auto; }
+        .nav-logo img { height: 72px; width: auto; }
         .nav-links { display: flex; gap: 8px; align-items: center; }
         .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
         .nav-links a:hover { background: var(--gray-100); }
@@ -46,13 +48,15 @@
         .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
         .mobile-menu a.active { color: var(--red); }
         @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
-/* HERO */
+        
+        /* HERO */
         .page-hero{background:linear-gradient(135deg,var(--red),var(--red-dark));color:var(--white);padding:60px 20px 80px;text-align:center;position:relative;overflow:hidden}
         .page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.06) 0%,transparent 50%);pointer-events:none}
         .page-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;margin-bottom:12px;position:relative}.page-hero p{font-size:1.1rem;opacity:.9;max-width:500px;margin:0 auto;position:relative}
+        .breadcrumb{margin-bottom:12px;font-size:.85rem;opacity:.7}.breadcrumb a{color:white;text-decoration:underline}
 
         /* TOGGLE */
-        .toggle-section{max-width:520px;margin:-32px auto 0;padding:0 20px;position:relative;z-index:10}
+        .toggle-section{max-width:520px;margin:-40px auto 0;padding:0 20px;position:relative;z-index:10}
         .toggle-card{background:var(--white);border-radius:60px;box-shadow:var(--shadow-lg);padding:6px;display:grid;grid-template-columns:1fr 1fr;gap:4px}
         .toggle-btn{padding:14px 20px;border-radius:54px;border:none;background:transparent;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;color:var(--gray-600);transition:.3s;display:flex;align-items:center;justify-content:center;gap:8px}
         .toggle-btn.active{background:var(--red);color:var(--white);box-shadow:0 4px 16px rgba(200,16,46,.3)}
@@ -64,17 +68,22 @@
         /* STEPS BAR */
         .steps-bar{display:flex;align-items:center;justify-content:center;max-width:500px;margin:0 auto 32px}
         .step-indicator{display:flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--gray-400);white-space:nowrap;transition:.3s}
-        .step-indicator.active{color:var(--red)}.step-indicator.done{color:var(--dark)}
+        .step-indicator.active{color:var(--red)}
+        .step-indicator.done{color:var(--dark)}
         .step-dot{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;background:var(--gray-200);color:var(--gray-400);transition:.3s}
-        .step-indicator.active .step-dot{background:var(--red);color:var(--white)}.step-indicator.done .step-dot{background:var(--dark);color:var(--white)}
-        .step-line{flex:1;height:2px;background:var(--gray-200);margin:0 12px;transition:.3s}.step-line.done{background:var(--dark)}
+        .step-indicator.active .step-dot{background:var(--red);color:var(--white)}
+        .step-indicator.done .step-dot{background:var(--dark);color:var(--white)}
+        .step-line{flex:1;height:2px;background:var(--gray-200);margin:0 12px;transition:.3s}
+        .step-line.done{background:var(--dark)}
         .form-step{display:none}.form-step.active{display:block}
 
         /* CARD SECTION */
         .card-section{max-width:900px;margin:0 auto;padding:48px 20px 60px}
         .card-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-        @media(max-width:700px){.card-layout{grid-template-columns:1fr}}
-        .card-preview{position:sticky;top:100px}
+        @media(max-width:700px){
+            .card-layout{grid-template-columns:1fr}
+        }
+        .card-preview{position:sticky;top:100px;z-index:1}
         .card-image-wrap{background:linear-gradient(135deg,#fff,var(--gray-100));border-radius:var(--radius-lg);padding:32px;box-shadow:var(--shadow-sm);text-align:center}
         .card-image-wrap img{max-width:320px;margin:0 auto;border-radius:var(--radius);box-shadow:0 8px 32px rgba(0,0,0,.15)}
         .card-caption{margin-top:16px;font-size:.85rem;color:var(--gray-600)}
@@ -83,17 +92,19 @@
         .card-feature svg{width:16px;height:16px;color:var(--green)}
         .order-form h2{font-size:1.5rem;font-weight:800;margin-bottom:24px}
         .form-group{margin-bottom:24px}
-        .form-label{display:block;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-600);margin-bottom:10px}
+        .form-label{display:block;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--gray-600);margin-bottom:10px}s.req{color:var(--red)}
+
 
         /* AMOUNT */
         .amount-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
         .amount-btn{padding:14px 8px;border:2px solid var(--gray-200);border-radius:var(--radius);background:var(--white);font-family:inherit;font-size:1.05rem;font-weight:700;cursor:pointer;transition:.2s;color:var(--dark)}
         .amount-btn:hover{border-color:var(--red);color:var(--red)}
         .amount-btn.selected{border-color:var(--red);background:var(--red-light);color:var(--red)}
-        .custom-amount-wrap{position:relative}.dollar-sign{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:1.1rem;font-weight:700;color:var(--gray-400)}
+        .custom-amount-wrap{position:relative}
+        .dollar-sign{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:1.1rem;font-weight:700;color:var(--gray-400)}
         .custom-input{width:100%;padding:14px 16px 14px 32px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:1rem;font-weight:600;color:var(--dark);transition:.2s;background:var(--white)}
         .custom-input:focus{outline:none;border-color:var(--red)}
-        .custom-hint{font-size:.8rem;color:var(--gray-400);margin-top:6px}
+        .custom-hint{font-size:.8rem;color:var(--gray-400);margin-top:6px;margin-left:14px}
 
         /* QTY */
         .qty-control{display:inline-flex;align-items:center;border:2px solid var(--gray-200);border-radius:var(--radius);overflow:hidden}
@@ -159,7 +170,7 @@
 
         /* INFO STRIP */
         .info-strip{background:var(--gray-100);padding:40px 20px;border-top:1px solid var(--gray-200)}
-        .info-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;text-align:center}
+        .info-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:32px;text-align:center}
         .info-item .info-icon{width:48px;height:48px;background:var(--white);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;box-shadow:var(--shadow-sm)}
         .info-item .info-icon svg{width:24px;height:24px;color:var(--red)}
         .info-item h4{font-size:.95rem;font-weight:700;margin-bottom:4px}
@@ -193,15 +204,15 @@
 <!-- NAV -->
 <nav class="nav">
     <div class="nav-inner">
-        <a href="https://mmcke4.github.io/index.html" class="nav-logo">
-            <img src="https://mmcke4.github.io/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+        <a href="/index.html" class="nav-logo">
+            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
         </a>
         <div class="nav-links">
             <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-            <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-            <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-            <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-            <a href="https://mmcke4.github.io/gift-cards.html" class="active">Gift Cards</a>
+            <a href="/order-online.html">Order Online</a>
+            <a href="/rewards.html">Rewards</a>
+            <a href="/coupons.html">Coupons</a>
+            <a href="/gift-cards.html" class="active">Gift Cards</a>
         </div>
         <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Toggle menu">
             <span></span><span></span><span></span>
@@ -209,19 +220,21 @@
     </div>
     <div class="mobile-menu">
         <a href="https://www.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
-        <a href="https://mmcke4.github.io/order-online.html">Order Online</a>
-        <a href="https://mmcke4.github.io/rewards.html">Rewards</a>
-        <a href="https://mmcke4.github.io/coupons.html">Coupons</a>
-        <a href="https://mmcke4.github.io/gift-cards.html" class="active">Gift Cards</a>
-        <a href="https://mmcke4.github.io/check-balance.html">Check Gift Card Balance</a>
+        <a href="/order-online.html">Order Online</a>
+        <a href="/rewards.html">Rewards</a>
+        <a href="/coupons.html">Coupons</a>
+        <a href="/fundraiser.html">Host a Fundraiser</a>
+        <a href="/gift-cards.html" class="active">Gift Cards</a>
+        <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance">Check Gift Card Balance</a>
     </div>
 </nav>
 
 <!-- HERO -->
 <section class="page-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="https://mmcke4.github.io/">Home</a> &rsaquo; Gift Cards</nav>
     <h1>Gift Cards</h1>
     <p>The perfect gift for the burger lovers in your life. Available as a physical card shipped to your door, or as an instant eGift!</p>
-</section>
+</section><div class="checker-stripe"></div>
 
 <!-- TYPE TOGGLE -->
 <div class="toggle-section">
@@ -254,12 +267,12 @@
             <div class="card-layout">
                 <div class="card-preview">
                     <div class="card-image-wrap">
-                        <img src="assets/gift-card-design.png" alt="Tom Wahl's Gift Card">
+                        <img src="/assets/gift-card-design.png" alt="Tom Wahl's Gift Card">
                         <p class="card-caption">Physical gift card shipped via USPS</p>
                         <div class="card-features">
                             <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Never expires</div>
                             <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> All locations</div>
-                            <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Earn rewards</div>
+                            <div class="card-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Earn points when spent</div>
                         </div>
                     </div>
                 </div>
@@ -278,7 +291,7 @@
                             <span class="dollar-sign">$</span>
                             <input type="number" class="custom-input" id="customAmount" placeholder="Custom amount (10–500)" min="10" max="500" step="5" onfocus="clearPresets()" oninput="updateCustomAmount()">
                         </div>
-                        <p class="custom-hint">Min $10 · Max $500 · $5 increments</p>
+                        <p class="custom-hint">Min $10 · Max $500</p>
                         <p class="amount-invalid-msg" id="amountErrorMsg">Please select or enter a gift card amount.</p>
                     </div>
 
@@ -292,8 +305,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Gift Message <span style="font-weight:400;text-transform:none;letter-spacing:0;">(optional)</span></label>
-                        <textarea class="gift-textarea" id="giftMessage" maxlength="200" placeholder="Add a personal message..." oninput="updateCharCount()"></textarea>
+                        <label class="form-label">Gift Message <span class="req">*</span></label>
+                        <textarea class="gift-textarea" id="giftMessage" maxlength="200" required placeholder="Add a personal message so the person receiving your gift knows who it came from..." oninput="updateCharCount()"></textarea>
                         <div class="char-count"><span id="charCount">0</span>/200</div>
                     </div>
 
@@ -518,10 +531,10 @@
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h4>Good Everywhere</h4>
-            <p>Accepted at all 7 Rochester area locations.</p>
+            <p>Accepted at all Tom Wahl's locations.</p>
         </div>
     </div>
-</section>
+</section><div class="checker-stripe"></div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -530,22 +543,22 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="https://mmcke4.github.io/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="https://mmcke4.github.io/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="https://mmcke4.github.io/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="https://mmcke4.github.io/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.png" alt="TikTok"></a>
             </div>
         </div>
         <div>
             <h4>Locations</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/locations.html#avon">Avon</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#basin">Bushnell's Basin</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#brighton">Brighton</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#canandaigua">Canandaigua</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#fairport">Fairport</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#greece">Greece</a></li>
-                <li><a href="https://mmcke4.github.io/locations.html#newark">Newark</a></li>
+                <li><a href="/locations.html#avon">Avon</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="/locations.html#fairport">Fairport</a></li>
+                <li><a href="/locations.html#greece">Greece</a></li>
+                <li><a href="/locations.html#newark">Newark</a></li>
             </ul>
         </div>
         <div>
@@ -557,12 +570,12 @@
         <div>
             <h4>Quick Links</h4>
             <ul class="footer-links">
-                <li><a href="https://mmcke4.github.io/order-online.html">Order Online</a></li>
-                <li><a href="https://mmcke4.github.io/rewards.html">Rewards Program</a></li>
-                <li><a href="https://mmcke4.github.io/coupons.html">Coupons &amp; Deals</a></li>
-                <li><a href="https://mmcke4.github.io/fundraiser.html">Fundraisers</a></li>
-                <li><a href="https://mmcke4.github.io/privacy.html">Privacy Policy</a></li>
-                <li><a href="https://mmcke4.github.io/accessibility.html">Accessibility</a></li>
+                <li><a href="/order-online.html">Order Online</a></li>
+                <li><a href="/rewards.html">Rewards Program</a></li>
+                <li><a href="/coupons.html">Coupons &amp; Deals</a></li>
+                <li><a href="/fundraiser.html">Fundraisers</a></li>
+                <li><a href="/privacy.html">Privacy Policy</a></li>
+                <li><a href="/accessibility.html">Accessibility</a></li>
             </ul>
         </div>
     </div>
@@ -571,7 +584,7 @@
     </div>
 </footer>
 
-<script src="https://mmcke4.github.io/assets/locations-data.js"></script>
+<script src="/assets/locations-data.js"></script>
 <script>twRenderFooterHours('footerHours');</script>
 
 <script>
@@ -869,11 +882,11 @@
     };
 
     // ── Mobile menu ──
-    var hamb = document.querySelector('.hamburger');
-    var mobMenu = document.querySelector('.mobile-menu');
-    if (hamb && mobMenu) {
-        hamb.addEventListener('click', function(e) { e.preventDefault(); mobMenu.classList.toggle('open'); });
-    }
+    //var hamb = document.querySelector('.hamburger');
+    //var mobMenu = document.querySelector('.mobile-menu');
+    //if (hamb && mobMenu) {
+        //hamb.addEventListener('click', function(e) { e.preventDefault(); mobMenu.classList.toggle('open'); });
+    //}
 
     // ── Init ──
     updateSummaries();
