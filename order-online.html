@@ -46,7 +46,7 @@
                     "telephone": "+1-585-226-2420",
                     "servesCuisine": ["American", "Burgers", "Fast Food"],
                     "priceRange": "$",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "3553"},
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "3565"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
                     "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsavon/menu"}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp"]}
                 }
@@ -63,7 +63,7 @@
                     "telephone": "+1-585-441-9620",
                     "servesCuisine": ["American", "Burgers", "Fast Food"],
                     "priceRange": "$",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1266"},
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1267"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
                     "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu"}}
                 }
@@ -76,7 +76,7 @@
                     "name": "Tom Wahl's Bushnell's Basin",
                     "address": {"@type": "PostalAddress", "streetAddress": "643 Pittsford-Victor Rd", "addressLocality": "Pittsford", "addressRegion": "NY", "postalCode": "14534", "addressCountry": "US"},
                     "telephone": "+1-585-586-4920",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "929"}
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "932"}
                 }
             },
             {
@@ -87,7 +87,7 @@
                     "name": "Tom Wahl's Canandaigua",
                     "address": {"@type": "PostalAddress", "streetAddress": "2510 Rochester Rd", "addressLocality": "Canandaigua", "addressRegion": "NY", "postalCode": "14424", "addressCountry": "US"},
                     "telephone": "+1-585-393-9170",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1732"}
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1735"}
                 }
             },
             {
@@ -98,7 +98,7 @@
                     "name": "Tom Wahl's Fairport",
                     "address": {"@type": "PostalAddress", "streetAddress": "1333 Fairport Rd", "addressLocality": "Fairport", "addressRegion": "NY", "postalCode": "14450", "addressCountry": "US"},
                     "telephone": "+1-585-377-8420",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1078"}
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1080"}
                 }
             },
             {
@@ -109,7 +109,7 @@
                     "name": "Tom Wahl's Greece",
                     "address": {"@type": "PostalAddress", "streetAddress": "671 Maiden Ln", "addressLocality": "Rochester", "addressRegion": "NY", "postalCode": "14616", "addressCountry": "US"},
                     "telephone": "+1-585-504-7470",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "379"}
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "383"}
                 }
             },
             {
@@ -120,7 +120,7 @@
                     "name": "Tom Wahl's Newark",
                     "address": {"@type": "PostalAddress", "streetAddress": "585 W Union St", "addressLocality": "Newark", "addressRegion": "NY", "postalCode": "14513", "addressCountry": "US"},
                     "telephone": "+1-315-331-9112",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "1126"}
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "1125"}
                 }
             }
         ]
@@ -191,7 +191,7 @@
             padding: 60px 20px 50px;
             text-align: center;
         }
-        .page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 12px; letter-spacing: -0.02em; }
+        .page-hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 900; margin-bottom: 16px; line-height: 1.1; position: relative; z-index: 2; }
         .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
 
         /* ── LOCATION FINDER ── */
@@ -460,6 +460,8 @@
         </div>
     </div>
 </section>
+<div class="checker-stripe"></div>
+
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -517,52 +519,10 @@
     
 <script>
 // ── DATA ─────────────────────────────────────────────────────────────────────
-// Fallback data — overwritten at runtime by hours-cache.json where available.
-// Order must match scripts/fetch-hours.js LOCATIONS array (avon → newark).
-const locations = [
-    {
-        name: "Avon", address: "283 E Main St, Avon, NY 14414", phone: "585-226-2420",
-        lat: 42.9097, lng: -77.7323, rating: 4.6, reviews: 3553, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsavon/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Brighton", address: "2545 Monroe Ave, Rochester, NY 14618", phone: "585-441-9620",
-        lat: 43.1174, lng: -77.5553, rating: 4.4, reviews: 1266, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Bushnell's Basin", address: "643 Pittsford-Victor Rd, Pittsford, NY 14534", phone: "585-586-4920",
-        lat: 43.0613, lng: -77.4780, rating: 4.4, reviews: 929, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsbushnellsbasin/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Canandaigua", address: "2510 Rochester Rd, Canandaigua, NY 14424", phone: "585-393-9170",
-        lat: 42.9093, lng: -77.2987, rating: 4.4, reviews: 1732, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/61450d0295b7018c168b459b/menu#value-meals",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Fairport", address: "1333 Fairport Rd, Fairport, NY 14450", phone: "585-377-8420",
-        lat: 43.1007, lng: -77.4609, rating: 4.4, reviews: 1078, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsfairport/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Greece", address: "671 Maiden Ln, Rochester, NY 14616", phone: "585-504-7470",
-        lat: 43.2234, lng: -77.6602, rating: 3.9, reviews: 379, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsgreece/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    },
-    {
-        name: "Newark", address: "585 W Union St, Newark, NY 14513", phone: "315-331-9112",
-        lat: 43.0471, lng: -77.1115, rating: 4.3, reviews: 1126, businessStatus: null,
-        url: "https://tomwahls.orderexperience.net/tomwahlsnewark/menu",
-        hours: { mon:"11am–9pm", tue:"11am–9pm", wed:"11am–9pm", thu:"11am–9pm", fri:"11am–9pm", sat:"11am–9pm", sun:"11am–9pm" }
-    }
-];
+// Shallow-copy TW_LOCATIONS (loaded from locations-data.js) so runtime fields
+// (distance, businessStatus) can be added without mutating the shared global.
+// hours-cache.json overwrites loc.hours at runtime when available.
+const locations = TW_LOCATIONS.map(l => Object.assign({}, l));
 
 // ── UTILITIES ────────────────────────────────────────────────────────────────
 function haversine(lat1, lon1, lat2, lon2) {
@@ -579,22 +539,23 @@ function fmtTime(str) { return str.replace(':00', '').replace(' ', ''); }
 // "11:00 am" + "9:00 pm" → "11am–9pm"
 function fmtRange(open, close) { return `${fmtTime(open)}–${fmtTime(close)}`; }
 
-// Open/closed status from a location's hours (string format "11am–9pm")
+// Open/closed status from a location's hours ({ open, close } format from locations-data.js / cache)
 function getLocationStatus(loc) {
     const DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
     const now = new Date();
-    const hoursStr = loc.hours[DAYS[now.getDay()]];
-    if (!hoursStr || hoursStr.toLowerCase() === 'closed') return { isOpen: false, text: 'Closed today' };
-    const match = hoursStr.match(/(\d{1,2})(am|pm)\s*[–-]\s*(\d{1,2})(am|pm)/i);
-    if (!match) return { isOpen: true, text: hoursStr };
-    let oh = +match[1], ch = +match[3];
-    if (match[2].toLowerCase() === 'pm' && oh !== 12) oh += 12;
-    if (match[2].toLowerCase() === 'am' && oh === 12) oh = 0;
-    if (match[4].toLowerCase() === 'pm' && ch !== 12) ch += 12;
-    if (match[4].toLowerCase() === 'am' && ch === 12) ch = 0;
-    const h = now.getHours();
-    const isOpen = h >= oh && h < ch;
-    return { isOpen, text: isOpen ? `Open · ${hoursStr}` : `Closed · Opens ${hoursStr.split('–')[0].trim()}` };
+    const today = loc.hours[DAYS[now.getDay()]];
+    if (!today || !today.open) return { isOpen: false, text: 'Closed today' };
+    const toMin = s => {
+        const [time, per] = s.trim().split(' ');
+        let [h, m] = time.split(':').map(Number);
+        if (per === 'pm' && h !== 12) h += 12;
+        if (per === 'am' && h === 12) h = 0;
+        return h * 60 + (m || 0);
+    };
+    const nowMin = now.getHours() * 60 + now.getMinutes();
+    const isOpen = nowMin >= toMin(today.open) && nowMin < toMin(today.close);
+    const range = fmtRange(today.open, today.close);
+    return { isOpen, text: isOpen ? `Open · ${range}` : `Closed · Opens ${fmtTime(today.open.trim())}` };
 }
 
 // ── CACHE ────────────────────────────────────────────────────────────────────
@@ -643,7 +604,7 @@ function renderLocations(sorted) {
                     ${isTempClosed ? '<span class="status-badge status-badge--temp">Temporarily Closed</span>' : ''}
                     ${isPermClosed ? '<span class="status-badge status-badge--perm">Permanently Closed</span>' : ''}
                 </div>
-                <div class="location-address">${loc.address}</div>
+                <div class="location-address">${loc.address}, ${loc.city}, ${loc.state} ${loc.zip}</div>
                 <div class="location-meta">
                     <a href="tel:${loc.phone.replace(/-/g,'')}" class="location-phone">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -659,7 +620,7 @@ function renderLocations(sorted) {
             </div>
             <div class="location-action">
                 ${!isPermClosed
-                    ? `<a href="${loc.url}" class="btn-order" target="_blank" rel="noopener">Order Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
+                    ? `<a href="${loc.orderUrl}" class="btn-order" target="_blank" rel="noopener">Order Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>`
                     : `<span class="btn-order-disabled">Unavailable</span>`}
             </div>
         </div>`;
@@ -678,14 +639,11 @@ function renderLocations(sorted) {
             locations[i].businessStatus = cached.businessStatus;
         });
 
-        // Update loc.hours from cache regularHours so getLocationStatus stays in sync
+        // Overwrite loc.hours with cache regularHours (same { open, close } format — no conversion needed)
         const rh = cache.regularHours;
         if (rh) {
             ['sun','mon','tue','wed','thu','fri','sat'].forEach(day => {
-                if (rh[day]) {
-                    const display = fmtRange(rh[day].open, rh[day].close);
-                    locations.forEach(loc => { loc.hours[day] = display; });
-                }
+                if (rh[day]) locations.forEach(loc => { loc.hours[day] = rh[day]; });
             });
         }
 

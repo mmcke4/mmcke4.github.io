@@ -81,6 +81,12 @@
 
         .btn-submit{width:100%;padding:16px;background:var(--red);color:var(--white);border:none;border-radius:50px;font-family:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;transition:background .2s;margin-top:8px}.btn-submit:hover{background:var(--red-dark)}
 
+        /* VALIDATION */
+        input.invalid,select.invalid,textarea.invalid{border-color:var(--red)!important;background:var(--red-light)}
+        .invalid-msg{color:var(--red);font-size:.78rem;margin-top:4px;display:none}
+        .invalid-msg.show{display:block}
+        .radio-group.invalid-radio{outline:2px solid var(--red);border-radius:8px;padding:4px 8px;background:var(--red-light)}
+
         .footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 20px 24px}
         .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px}
         .footer h4{color:var(--white);font-size:1rem;margin-bottom:16px;font-weight:600}
@@ -150,46 +156,47 @@
     <!-- The form posts to the existing Tom Wahl's careers backend -->
     <div class="form-card">
         <div class="form-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg> Applicant Information</div>
+        <form id="careerForm" novalidate>
         <div class="form-body">
             <div class="form-row">
-                <div class="form-group"><label>Preferred Location <span class="req">*</span></label><select required><option value="">Select a Location</option><option>Avon</option><option>Brighton</option><option>Bushnell's Basin</option><option>Canandaigua</option><option>Fairport</option><option>Greece</option><option>Newark</option></select></div>
-                <div class="form-group"><label>Referred By Current Employee?</label><input type="text" placeholder="Employee name (if applicable)"></div>
+                <div class="form-group"><label for="prefLocation">Preferred Location <span class="req">*</span></label><select id="prefLocation" required><option value="">Select a Location</option><option>Avon</option><option>Brighton</option><option>Bushnell's Basin</option><option>Canandaigua</option><option>Fairport</option><option>Greece</option><option>Newark</option></select><p class="invalid-msg" id="prefLocationMsg">Please select a location.</p></div>
+                <div class="form-group"><label for="referredBy">Referred By Current Employee?</label><input type="text" id="referredBy" placeholder="Employee name (if applicable)"></div>
             </div>
             <div class="form-row">
-                <div class="form-group"><label>Applicant Name <span class="req">*</span></label><input type="text" required placeholder="Full name"></div>
-                <div class="form-group"><label>Email <span class="req">*</span></label><input type="email" required placeholder="you@email.com"></div>
+                <div class="form-group"><label for="applicantName">Applicant Name <span class="req">*</span></label><input type="text" id="applicantName" required placeholder="Full name"><p class="invalid-msg" id="applicantNameMsg">Please enter your full name.</p></div>
+                <div class="form-group"><label for="applicantEmail">Email <span class="req">*</span></label><input type="email" id="applicantEmail" required placeholder="you@email.com"><p class="invalid-msg" id="applicantEmailMsg">Please enter a valid email address.</p></div>
             </div>
-            <div class="form-group"><label>Street Address</label><input type="text" placeholder="Street address"></div>
+            <div class="form-group"><label for="streetAddress">Street Address <span class="req">*</span></label><input type="text" id="streetAddress" required placeholder="Street address"><p class="invalid-msg" id="streetAddressMsg">Please enter your street address.</p></div>
             <div class="form-row">
-                <div class="form-group"><label>Apt/Unit</label><input type="text" placeholder="Apt, unit, etc."></div>
-                <div class="form-group"><label>City</label><input type="text" placeholder="City"></div>
+                <div class="form-group"><label for="aptUnit">Apt/Unit</label><input type="text" id="aptUnit" placeholder="Apt, unit, etc."></div>
+                <div class="form-group"><label for="city">City <span class="req">*</span></label><input type="text" id="city" required placeholder="City"><p class="invalid-msg" id="cityMsg">Please enter your city.</p></div>
             </div>
             <div class="form-row">
-                <div class="form-group"><label>State</label><select><option value="NY" selected>NY</option><option value="PA">PA</option></select></div>
-                <div class="form-group"><label>Zip Code</label><input type="text" placeholder="14xxx"></div>
+                <div class="form-group"><label for="state">State</label><select id="state"><option value="NY" selected>NY</option></select></div>
+                <div class="form-group"><label for="zipCode">Zip Code <span class="req">*</span></label><input type="text" id="zipCode" required placeholder="14xxx" maxlength="10"><p class="invalid-msg" id="zipCodeMsg">Please enter your zip code.</p></div>
             </div>
-            <div class="form-group"><label>Phone <span class="req">*</span></label><input type="tel" required placeholder="(585) 000-0000"></div>
+            <div class="form-group"><label for="applicantPhone">Phone <span class="req">*</span></label><input type="tel" id="applicantPhone" required placeholder="(585) 000-0000" maxlength="14" oninput="formatCareerPhone(this)"><p class="invalid-msg" id="applicantPhoneMsg">Please enter a valid phone number: (XXX) XXX-XXXX</p></div>
 
             <hr class="section-divider">
 
             <div class="form-header" style="background:var(--dark);margin:-32px -32px 24px;padding:20px 32px;border-radius:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Additional Questions</div>
 
             <div class="form-row">
-                <div class="form-group"><label>Desired Position <span class="req">*</span></label><select required><option value="">Select a Position</option><option>Cashier</option><option>Dining Room</option><option>Kitchen</option></select></div>
-                <div class="form-group"><label>Hours Per Week</label><select><option value="">Select</option><option>5–10</option><option>10–20</option><option>20–30</option><option>30–40</option><option>40+</option></select></div>
+                <div class="form-group"><label for="desiredPosition">Desired Position <span class="req">*</span></label><select id="desiredPosition" required><option value="">Select a Position</option><option>Cashier</option><option>Dining Room</option><option>Kitchen</option></select><p class="invalid-msg" id="desiredPositionMsg">Please select a position.</p></div>
+                <div class="form-group"><label for="hoursPerWeek">Hours Per Week</label><select id="hoursPerWeek"><option value="">Select</option><option>5–10</option><option>10–20</option><option>20–30</option><option>30–40</option><option>40+</option></select></div>
             </div>
             <div class="form-row">
-                <div class="form-group"><label>Are you 18 years or older?</label><div class="radio-group"><label><input type="radio" name="age18" value="yes"> Yes</label><label><input type="radio" name="age18" value="no"> No</label></div></div>
-                <div class="form-group"><label>Relatives or friends at Tom Wahl's?</label><div class="radio-group"><label><input type="radio" name="relatives" value="yes"> Yes</label><label><input type="radio" name="relatives" value="no"> No</label></div></div>
+                <div class="form-group"><label>Are you 18 years or older? <span class="req">*</span></label><div class="radio-group" id="age18Group"><label><input type="radio" name="age18" value="yes"> Yes</label><label><input type="radio" name="age18" value="no"> No</label></div><p class="invalid-msg" id="age18Msg">Please select an option.</p></div>
+                <div class="form-group"><label>Worked at Tom Wahl's, Bill Gray's or Hegedorns before? <span class="req">*</span></label><div class="radio-group" id="prevworkGroup"><label><input type="radio" name="prevwork" value="yes"> Yes</label><label><input type="radio" name="prevwork" value="no"> No</label></div><p class="invalid-msg" id="prevworkMsg">Please select an option.</p></div>
             </div>
-            <div class="form-group"><label>If yes, what are their names?</label><input type="text" placeholder="Names"></div>
-            <div class="form-row">
-                <div class="form-group"><label>Worked at Tom Wahl's, Bill Gray's or Hegedorns before?</label><div class="radio-group"><label><input type="radio" name="prevwork" value="yes"> Yes</label><label><input type="radio" name="prevwork" value="no"> No</label></div></div>
-                <div class="form-group"><label>If yes, when?</label><input type="text" placeholder="Dates"></div>
+            <div class="form-group" id="prevworkWhenGroup" style="display:none"><label for="prevworkWhen">If yes, when? <span class="req">*</span></label><input type="text" id="prevworkWhen" placeholder="Approximate dates"><p class="invalid-msg" id="prevworkWhenMsg">Please enter when you worked there.</p></div>
+            <div class="form-row" style="align-items:flex-start">
+                <div class="form-group"><label>Relatives or friends at Tom Wahl's? <span class="req">*</span></label><div class="radio-group" id="relativesGroup"><label><input type="radio" name="relatives" value="yes"> Yes</label><label><input type="radio" name="relatives" value="no"> No</label></div><p class="invalid-msg" id="relativesMsg">Please select an option.</p></div>
+                <div class="form-group" id="relativesNamesGroup"><label for="relativesNames">If yes, what are their names?</label><textarea id="relativesNames" placeholder="Names" style="min-height:80px;resize:vertical"></textarea></div>
             </div>
-            <div class="form-group"><label>If a student, school name &amp; grade/year?</label><input type="text" placeholder="School name, grade or year"></div>
-            <div class="form-group"><label>Activities, hobbies, or interests?</label><textarea placeholder="Tell us about yourself..."></textarea></div>
-            <div class="form-group"><label>When can you start?</label><input type="text" placeholder="Date or timeframe"></div>
+            <div class="form-group"><label for="startDate">When can you start? <span class="req">*</span></label><input type="date" id="startDate" required><p class="invalid-msg" id="startDateMsg">Please select a start date.</p></div>
+            <div class="form-group"><label for="studentInfo">If a student, school name &amp; grade/year?</label><input type="text" id="studentInfo" placeholder="School name, grade or year"></div>
+            <div class="form-group"><label for="hobbies">Activities, hobbies, or interests?</label><textarea id="hobbies" placeholder="Tell us about yourself..."></textarea></div>
 
             <hr class="section-divider">
 
@@ -224,6 +231,7 @@
 
             <button type="submit" class="btn-submit">Submit Application</button>
         </div>
+        </form>
     </div>
 </section>
 
@@ -277,6 +285,132 @@
     <!-- Hours JS -->
     <script src="/assets/scripts/locations-data.js"></script>
     <script>twRenderFooterHours('footerHours');</script>
+
+    <script>
+    // ── Phone formatter ──
+    function formatCareerPhone(el) {
+        var digits = el.value.replace(/\D/g,'').slice(0,10);
+        var formatted = '';
+        if (digits.length === 0) { formatted = ''; }
+        else if (digits.length <= 3) { formatted = '(' + digits; }
+        else if (digits.length <= 6) { formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3); }
+        else { formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6); }
+        el.value = formatted;
+        if (/^\(\d{3}\) \d{3}-\d{4}$/.test(formatted)) {
+            el.classList.remove('invalid');
+            var msg = document.getElementById('applicantPhoneMsg');
+            if (msg) msg.classList.remove('show');
+        }
+    }
+
+    // ── Show/hide conditional fields ──
+    document.querySelectorAll('input[name="prevwork"]').forEach(function(r) {
+        r.addEventListener('change', function() {
+            var grp = document.getElementById('prevworkWhenGroup');
+            if (grp) grp.style.display = this.value === 'yes' ? '' : 'none';
+            if (this.value === 'no') {
+                var f = document.getElementById('prevworkWhen');
+                var m = document.getElementById('prevworkWhenMsg');
+                if (f) f.classList.remove('invalid');
+                if (m) m.classList.remove('show');
+            }
+        });
+    });
+
+    // ── Validation ──
+    function markInvalid(el) { el.classList.add('invalid'); }
+    function markValid(el) { el.classList.remove('invalid'); }
+
+    function showMsg(id) { var m = document.getElementById(id); if (m) m.classList.add('show'); }
+    function hideMsg(id) { var m = document.getElementById(id); if (m) m.classList.remove('show'); }
+
+    function clearOnInput(el, msgId) {
+        var evt = (el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(evt, function() { markValid(el); hideMsg(msgId); }, { once: false });
+    }
+
+    function validateCareerForm() {
+        var valid = true;
+
+        // Simple required text/select/email fields
+        var required = [
+            { id: 'prefLocation',    msg: 'prefLocationMsg' },
+            { id: 'applicantName',   msg: 'applicantNameMsg' },
+            { id: 'streetAddress',   msg: 'streetAddressMsg' },
+            { id: 'city',            msg: 'cityMsg' },
+            { id: 'zipCode',         msg: 'zipCodeMsg' },
+            { id: 'desiredPosition', msg: 'desiredPositionMsg' },
+            { id: 'startDate',       msg: 'startDateMsg' }
+        ];
+        required.forEach(function(f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            if (!el.value.trim()) { markInvalid(el); showMsg(f.msg); clearOnInput(el, f.msg); valid = false; }
+            else { markValid(el); hideMsg(f.msg); }
+        });
+
+        // Email
+        var emailEl = document.getElementById('applicantEmail');
+        if (emailEl) {
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailEl.value.trim() || !emailRe.test(emailEl.value.trim())) {
+                markInvalid(emailEl); showMsg('applicantEmailMsg'); clearOnInput(emailEl, 'applicantEmailMsg'); valid = false;
+            } else { markValid(emailEl); hideMsg('applicantEmailMsg'); }
+        }
+
+        // Phone
+        var phoneEl = document.getElementById('applicantPhone');
+        if (phoneEl) {
+            if (!/^\(\d{3}\) \d{3}-\d{4}$/.test(phoneEl.value)) {
+                markInvalid(phoneEl); showMsg('applicantPhoneMsg'); clearOnInput(phoneEl, 'applicantPhoneMsg'); valid = false;
+            } else { markValid(phoneEl); hideMsg('applicantPhoneMsg'); }
+        }
+
+        // Radio groups
+        var radioGroups = [
+            { name: 'age18',    groupId: 'age18Group',    msgId: 'age18Msg' },
+            { name: 'prevwork', groupId: 'prevworkGroup', msgId: 'prevworkMsg' },
+            { name: 'relatives',groupId: 'relativesGroup',msgId: 'relativesMsg' }
+        ];
+        radioGroups.forEach(function(rg) {
+            var checked = document.querySelector('input[name="' + rg.name + '"]:checked');
+            var grpEl = document.getElementById(rg.groupId);
+            if (!checked) {
+                if (grpEl) grpEl.classList.add('invalid-radio');
+                showMsg(rg.msgId);
+                document.querySelectorAll('input[name="' + rg.name + '"]').forEach(function(r) {
+                    r.addEventListener('change', function() {
+                        if (grpEl) grpEl.classList.remove('invalid-radio');
+                        hideMsg(rg.msgId);
+                    }, { once: true });
+                });
+                valid = false;
+            } else {
+                if (grpEl) grpEl.classList.remove('invalid-radio');
+                hideMsg(rg.msgId);
+            }
+        });
+
+        // Conditional: prevwork when
+        var prevworkVal = document.querySelector('input[name="prevwork"]:checked');
+        if (prevworkVal && prevworkVal.value === 'yes') {
+            var pwWhen = document.getElementById('prevworkWhen');
+            if (pwWhen && !pwWhen.value.trim()) {
+                markInvalid(pwWhen); showMsg('prevworkWhenMsg'); clearOnInput(pwWhen, 'prevworkWhenMsg'); valid = false;
+            } else if (pwWhen) { markValid(pwWhen); hideMsg('prevworkWhenMsg'); }
+        }
+
+        return valid;
+    }
+
+    document.getElementById('careerForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (validateCareerForm()) {
+            // Form is valid — submit or show success
+            this.submit();
+        }
+    });
+    </script>
 
 </body>
 </html>

@@ -9,7 +9,40 @@
     "sat": { "open": "11:00 am", "close": "9:00 pm" },
     "sun": { "open": "11:00 am", "close": "9:00 pm" }
   },
-  "specialDays": [],
+  "specialDays": [
+  {
+    "date": "2026-4-12",
+    "displayDate": "Sunday, April 12",
+    "closed": true,
+    "open": null,
+    "close": null,
+    "label": "Easter"
+  },
+  {
+    "date": "2026-07-04",
+    "displayDate": "Saturday, July 4",
+    "closed": false,
+    "open": " 11:00am",
+    "close": "8:00pm",
+    "label": "Independance Day"
+  },
+  {
+    "date": "2026-11-26",
+    "displayDate": "Thursday, November 26",
+    "closed": true,
+    "open": null,
+    "close": null,
+    "label": "Thanksgiving"
+  },
+  {
+    "date": "2026-12-25",
+    "displayDate": "Friday, December 25",
+    "closed": true,
+    "open": null,
+    "close": null,
+    "label": "Christmas"
+  }
+],
   "locations": [
     { "id": "avon",        "businessStatus": "OPERATIONAL", "rating": 4.6, "reviews": 3553 },
     { "id": "brighton",    "businessStatus": "OPERATIONAL", "rating": 4.4, "reviews": 1266 },

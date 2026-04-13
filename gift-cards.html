@@ -190,7 +190,7 @@
         .footer-links li{margin-bottom:4px}
 
         /* VALIDATION */
-        .form-group-gc input.invalid, .form-group-gc select.invalid { border-color: var(--red) !important; background: var(--red-light); }
+        .form-group-gc input.invalid, .form-group-gc select.invalid, .form-group-gc textarea.invalid, .gift-textarea.invalid { border-color: var(--red) !important; background: var(--red-light); }
         .invalid-msg { color: var(--red); font-size: .78rem; margin-top: 5px; display: none; }
         .invalid-msg.show { display: block; }
         .amount-invalid .amount-grid { outline: 2px solid var(--red); border-radius: var(--radius); background: var(--red-light); padding: 4px; }
@@ -308,6 +308,7 @@
                         <label class="form-label">Gift Message <span class="req">*</span></label>
                         <textarea class="gift-textarea" id="giftMessage" maxlength="200" required placeholder="Add a personal message so the person receiving your gift knows who it came from..." oninput="updateCharCount()"></textarea>
                         <div class="char-count"><span id="charCount">0</span>/200</div>
+                        <p class="invalid-msg" id="messageErrorMsg">Please add a personal message.</p>
                     </div>
 
                     <div class="order-summary">
@@ -641,7 +642,19 @@
             if (amountGroup) amountGroup.classList.remove('amount-invalid');
             if (errMsg) errMsg.classList.remove('show');
         }
-        return amountOk;
+
+        var msgEl = document.getElementById('giftMessage');
+        var msgErr = document.getElementById('messageErrorMsg');
+        var msgOk = msgEl && msgEl.value.trim().length > 0;
+        if (!msgOk) {
+            markInvalid(msgEl);
+            if (msgErr) msgErr.classList.add('show');
+        } else {
+            markValid(msgEl);
+            if (msgErr) msgErr.classList.remove('show');
+        }
+
+        return amountOk && msgOk;
     }
 
     function validateStep2() {
@@ -872,6 +885,11 @@
         var gm = document.getElementById('giftMessage');
         var cc = document.getElementById('charCount');
         if (gm && cc) cc.textContent = gm.value.length;
+        if (gm && gm.value.trim().length > 0) {
+            markValid(gm);
+            var msgErr = document.getElementById('messageErrorMsg');
+            if (msgErr) msgErr.classList.remove('show');
+        }
     };
 
     // ── Billing toggle ──
