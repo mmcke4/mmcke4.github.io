@@ -331,14 +331,17 @@
         .holiday-toggle svg { width: 14px; height: 14px; flex-shrink: 0; }
         .holiday-chevron { transition: transform .2s; }
         .holiday-toggle.open .holiday-chevron { transform: rotate(180deg); }
+        .holiday-section { position: relative; }
         .holiday-expand {
             display: none;
-            margin-top: 10px;
+            position: absolute; right: 0; top: calc(100% + 6px);
             min-width: 260px;
             background: var(--white);
             border: 1px solid var(--gray-200);
             border-radius: var(--radius);
             overflow: hidden;
+            z-index: 50;
+            box-shadow: var(--shadow-md);
         }
         .holiday-expand.open { display: block; }
         .holiday-row {
