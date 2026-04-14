@@ -335,6 +335,11 @@
             transition: background 0.2s;
         }
         .lightbox-close:hover { background: rgba(255,255,255,0.3); }
+        @media(max-width:600px){
+            .page-hero{padding:36px 20px 84px}
+            .page-hero h1{font-size:1.5rem}
+            .page-hero p{font-size:.95rem}
+        }
     </style>
 </head>
 <body>
@@ -395,9 +400,7 @@
     <p class="section-subtitle">Simply click a coupon to view full size. Show it on your phone or print it out!</p>
 
     <div class="coupon-grid" id="couponGrid">
-        <!-- Coupon cards are inserted here. 
-             To update coupons, simply change the image src paths below.
-             Add or remove coupon-card divs as needed. -->
+        <!-- Coupon cards are inserted here. To update coupons, change the image src paths -->
 
         <div class="coupon-card" onclick="openLightbox(this.querySelector('img').src)">
             <img src="/assets/coupon-images/TW_CouponQR 0426.jpg" alt="Tom Wahl's BOGO Hot Dog Coupon - April 2026">
