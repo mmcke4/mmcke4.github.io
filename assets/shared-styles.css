@@ -274,3 +274,8 @@
     font-size: 0.85rem;
     letter-spacing: 0.03em;
 }
+
+/* ── MOBILE NAV LOGO ── */
+@media(max-width:768px){
+    .nav-logo img{height:52px!important}
+}
