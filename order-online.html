@@ -25,13 +25,13 @@
     <meta name="twitter:description" content="Rochester's Best Cheeseburgers delivered or ready for pickup from 7 locations across Western NY.">
     <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
 
-    <!-- Structured Data: Restaurant with Order Action -->
+    <!-- Structured Data: Restaurant Locations with Order Actions -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "Tom Wahl's Order Online Locations",
-        "description": "Order online for pickup or delivery from any Tom Wahl's location in Western New York",
+        "name": "Tom Wahl's Order Online — Pickup & Delivery",
+        "description": "Order fresh Wahlburgers, fries, and homemade root beer from any of our 7 Western New York locations.",
         "numberOfItems": 7,
         "itemListElement": [
             {
@@ -46,9 +46,11 @@
                     "telephone": "+1-585-226-2420",
                     "servesCuisine": ["American", "Burgers", "Fast Food"],
                     "priceRange": "$",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "3565"},
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "3553"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
-                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsavon/menu"}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp"]}
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJfeUhN6VE0YkRwbghSiNMf-U",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsavon/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsavon#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -63,9 +65,11 @@
                     "telephone": "+1-585-441-9620",
                     "servesCuisine": ["American", "Burgers", "Fast Food"],
                     "priceRange": "$",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1267"},
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1266"},
                     "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
-                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu"}}
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJZSAYxa7K1okR6SFysaZu4lY",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsbrighton/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsbrighton#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -74,9 +78,17 @@
                 "item": {
                     "@type": "Restaurant",
                     "name": "Tom Wahl's Bushnell's Basin",
+                    "image": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "643 Pittsford-Victor Rd", "addressLocality": "Pittsford", "addressRegion": "NY", "postalCode": "14534", "addressCountry": "US"},
+                    "geo": {"@type": "GeoCoordinates", "latitude": 43.0613, "longitude": -77.4780},
                     "telephone": "+1-585-586-4920",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "932"}
+                    "servesCuisine": ["American", "Burgers", "Fast Food"],
+                    "priceRange": "$",
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "929"},
+                    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJ40rcrX000YkRjidZhLYdxtg",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsbushnellsbasin/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsbushnellsbasin#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -85,9 +97,17 @@
                 "item": {
                     "@type": "Restaurant",
                     "name": "Tom Wahl's Canandaigua",
+                    "image": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "2510 Rochester Rd", "addressLocality": "Canandaigua", "addressRegion": "NY", "postalCode": "14424", "addressCountry": "US"},
+                    "geo": {"@type": "GeoCoordinates", "latitude": 42.9093, "longitude": -77.2987},
                     "telephone": "+1-585-393-9170",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1735"}
+                    "servesCuisine": ["American", "Burgers", "Fast Food"],
+                    "priceRange": "$",
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1732"},
+                    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJEUVku8Il0YkRqqsrKuX-CaQ",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlscanandaigua/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlscanandaigua#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -96,9 +116,17 @@
                 "item": {
                     "@type": "Restaurant",
                     "name": "Tom Wahl's Fairport",
+                    "image": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "1333 Fairport Rd", "addressLocality": "Fairport", "addressRegion": "NY", "postalCode": "14450", "addressCountry": "US"},
+                    "geo": {"@type": "GeoCoordinates", "latitude": 43.1007, "longitude": -77.4609},
                     "telephone": "+1-585-377-8420",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1080"}
+                    "servesCuisine": ["American", "Burgers", "Fast Food"],
+                    "priceRange": "$",
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1078"},
+                    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJ_8sNLa3M1okR8yNd933sq9k",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsfairport/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsfairport#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -107,9 +135,17 @@
                 "item": {
                     "@type": "Restaurant",
                     "name": "Tom Wahl's Greece",
+                    "image": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "671 Maiden Ln", "addressLocality": "Rochester", "addressRegion": "NY", "postalCode": "14616", "addressCountry": "US"},
+                    "geo": {"@type": "GeoCoordinates", "latitude": 43.2234, "longitude": -77.6602},
                     "telephone": "+1-585-504-7470",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "383"}
+                    "servesCuisine": ["American", "Burgers", "Fast Food"],
+                    "priceRange": "$",
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "3.9", "reviewCount": "379"},
+                    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJ-WBYjVWx1okRhOUwLPdv614",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsgreece/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsgreece#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
             },
             {
@@ -118,10 +154,59 @@
                 "item": {
                     "@type": "Restaurant",
                     "name": "Tom Wahl's Newark",
+                    "image": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
                     "address": {"@type": "PostalAddress", "streetAddress": "585 W Union St", "addressLocality": "Newark", "addressRegion": "NY", "postalCode": "14513", "addressCountry": "US"},
+                    "geo": {"@type": "GeoCoordinates", "latitude": 43.0471, "longitude": -77.1115},
                     "telephone": "+1-315-331-9112",
-                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "1125"}
+                    "servesCuisine": ["American", "Burgers", "Fast Food"],
+                    "priceRange": "$",
+                    "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.3", "reviewCount": "1126"},
+                    "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}],
+                    "sameAs": "https://www.google.com/maps/place/?q=place_id:ChIJ1UsPa6TU0IkR6sTeoPWJ8pI",
+                    "hasMenu": "https://tomwahls.orderexperience.net/tomwahlsnewark/menu",
+                    "potentialAction": {"@type": "OrderAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://order.myguestaccount.com/menu/tomwahlsnewark#value-meals", "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]}, "deliveryMethod": ["http://purl.org/goodrelations/v1#DeliveryModePickUp","http://purl.org/goodrelations/v1#DeliveryModeDelivery"]}
                 }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: Menu -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Tom Wahl's Menu",
+        "description": "Burgers, hot dogs, fries, fish dinner, chicken tenders, ice cream and homemade root beer.",
+        "url": "https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu",
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "Signature Burgers",
+                "hasMenuItem": [
+                    {"@type": "MenuItem", "name": "Wahlburger", "description": "Tom Wahl's signature Ground Steak Burger with Swiss Cheese, Ham, Lettuce and our Signature Wahl Sauce", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "8.89"}},
+                    {"@type": "MenuItem", "name": "Rochester's Best Cheeseburger", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "8.19"}},
+                    {"@type": "MenuItem", "name": "Hollywood Burger", "description": "Cheeseburger with Lettuce, Tomato & Mayo on a Hard Roll", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "8.19"}}
+                ]
+            },
+            {
+                "@type": "MenuSection",
+                "name": "Signature Drinks",
+                "hasMenuItem": [
+                    {"@type": "MenuItem", "name": "Homemade Root Beer", "description": "Tom Wahl's famous house-made root beer", "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "3.19"}}
+                ]
+            },
+            {
+                "@type": "MenuSection",
+                "name": "More Favorites",
+                "hasMenuItem": [
+                    {"@type": "MenuItem", "name": "Hot Dogs", "description": "Zweigle's Texas or Pork Hots"},
+                    {"@type": "MenuItem", "name": "Kid's Meals"},
+                    {"@type": "MenuItem", "name": "Fish Dinner"},
+                    {"@type": "MenuItem", "name": "Chicken Tenders"},
+                    {"@type": "MenuItem", "name": "Crispy Fries"},
+                    {"@type": "MenuItem", "name": "Ice Cream"}
+                ]
             }
         ]
     }
@@ -373,6 +458,7 @@
             .page-hero h1{font-size:1.5rem}
             .page-hero p{font-size:.95rem}
             .finder-section{padding:32px 20px 40px}
+            .finder-right{width:100%;align-items:flex-end}
             .tips-inner{grid-template-columns:1fr;gap:20px}
             .tip-item{display:flex;align-items:flex-start;gap:14px;text-align:left}
             .tip-item .tip-icon{flex-shrink:0;margin-top:2px}
@@ -530,12 +616,6 @@
     <script>twRenderFooterHours('footerHours');</script>
     
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────────
-// Shallow-copy TW_LOCATIONS (loaded from locations-data.js) so runtime fields
-// (distance, businessStatus) can be added without mutating the shared global.
-// hours-cache.json overwrites loc.hours at runtime when available.
-const locations = TW_LOCATIONS.map(l => Object.assign({}, l));
-
 // ── UTILITIES ────────────────────────────────────────────────────────────────
 function haversine(lat1, lon1, lat2, lon2) {
     const R = 3959;
@@ -551,7 +631,7 @@ function fmtTime(str) { return str.replace(':00', '').replace(' ', ''); }
 // "11:00 am" + "9:00 pm" → "11am–9pm"
 function fmtRange(open, close) { return `${fmtTime(open)}–${fmtTime(close)}`; }
 
-// Open/closed status from a location's hours ({ open, close } format from locations-data.js / cache)
+// Open/closed status using live hours populated by TW_CACHE_READY
 function getLocationStatus(loc) {
     const DAYS = ['sun','mon','tue','wed','thu','fri','sat'];
     const now = new Date();
@@ -568,15 +648,6 @@ function getLocationStatus(loc) {
     const isOpen = nowMin >= toMin(today.open) && nowMin < toMin(today.close);
     const range = fmtRange(today.open, today.close);
     return { isOpen, text: isOpen ? `Open · ${range}` : `Closed · Opens ${fmtTime(today.open.trim())}` };
-}
-
-// ── CACHE ────────────────────────────────────────────────────────────────────
-async function loadHoursCache() {
-    try {
-        const r = await fetch('/assets/hours-cache.json');
-        if (!r.ok) throw new Error();
-        return await r.json();
-    } catch { return null; }
 }
 
 // ── HOLIDAY SECTION ──────────────────────────────────────────────────────────
@@ -640,29 +711,13 @@ function renderLocations(sorted) {
 }
 
 // ── INIT ─────────────────────────────────────────────────────────────────────
+// Wait for locations-data.js to populate TW_LOCATIONS with live hours/ratings,
+// then shallow-copy so runtime fields (distance) don't mutate the shared global.
 (async () => {
-    const cache = await loadHoursCache();
-    if (cache) {
-        // Merge live ratings/reviews/status — array order matches LOCATIONS in fetch-hours.js
-        (cache.locations || []).forEach((cached, i) => {
-            if (!locations[i]) return;
-            if (cached.rating != null) locations[i].rating = cached.rating;
-            if (cached.reviews != null) locations[i].reviews = cached.reviews;
-            locations[i].businessStatus = cached.businessStatus;
-        });
+    await TW_CACHE_READY;
+    const locations = TW_LOCATIONS.map(l => Object.assign({}, l));
 
-        // Overwrite loc.hours with cache regularHours (same { open, close } format — no conversion needed)
-        const rh = cache.regularHours;
-        if (rh) {
-            ['sun','mon','tue','wed','thu','fri','sat'].forEach(day => {
-                if (rh[day]) locations.forEach(loc => { loc.hours[day] = rh[day]; });
-            });
-        }
-
-        renderHolidaySection(cache);
-    }
-
-    // Initial render (alphabetical)
+    if (TW_CACHE) renderHolidaySection(TW_CACHE);
     renderLocations(locations);
 
     // Attempt geolocation

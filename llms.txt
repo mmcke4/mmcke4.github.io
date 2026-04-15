@@ -1,0 +1,34 @@
+# Tom Wahl's
+> Rochester's favorite burger destination since 1955. Home of the Wahlburger®, Rochester's best cheeseburger, ground steak burgers, homemade root beer & the 55 Junker Plate. Located in Western New York.
+
+## Key Pages
+- [Home](https://mmcke4.github.io/): Tom Wahl's — Rochester's Best Cheeseburgers since 1955
+- [Order Online](https://mmcke4.github.io/order-online.html): Order for dine-in, pickup or delivery from all locations
+- [Locations](https://mmcke4.github.io/locations.html): All 7 Rochester-area locations with hours and directions
+- [Rewards Program](https://mmcke4.github.io/rewards.html): Earn 2 points per $1; free cheeseburger after first $10 purchase
+- [Coupons & Deals](https://mmcke4.github.io/coupons.html): Current promotions and discount codes
+- [Gift Cards](https://mmcke4.github.io/gift-cards.html): Physical and eGift cards
+- [Careers](https://mmcke4.github.io/careers.html): Now hiring at all locations
+- [Host a Fundraiser](https://mmcke4.github.io/fundraiser.html): 15% of sales donated to your organization
+
+## Menu
+- Full menu: https://www.orderexperience.net/62602331214add22d5341ca5/menu
+- Signature: Wahlburger (Ground Steak Burger + Ham, Lettuce and Signature Sauce on a 5" seeded roll)
+- Classic: Rochester's Best Cheeseburger
+- Fan favorite: Kid's Meals, 55 Junker Plate
+- Drink: Homemade Root Beer (made on-site)
+- Also: Kid's Meals, Crispy Fries, Hot Dogs, Fish Dinners, Chicken Tenders, Ice Cream
+
+## Locations (open 11AM–9PM daily)
+- Avon: 283 E Main St, Avon, NY 14414 — (585) 226-2420
+- Brighton: 2545 Monroe Ave, Rochester, NY 14618 — (585) 441-9620
+- Bushnell's Basin: 643 Pittsford-Victor Rd, Pittsford, NY 14534 — (585) 586-4920
+- Canandaigua: 2510 Rochester Rd, Canandaigua, NY 14424 — (585) 393-9170
+- Fairport: 1333 Fairport Rd, Fairport, NY 14450 — (585) 377-8420
+- Greece: 671 Maiden Ln, Rochester, NY 14616 — (585) 504-7470
+- Newark: 585 W Union St, Newark, NY 14513 — (315) 331-9112
+
+## Contact
+- Phone: 585-787-0150
+- Email: feedback@tomwahls.com
+- Rewards/Points inquiries: rewards@tomwahls.com

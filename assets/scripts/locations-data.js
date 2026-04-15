@@ -1,18 +1,12 @@
 /**
  * Tom Wahl's — Centralized Location Data
  * ========================================
- * This single file powers hours, ratings, addresses, and status
- * across ALL pages (footer, order-online, locations, index, etc.)
+ * Static location info (address, phone, coordinates, URLs, rating fallbacks).
+ * Hours and live ratings are loaded from /assets/hours-cache.json,
+ * which is updated daily by GitHub Actions via fetch-hours.js.
  *
- * HOW TO UPDATE:
- * - Change hours below when a location adjusts seasonal/holiday hours
- * - Update ratings/reviews periodically from Google Business profiles
- * - All pages that include this script will reflect changes immediately
- *
- * USAGE: Add <script src="https://mmcke4.github.io/assets/locations-data.js"></script>
- *        before your page-specific <script> tags.
- *
- * Last updated from Google Business Profiles: April 2026
+ * USAGE: <script src="/assets/scripts/locations-data.js"></script>
+ *        Add before page-specific <script> blocks.
  */
 
 const TW_LOCATIONS = [
@@ -32,15 +26,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJfeUhN6VE0YkRwbghSiNMf-U",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsavon#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJfeUhN6VE0YkRwbghSiNMf-U",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "brighton",
@@ -58,15 +44,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJZSAYxa7K1okR6SFysaZu4lY",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsbrighton#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJZSAYxa7K1okR6SFysaZu4lY",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "basin",
@@ -84,15 +62,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJ40rcrX000YkRjidZhLYdxtg",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsbushnellsbasin#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ40rcrX000YkRjidZhLYdxtg",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "canandaigua",
@@ -110,15 +80,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJEUVku8Il0YkRqqsrKuX-CaQ",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlscanandaigua#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJEUVku8Il0YkRqqsrKuX-CaQ",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "fairport",
@@ -136,15 +98,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJ_8sNLa3M1okR8yNd933sq9k",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsfairport#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ_8sNLa3M1okR8yNd933sq9k",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "greece",
@@ -162,15 +116,7 @@ const TW_LOCATIONS = [
         placeId: "ChIJ-WBYjVWx1okRhOUwLPdv614",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsgreece#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ-WBYjVWx1okRhOUwLPdv614",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     },
     {
         id: "newark",
@@ -188,76 +134,92 @@ const TW_LOCATIONS = [
         placeId: "ChIJ1UsPa6TU0IkR6sTeoPWJ8pI",
         orderUrl: "https://order.myguestaccount.com/menu/tomwahlsnewark#value-meals",
         mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ1UsPa6TU0IkR6sTeoPWJ8pI",
-        hours: {
-            mon: { open: "11:00 am", close: "9:00 pm" },
-            tue: { open: "11:00 am", close: "9:00 pm" },
-            wed: { open: "11:00 am", close: "9:00 pm" },
-            thu: { open: "11:00 am", close: "9:00 pm" },
-            fri: { open: "11:00 am", close: "9:00 pm" },
-            sat: { open: "11:00 am", close: "9:00 pm" },
-            sun: { open: "11:00 am", close: "9:00 pm" }
-        }
+        hours: {}
     }
 ];
 
+// ── LIVE HOURS CACHE ─────────────────────────────────────────────────────────
+// Fetched once on page load. Resolves TW_CACHE and populates loc.hours /
+// live ratings on every TW_LOCATIONS entry. Pages that shallow-copy
+// TW_LOCATIONS (order-online.html) share the same hours object by reference,
+// so they receive live data automatically once this promise resolves.
+let TW_CACHE = null;
+const TW_CACHE_READY = fetch('/assets/hours-cache.json')
+    .then(function(r) { if (!r.ok) throw new Error(); return r.json(); })
+    .then(function(data) {
+        TW_CACHE = data;
+
+        // Populate loc.hours from regularHours
+        var rh = data.regularHours;
+        if (rh) {
+            TW_LOCATIONS.forEach(function(loc) {
+                ['sun','mon','tue','wed','thu','fri','sat'].forEach(function(day) {
+                    if (rh[day]) loc.hours[day] = rh[day];
+                });
+            });
+        }
+
+        // Update ratings / reviews / businessStatus from live cache
+        (data.locations || []).forEach(function(cached) {
+            var loc = TW_LOCATIONS.find(function(l) { return l.id === cached.id; });
+            if (!loc) return;
+            if (cached.rating   != null) loc.rating         = cached.rating;
+            if (cached.reviews  != null) loc.reviews        = cached.reviews;
+            if (cached.businessStatus)   loc.businessStatus = cached.businessStatus;
+        });
+    })
+    .catch(function() {});
+
+// ── UTILITIES ────────────────────────────────────────────────────────────────
+
 /**
- * Utility: Get today's hours for a location
- * @param {Object} loc - A location object from TW_LOCATIONS
+ * Get today's open/closed status for a location.
+ * Depends on loc.hours being populated (call after TW_CACHE_READY resolves).
+ * @param {Object} loc - Entry from TW_LOCATIONS
  * @returns {{ isOpen: boolean, todayHours: string, statusText: string }}
  */
 function twGetStatus(loc) {
-    const days = ['sun','mon','tue','wed','thu','fri','sat'];
-    const now = new Date();
-    const dayKey = days[now.getDay()];
-    const today = loc.hours[dayKey];
-
+    var days = ['sun','mon','tue','wed','thu','fri','sat'];
+    var today = loc.hours[days[new Date().getDay()]];
     if (!today || !today.open) {
         return { isOpen: false, todayHours: 'Closed', statusText: 'Closed today' };
     }
-
-    const toMin = (str) => {
-        const [time, period] = str.split(' ');
-        let [h, m] = time.split(':').map(Number);
-        if (period === 'PM' && h !== 12) h += 12;
-        if (period === 'AM' && h === 12) h = 0;
-        return h * 60 + (m || 0);
+    var toMin = function(str) {
+        var parts = str.trim().split(' ');
+        var time  = parts[0], per = parts[1];
+        var hm = time.split(':').map(Number);
+        var h  = hm[0], m = hm[1] || 0;
+        if (per === 'pm' && h !== 12) h += 12;
+        if (per === 'am' && h === 12) h  = 0;
+        return h * 60 + m;
     };
-
-    const openMin = toMin(today.open);
-    const closeMin = toMin(today.close);
-    const nowMin = now.getHours() * 60 + now.getMinutes();
-    const isOpen = nowMin >= openMin && nowMin < closeMin;
-    const shortOpen = today.open.replace(':00 ', '').replace(' ', '');
-    const shortClose = today.close.replace(':00 ', '').replace(' ', '');
-    const todayHours = `${shortOpen}–${shortClose}`;
-
+    var now     = new Date();
+    var nowMin  = now.getHours() * 60 + now.getMinutes();
+    var isOpen  = nowMin >= toMin(today.open) && nowMin < toMin(today.close);
+    var fmt     = function(s) { return s.replace(':00', '').replace(' ', ''); };
+    var range   = fmt(today.open) + '\u2013' + fmt(today.close);
     return {
-        isOpen,
-        todayHours,
-        statusText: isOpen ? `Open · ${todayHours}` : `Closed · Opens ${shortOpen}`
+        isOpen: isOpen,
+        todayHours: range,
+        statusText: isOpen ? 'Open \u00b7 ' + range : 'Closed \u00b7 Opens ' + fmt(today.open.trim())
     };
 }
 
 /**
- * Utility: Haversine distance in miles
- */
-function twHaversine(lat1, lon1, lat2, lon2) {
-    const R = 3959;
-    const dLat = (lat2 - lat1) * Math.PI / 180;
-    const dLon = (lon2 - lon1) * Math.PI / 180;
-    const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180) * Math.cos(lat2*Math.PI/180) * Math.sin(dLon/2)**2;
-    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-}
-
-/**
- * Utility: Render footer hours from the Avon location (flagship)
- * Call this on any page: twRenderFooterHours('footerHoursId')
+ * Render today's hours into a footer element.
+ * Async-safe: waits for the cache before touching the DOM.
+ * Call: twRenderFooterHours('footerHours')
  */
 function twRenderFooterHours(elementId) {
-    const el = document.getElementById(elementId);
-    if (!el) return;
-    const avon = TW_LOCATIONS.find(l => l.id === 'avon');
-    if (!avon) return;
-    const status = twGetStatus(avon);
-    el.textContent = status.todayHours + ' Today';
+    TW_CACHE_READY.then(function() {
+        var el = document.getElementById(elementId);
+        if (!el) return;
+        var rh = TW_CACHE && TW_CACHE.regularHours;
+        if (!rh) return; // element keeps its static default text
+        var days  = ['sun','mon','tue','wed','thu','fri','sat'];
+        var today = rh[days[new Date().getDay()]];
+        if (!today || !today.open) { el.textContent = 'Closed Today'; return; }
+        var fmt = function(s) { return s.replace(':00', '').replace(' ', ''); };
+        el.textContent = fmt(today.open) + '\u2013' + fmt(today.close) + ' Today';
+    });
 }
