@@ -123,8 +123,20 @@
         input,select,textarea{width:100%;padding:12px 14px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:.95rem;color:var(--dark);transition:border-color .2s;background:var(--white)}
         input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red)}
         select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
-        .btn-submit{width:100%;padding:16px;background:var(--red);color:var(--white);border:none;border-radius:50px;font-family:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;transition:background .2s;margin-top:8px}.btn-submit:hover{background:var(--red-dark)}
+        .btn-submit{width:100%;padding:16px;background:var(--red);color:var(--white);border:none;border-radius:50px;font-family:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;transition:background .2s,opacity .2s;margin-top:8px}.btn-submit:hover:not(:disabled){background:var(--red-dark)}.btn-submit:disabled{opacity:.6;cursor:not-allowed}
         .form-note{font-size:.8rem;color:var(--gray-400);text-align:center;margin-top:12px}
+
+        .submit-success{display:none;margin-top:24px;padding:24px 28px;background:#f0faf4;border:1px solid #7ecfa0;border-radius:var(--radius);text-align:center}
+        .submit-success.show{display:block}
+        .submit-success .success-icon{width:48px;height:48px;background:#28a057;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
+        .submit-success .success-icon svg{width:24px;height:24px;color:#fff}
+        .submit-success h3{font-size:1.1rem;font-weight:700;color:#1a4730;margin-bottom:6px}
+        .submit-success p{font-size:.9rem;color:#2d6a4a}
+
+        /* VALIDATION */
+        input.invalid,select.invalid,textarea.invalid{border-color:var(--red)!important;background:var(--red-light)}
+        .invalid-msg{color:var(--red);font-size:.78rem;margin-top:4px;display:none}
+        .invalid-msg.show{display:block}
 
         .footer{justify-content: center; background:var(--dark);color:rgba(255,255,255,.7);padding:48px 20px 24px}.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:36px}.footer h4{color:var(--white);font-size:1rem;margin-bottom:16px;font-weight:600}.footer p,.footer a{font-size:.9rem;line-height:1.8}.footer a:hover{color:var(--white)}.footer-bottom{max-width:1200px;margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem}.social-icons{display:flex;gap:12px;margin-top:8px}.social-icons a img{width:28px;height:28px;opacity:.7;transition:opacity .2s}.social-icons a img:hover{opacity:1}.footer-links{list-style:none}.footer-links li{margin-bottom:4px}
         @media(max-width:600px){
@@ -208,59 +220,75 @@
 <section class="form-section">
     <div class="form-card">
         <div class="form-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Request a Fundraiser</div>
+        <form id="fundraiserForm" novalidate>
         <div class="form-body">
             <div class="form-row">
                 <div class="form-group">
-                    <label>Preferred Location <span class="req">*</span></label>
-                    <select required>
+                    <label for="frLocation">Preferred Location <span class="req">*</span></label>
+                    <select id="frLocation" name="frLocation" required>
                         <option value="">Select a Location</option>
-                        <option>Avon</option><option>Brighton</option><option>Bushnell's Basin</option><option>Canandaigua</option><option>Fairport</option><option>Greece</option><option>Newark</option>
+                        <option value="avon">Avon</option><option value="brighton">Brighton</option><option value="basin">Bushnell's Basin</option><option value="canandaigua">Canandaigua</option><option value="fairport">Fairport</option><option value="greece">Greece</option><option value="newark">Newark</option>
                     </select>
+                    <p class="invalid-msg" id="frLocationMsg">Please select a location.</p>
                 </div>
                 <div class="form-group">
-                    <label>Preferred Date <span class="req">*</span></label>
-                    <input type="date" required>
+                    <label for="frDate">Preferred Date <span class="req">*</span></label>
+                    <input type="date" id="frDate" name="frDate" required>
+                    <p class="invalid-msg" id="frDateMsg">Please select a date.</p>
                 </div>
             </div>
             <div class="form-group">
-                <label>Fundraiser Type <span class="req">*</span></label>
-                <select required>
+                <label for="frType">Fundraiser Type <span class="req">*</span></label>
+                <select id="frType" name="frType" required>
                     <option value="">Select Type</option>
-                    <option>In-Store Only</option>
-                    <option>In-Store/Online Ordering</option>
+                    <option value="In-Store Only">In-Store Only</option>
+                    <option value="In-Store/Online Ordering">In-Store/Online Ordering</option>
                 </select>
+                <p class="invalid-msg" id="frTypeMsg">Please select a fundraiser type.</p>
             </div>
             <div class="form-group">
-                <label>Name of Group / Organization <span class="req">*</span></label>
-                <input type="text" required placeholder="e.g. Youth Soccer League">
+                <label for="frOrg">Name of Group / Organization <span class="req">*</span></label>
+                <input type="text" id="frOrg" name="frOrg" required placeholder="e.g. Youth Soccer League">
+                <p class="invalid-msg" id="frOrgMsg">Please enter your organization name.</p>
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label>Representative Name <span class="req">*</span></label>
-                    <input type="text" required placeholder="Contact person">
+                    <label for="frRepName">Representative Name <span class="req">*</span></label>
+                    <input type="text" id="frRepName" name="frRepName" required placeholder="Contact person">
+                    <p class="invalid-msg" id="frRepNameMsg">Please enter your name.</p>
                 </div>
                 <div class="form-group">
-                    <label>Email <span class="req">*</span></label>
-                    <input type="email" required placeholder="you@email.com">
+                    <label for="frEmail">Email <span class="req">*</span></label>
+                    <input type="email" id="frEmail" name="frEmail" required placeholder="you@email.com">
+                    <p class="invalid-msg" id="frEmailMsg">Please enter a valid email address.</p>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <label>Phone <span class="req">*</span></label>
-                    <input type="tel" required placeholder="(585) 000-0000">
+                    <label for="frPhone">Phone <span class="req">*</span></label>
+                    <input type="tel" id="frPhone" name="frPhone" required placeholder="(585) 000-0000" maxlength="14" oninput="formatFundraiserPhone(this)">
+                    <p class="invalid-msg" id="frPhoneMsg">Please enter a valid phone number: (XXX) XXX-XXXX</p>
                 </div>
                 <div class="form-group">
-                    <label>Check Made Payable To</label>
-                    <input type="text" placeholder="Organization name for check">
+                    <label for="frPayable">Check Made Payable To <span class="req">*</span></label>
+                    <input type="text" id="frPayable" name="frPayable" required placeholder="Organization name for check">
+                    <p class="invalid-msg" id="frPayableMsg">Please enter the payable name.</p>
                 </div>
             </div>
             <div class="form-group">
-                <label>Address of Organization</label>
-                <input type="text" placeholder="Mailing address for donation check">
+                <label for="frAddress">Address of Organization <span class="req">*</span></label>
+                <input type="text" id="frAddress" name="frAddress" required placeholder="Mailing address for donation check">
+                <p class="invalid-msg" id="frAddressMsg">Please enter the organization address.</p>
             </div>
-            <button type="submit" class="btn-submit">Submit Fundraiser Request</button>
+            <button type="submit" class="btn-submit" id="frSubmitBtn">Submit Fundraiser Request</button>
+            <div class="submit-success" id="frSubmitSuccess">
+                <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <h3>Request Submitted!</h3>
+                <p>Thanks for your interest in hosting a fundraiser at Tom Wahl's. We'll review your request and reach out within a few business days to confirm the details.</p>
+            </div>
             <p class="form-note">We'll review your request and reach out to confirm the details within a few business days.</p>
         </div>
+        </form>
     </div>
 </section><div class="checker-stripe"></div>
 
@@ -317,6 +345,87 @@
     <!-- Hours JS -->
     <script src="/assets/scripts/locations-data.js"></script>
     <script>twRenderFooterHours('footerHours');</script>
+
+    <script>
+    // ── Phone formatter (matches careers.html pattern) ──
+    function formatFundraiserPhone(el) {
+        var digits = el.value.replace(/\D/g, '').slice(0, 10);
+        if (digits.length === 0) el.value = '';
+        else if (digits.length <= 3) el.value = '(' + digits;
+        else if (digits.length <= 6) el.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+        else el.value = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6);
+        if (/^\(\d{3}\) \d{3}-\d{4}$/.test(el.value)) {
+            el.classList.remove('invalid');
+            var m = document.getElementById('frPhoneMsg');
+            if (m) m.classList.remove('show');
+        }
+    }
+
+    // ── Validation helpers ──
+    function markInvalid(el) { el.classList.add('invalid'); }
+    function markValid(el) { el.classList.remove('invalid'); }
+    function showMsg(id) { var m = document.getElementById(id); if (m) m.classList.add('show'); }
+    function hideMsg(id) { var m = document.getElementById(id); if (m) m.classList.remove('show'); }
+    function clearOnInput(el, msgId) {
+        var evt = (el.tagName === 'SELECT') ? 'change' : 'input';
+        el.addEventListener(evt, function() { markValid(el); hideMsg(msgId); }, { once: false });
+    }
+
+    function validateFundraiserForm() {
+        var valid = true;
+
+        // Required text/select fields
+        var required = [
+            { id: 'frLocation', msg: 'frLocationMsg' },
+            { id: 'frDate',     msg: 'frDateMsg' },
+            { id: 'frType',     msg: 'frTypeMsg' },
+            { id: 'frOrg',      msg: 'frOrgMsg' },
+            { id: 'frRepName',  msg: 'frRepNameMsg' },
+            { id: 'frPayable',  msg: 'frPayableMsg' },
+            { id: 'frAddress',  msg: 'frAddressMsg' }
+        ];
+        required.forEach(function(f) {
+            var el = document.getElementById(f.id);
+            if (!el) return;
+            if (!el.value.trim()) { markInvalid(el); showMsg(f.msg); clearOnInput(el, f.msg); valid = false; }
+            else { markValid(el); hideMsg(f.msg); }
+        });
+
+        // Email
+        var emailEl = document.getElementById('frEmail');
+        if (emailEl) {
+            var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailEl.value.trim() || !emailRe.test(emailEl.value.trim())) {
+                markInvalid(emailEl); showMsg('frEmailMsg'); clearOnInput(emailEl, 'frEmailMsg'); valid = false;
+            } else { markValid(emailEl); hideMsg('frEmailMsg'); }
+        }
+
+        // Phone
+        var phoneEl = document.getElementById('frPhone');
+        if (phoneEl) {
+            if (!/^\(\d{3}\) \d{3}-\d{4}$/.test(phoneEl.value)) {
+                markInvalid(phoneEl); showMsg('frPhoneMsg'); clearOnInput(phoneEl, 'frPhoneMsg'); valid = false;
+            } else { markValid(phoneEl); hideMsg('frPhoneMsg'); }
+        }
+
+        return valid;
+    }
+
+    // ── Submit handler ──
+    document.getElementById('fundraiserForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (validateFundraiserForm()) {
+            var btn = document.getElementById('frSubmitBtn');
+            btn.textContent = 'PROCESSING...';
+            btn.disabled = true;
+            setTimeout(function() {
+                document.getElementById('frSubmitSuccess').classList.add('show');
+                btn.style.display = 'none';
+                document.getElementById('frSubmitSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 1200);
+        }
+    });
+    </script>
 
 </body>
 </html>

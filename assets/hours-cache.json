@@ -10,9 +10,17 @@
     "sun": { "open": "11:00 am", "close": "9:00 pm" }
   },
   "specialDays": [
-  {
-    "date": "2026-4-12",
-    "displayDate": "Sunday, April 12",
+    {
+    "date": "2027-2-14",
+    "displayDate": "Sunday, February 14",
+    "closed": false,
+    "open": null,
+    "close": null,
+    "label": "Super Bowl"
+  },
+    {
+    "date": "2026-4-5",
+    "displayDate": "Sunday, April 5",
     "closed": true,
     "open": null,
     "close": null,
@@ -22,9 +30,17 @@
     "date": "2026-07-04",
     "displayDate": "Saturday, July 4",
     "closed": false,
-    "open": " 11",
-    "close": "8",
+    "open": " 11am",
+    "close": "7pm",
     "label": "Independance Day"
+  },
+  {
+    "date": "2025-10-31",
+    "displayDate": "Saturday, October 31",
+    "closed": false,
+    "open": " 11am",
+    "close": "8pm",
+    "label": "Halloween"
   },
   {
     "date": "2026-11-26",
@@ -35,12 +51,36 @@
     "label": "Thanksgiving"
   },
   {
+    "date": "2026-12-24",
+    "displayDate": "Thursday, December 24",
+    "closed": false,
+    "open": "11am",
+    "close": "4pm",
+    "label": "Christmas Eve"
+  },
+  {
     "date": "2026-12-25",
     "displayDate": "Friday, December 25",
     "closed": true,
     "open": null,
     "close": null,
     "label": "Christmas"
+  },
+  {
+    "date": "2026-12-31",
+    "displayDate": "Thursday, December 31",
+    "closed": false,
+    "open": "11am",
+    "close": "8pm",
+    "label": "New Year's Eve"
+  },
+  {
+    "date": "2027-1-1",
+    "displayDate": "Friday, January 1",
+    "closed": true,
+    "open": "12pm",
+    "close": "8pm",
+    "label": "Christmas Eve"
   }
 ],
   "locations": [

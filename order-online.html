@@ -420,7 +420,7 @@
         .holiday-expand {
             display: none;
             position: absolute; right: 0; top: calc(100% + 6px);
-            min-width: 260px;
+            min-width: 300px;
             background: var(--white);
             border: 1px solid var(--gray-200);
             border-radius: var(--radius);
@@ -430,11 +430,12 @@
         }
         .holiday-expand.open { display: block; }
         .holiday-row {
-            display: flex; justify-content: space-between; align-items: center;
+            display: flex; justify-content: space-between; align-items: flex-start;
             padding: 10px 16px; border-bottom: 1px solid var(--gray-200); font-size: .88rem;
         }
         .holiday-row:last-child { border-bottom: none; }
-        .hday-label { font-weight: 600; color: var(--dark); }
+        .hday-label { font-weight: 600; color: var(--dark); line-height: 1.4; }
+        .hday-name { display: block; font-weight: 400; color: var(--gray-400); font-size: .82rem; }
         .hday-hours { color: var(--gray-600); }
         .hday-closed { color: var(--red); font-weight: 700; }
 
@@ -659,7 +660,7 @@ function renderHolidaySection(cache) {
     document.getElementById('holidaySection').style.display = '';
     document.getElementById('holidayExpand').innerHTML = upcoming.map(d => `
         <div class="holiday-row">
-            <span class="hday-label">${d.displayDate}${d.label ? ` <span style="font-weight:400;color:var(--gray-400)">(${d.label})</span>` : ''}</span>
+            <span class="hday-label">${d.displayDate}${d.label ? `<span class="hday-name">(${d.label})</span>` : ''}</span>
             ${d.closed ? '<span class="hday-closed">Closed</span>' : `<span class="hday-hours">${fmtRange(d.open, d.close)}</span>`}
         </div>`).join('');
 }
