@@ -11,14 +11,6 @@
   },
   "specialDays": [
     {
-    "date": "2027-02-14",
-    "displayDate": "Sunday, February 14",
-    "closed": false,
-    "open": "11am",
-    "close": "5pm",
-    "label": "Super Bowl"
-  },
-    {
     "date": "2026-04-05",
     "displayDate": "Sunday, April 5",
     "closed": true,
