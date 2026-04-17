@@ -47,55 +47,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --red: #C8102E; --red-dark: #a00d24; --dark: #1a1a1a; --cream: #faf8f5;
-            --white: #ffffff; --gray-100: #f5f5f5; --gray-200: #e8e8e8; --gray-400: #999; --gray-600: #666;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08); --radius: 12px; --radius-lg: 20px;
-        }
-        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        a { text-decoration: none; color: inherit; } a:hover { color: var(--red); }
-        img { max-width: 100%; height: auto; display: block; }
-
-        .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
-        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 72px; width: auto; }
-        .nav-links { display: flex; gap: 8px; align-items: center; }
-        .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
-        .nav-links a:hover { background: var(--gray-100); color: var(--dark); }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; border-radius: 2px; }
-        .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 20px; }
-        .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
-        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
-
-        .page-hero { background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); color: var(--white); padding: 60px 20px 50px; text-align: center; }
-        .page-hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 12px; }
-
         .content-section { max-width: 760px; margin: 0 auto; padding: 48px 20px 64px; }
         .content-card { background: var(--white); border-radius: var(--radius-lg); padding: 40px 36px; box-shadow: var(--shadow-sm); }
         .content-card h2 { font-size: 1.2rem; font-weight: 700; margin: 28px 0 12px; color: var(--dark); }
         .content-card h2:first-child { margin-top: 0; }
         .content-card p { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 16px; line-height: 1.75; }
         .content-card a { color: var(--red); font-weight: 600; }
-
-        .breadcrumb { margin-bottom: 12px; font-size: 0.85rem; opacity: 0.7; }
-        .breadcrumb a { color: white; text-decoration: underline; }
-
-        .footer { justify-content: center; background: var(--dark); color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
-        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
-        .footer a:hover { color: var(--white); }
-        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
-        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
-        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
-        .social-icons a img:hover { opacity: 1; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 4px; }
         @media(max-width:600px){
-            .page-hero{padding:36px 20px 36px}
-            .page-hero h1{font-size:1.5rem}
+            .content-card { padding: 28px 20px; }
         }
     </style>
 </head>
@@ -107,7 +66,15 @@
             <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
         </a>
         <div class="nav-links">
-            <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+            <div class="nav-dropdown">
+                <a>Menu</a>
+                <div class="nav-dropdown-menu">
+                    <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu" target="_blank" rel="noopener">View Full Menu</a>
+                    <a href="/assets/menus/Gluten_Free_Menu.pdf" target="_blank" rel="noopener">Gluten Free Menu</a>
+                    <a href="/assets/menus/Nutritional_Information.pdf" target="_blank" rel="noopener">Nutritional Info</a>
+                    <a href="/assets/menus/Allergen_Sheet.pdf" target="_blank" rel="noopener">Allergy Info</a>
+                </div>
+            </div>
             <a href="/order-online.html">Order Online</a>
             <a href="/rewards.html">Rewards</a>
             <a href="/coupons.html">Coupons</a>
@@ -118,7 +85,13 @@
         </button>
     </div>
     <div class="mobile-menu">
-        <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+        <a class="mobile-menu-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Menu</a>
+        <div class="mobile-menu-sub">
+            <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu" target="_blank" rel="noopener">View Full Menu</a>
+            <a href="/assets/menus/Gluten_Free_Menu.pdf" target="_blank" rel="noopener">Gluten Free Menu</a>
+            <a href="/assets/menus/Nutritional_Information.pdf" target="_blank" rel="noopener">Nutritional Info</a>
+            <a href="/assets/menus/Allergen_Sheet.pdf" target="_blank" rel="noopener">Allergy Info</a>
+        </div>
         <a href="/order-online.html">Order Online</a>
         <a href="/rewards.html">Rewards</a>
         <a href="/coupons.html">Coupons</a>
@@ -162,12 +135,15 @@
             </div>
         </div>
         <div>
-            <h4>Our Menu</h4>
+            <h4>Locations</h4>
             <ul class="footer-links">
-                <li><a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu">Full Menu</a></li>
-                <li><a href="/menus/gluten-free.pdf">Gluten Free Menu</a></li>
-                <li><a href="/menus/nutrition.pdf">Nutrition Info</a></li>
-                <li><a href="/menus/allergy.pdf">Allergy Info</a></li>
+                <li><a href="/locations.html#avon">Avon</a></li>
+                <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
+                <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
+                <li><a href="/locations.html#fairport">Fairport</a></li>
+                <li><a href="/locations.html#greece">Greece</a></li>
+                <li><a href="/locations.html#newark">Newark</a></li>
             </ul>
         </div>
         <div>

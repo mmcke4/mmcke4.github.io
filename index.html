@@ -80,44 +80,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/shared-styles.css">
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --red: #C8102E;
-            --red-dark: #a00d24;
-            --red-light: #ffeaee;
-            --dark: #1a1a1a;
-            --cream: #faf8f5;
-            --white: #ffffff;
-            --gray-100: #f5f5f5;
-            --gray-200: #e8e8e8;
-            --gray-400: #999;
-            --gray-600: #666;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
-            --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
-            --radius: 12px;
-            --radius-lg: 20px;
-        }
-        body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        a { text-decoration: none; color: inherit; }
-        img { max-width: 100%; height: auto; display: block; }
-
-        /* ── NAV ── */
-        .nav { background: var(--white); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--gray-200); }
-        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; }
-        .nav-logo img { height: 72px; width: auto; }
-        .nav-links { display: flex; gap: 8px; align-items: center; }
-        .nav-links a { padding: 8px 16px; border-radius: 8px; font-weight: 500; font-size: 0.95rem; color: var(--dark); transition: all 0.2s; }
-        .nav-links a:hover { background: var(--gray-100); }
-        .nav-links a.active { background: var(--red); color: var(--white); }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-        .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); margin: 6px 0; border-radius: 2px; }
-        .mobile-menu { display: none; background: var(--white); border-top: 1px solid var(--gray-200); padding: 12px 20px; }
-        .mobile-menu a { display: block; padding: 12px 0; font-weight: 500; color: var(--dark); border-bottom: 1px solid var(--gray-100); }
-        .mobile-menu a.active { color: var(--red); }
-        @media (max-width: 768px) { .nav-links { display: none; } .hamburger { display: block; } .mobile-menu.open { display: block; } }
-
-        /* ── HERO ── */
+        /* ── HERO (index uses .hero, not .page-hero) ── */
         .hero {
             background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
             color: var(--white);
@@ -139,17 +102,17 @@
             position: relative;
         }
         .hero p {
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
-            opacity: 0.92;
-            max-width: 600px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 520px;
             margin: 0 auto 32px;
             line-height: 1.7;
         }
         .hero h1 {
-            font-size: clamp(2.2rem, 6vw, 3.4rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 900;
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
             line-height: 1.1;
             position: relative;
             z-index: 2;
@@ -331,21 +294,9 @@
         }
         .locations-cta svg { width: 18px; height: 18px; }
 
-        /* ── FOOTER ── */
-        .footer { background:var(--dark); justify-content: center; color: rgba(255,255,255,0.7); padding: 48px 20px 24px; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 36px; }
-        .footer h4 { color: var(--white); font-size: 1rem; margin-bottom: 16px; font-weight: 600; }
-        .footer p, .footer a { font-size: 0.9rem; line-height: 1.8; }
-        .footer a:hover { color: var(--white); }
-        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.8rem; }
-        .social-icons { display: flex; gap: 12px; margin-top: 8px; }
-        .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
-        .social-icons a img:hover { opacity: 1; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 4px; }
         @media(max-width:600px){
             .hero{padding:40px 20px 48px}
-            .hero h1{font-size:1.6rem}
+            .hero h1{font-size:1.5rem}
             .hero p{font-size:.95rem}
             .app-banner{padding:32px 20px}
             .locations-strip{padding:32px 20px}
@@ -363,7 +314,15 @@
             <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo — Rochester's Best Cheeseburgers Since 1955">
         </a>
         <div class="nav-links">
-            <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+            <div class="nav-dropdown">
+                <a>Menu</a>
+                <div class="nav-dropdown-menu">
+                    <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu" target="_blank" rel="noopener">View Full Menu</a>
+                    <a href="/assets/menus/Gluten_Free_Menu.pdf" target="_blank" rel="noopener">Gluten Free Menu</a>
+                    <a href="/assets/menus/Nutritional_Information.pdf" target="_blank" rel="noopener">Nutritional Info</a>
+                    <a href="/assets/menus/Allergen_Sheet.pdf" target="_blank" rel="noopener">Allergy Info</a>
+                </div>
+            </div>
             <a href="/order-online.html">Order Online</a>
             <a href="/rewards.html">Rewards</a>
             <a href="/coupons.html">Coupons</a>
@@ -374,10 +333,17 @@
         </button>
     </div>
     <div class="mobile-menu">
-        <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu">Menu</a>
+        <a class="mobile-menu-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Menu</a>
+        <div class="mobile-menu-sub">
+            <a href="https://tomwahls.orderexperience.net/62602331214add22d5341ca5/menu" target="_blank" rel="noopener">View Full Menu</a>
+            <a href="/assets/menus/Gluten_Free_Menu.pdf" target="_blank" rel="noopener">Gluten Free Menu</a>
+            <a href="/assets/menus/Nutritional_Information.pdf" target="_blank" rel="noopener">Nutritional Info</a>
+            <a href="/assets/menus/Allergen_Sheet.pdf" target="_blank" rel="noopener">Allergy Info</a>
+        </div>
         <a href="/order-online.html">Order Online</a>
         <a href="/rewards.html">Rewards</a>
         <a href="/coupons.html">Coupons</a>
+        <a href="/careers.html">Careers</a>
         <a href="/fundraiser.html">Host a Fundraiser</a>
         <a href="/gift-cards.html">Gift Cards</a>
         <a href="https://tomwahls.myguestaccount.com/guest/nologin/account-balance">Check Gift Card Balance</a>
@@ -565,8 +531,8 @@
             <h4>Locations</h4>
             <ul class="footer-links">
                 <li><a href="/locations.html#avon">Avon</a></li>
-                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
                 <li><a href="/locations.html#brighton">Brighton</a></li>
+                <li><a href="/locations.html#basin">Bushnell's Basin</a></li>
                 <li><a href="/locations.html#canandaigua">Canandaigua</a></li>
                 <li><a href="/locations.html#fairport">Fairport</a></li>
                 <li><a href="/locations.html#greece">Greece</a></li>
@@ -587,13 +553,12 @@
                 <li><a href="/coupons.html">Coupons &amp; Deals</a></li>
                 <li><a href="/gift-cards.html">Gift Cards</a></li>
                 <li><a href="/fundraiser.html">Fundraisers</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/accessibility.html">Accessibility</a></li>
+                <li><a href="/careers.html">Careers</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites. | <a href="/accessibility.html">Accessibility</a> | <a href="/privacy.html">Privacy Policy</a>
     </div>
 </footer>
 
