@@ -91,7 +91,7 @@ img { max-width: 100%; height: auto; display: block; }
 .social-icons { display: flex; gap: 12px; margin-top: 8px; }
 .social-icons a img { width: 28px; height: 28px; opacity: 0.7; transition: opacity 0.2s; }
 .social-icons a img:hover { opacity: 1; }
-.footer-links { list-style: none; }
+.footer-links { list-style: none; line-height: 1.3;}
 .footer-links li { margin-bottom: 4px; }
 
 /* ── MOBILE BREAKPOINTS ── */
@@ -104,11 +104,11 @@ img { max-width: 100%; height: auto; display: block; }
 @media (max-width: 600px) {
     .page-hero { padding: 36px 20px 36px; }
     .page-hero h1 { font-size: 1.5rem; }
-    .page-hero p { font-size: 0.95rem; }
+    .page-hero p { font-size: 0.75rem; } /* 0.95rem */
     /* Footer scale-down for narrow screens */
     .footer { padding: 36px 20px 20px; }
     .footer h4 { font-size: 0.95rem; margin-bottom: 12px; }
-    .footer p, .footer a { font-size: 0.85rem; line-height: 1.7; }
+    .footer p, .footer a { font-size: 0.75rem; line-height: 1.7; } /* 0.85rem; line-height: 1.7; */
     .footer-bottom { font-size: 0.75rem; }
 }
 
