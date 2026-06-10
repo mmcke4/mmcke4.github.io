@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <title>Host a Fundraiser | 15% Donated to Your Organization | Tom Wahl's</title>
     <meta name="description" content="Host a fundraiser at Tom Wahl's! 15% of sales your group brings in will be donated to your school, club, sports team or organization. Request your event today.">
     <link rel="canonical" href="https://mmcke4.github.io/fundraiser.html">
@@ -14,7 +23,7 @@
     <meta property="og:title" content="Host a Fundraiser at Tom Wahl's — 15% Donated">
     <meta property="og:description" content="Host a fundraiser at Tom Wahl's and earn 15% of sales back for your school, club, sports team, or organization. Request your event date today.">
     <meta property="og:url" content="https://mmcke4.github.io/fundraiser.html">
-    <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta property="og:image" content="https://mmcke4.github.io/assets/tomwahlslogo.png">
     <meta property="og:site_name" content="Tom Wahl's">
     <meta property="og:locale" content="en_US">
 
@@ -22,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tom Wahl's Fundraisers — 15% Back to Your Organization">
     <meta name="twitter:description" content="Earn 15% of your group's sales at Tom Wahl's for your school, team, or nonprofit. Easy to book, great for any group.">
-    <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta name="twitter:image" content="https://mmcke4.github.io/assets/tomwahlslogo.png">
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -139,7 +148,7 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="/index.html" class="nav-logo">
-            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo"></a>
+            <img src="/assets/tomwahlslogo.webp" width="252" height="216" alt="Tom Wahl's Logo"></a>
             <div class="nav-links">
                 <div class="nav-dropdown">
                     <a>Menu</a>
@@ -218,7 +227,7 @@
 
 <section class="form-section">
     <div class="form-card">
-        <div class="form-header"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Request a Fundraiser</div>
+        <div class="form-header"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Request a Fundraiser</div>
         <form id="fundraiserForm" novalidate>
         <div class="form-body">
             <div class="form-row">
@@ -281,7 +290,7 @@
             </div>
             <button type="submit" class="btn-submit" id="frSubmitBtn">Submit Fundraiser Request</button>
             <div class="submit-success" id="frSubmitSuccess">
-                <div class="success-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="success-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
                 <h3>Request Submitted!</h3>
                 <p>Thanks for your interest in hosting a fundraiser at Tom Wahl's. We'll review your request and reach out within a few business days to confirm the details.</p>
             </div>
@@ -298,10 +307,10 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.webp" alt="Facebook" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.webp" alt="Instagram" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.webp" alt="Twitter" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.webp" alt="TikTok" width="512" height="512" loading="lazy" decoding="async"></a>
             </div>
         </div>
         <div>
@@ -329,13 +338,12 @@
                 <li><a href="/rewards.html">Rewards Program</a></li>
                 <li><a href="/coupons.html">Coupons &amp; Deals</a></li>
                 <li><a href="/gift-cards.html">Gift Cards</a></li>
-                <li><a href="/privacy.html">Privacy Policy</a></li>
-                <li><a href="/accessibility.html">Accessibility</a></li>
+                <li><a href="/careers.html">Careers</a></li>
             </ul>
         </div>
     </div>
     <div class="footer-bottom">
-        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites.
+        &copy; 2026 Tom Wahl's. All rights reserved. | Designed with enthusiasm for Rochester's best bites. | <a href="/accessibility.html">Accessibility</a> | <a href="/privacy.html">Privacy Policy</a>
     </div>
 </footer>
 

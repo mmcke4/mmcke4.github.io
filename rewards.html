@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <title>Rewards Program | Earn Free Cheeseburgers & More | Tom Wahl's - Rochester, NY</title>
     <meta name="description" content="Join Tom Wahl's Rewards and earn 2 points per dollar at all 7 Rochester, NY area locations. Get a FREE cheeseburger after your first $10 purchase! Redeem points for free menu items, enjoy birthday rewards & exclusive member deals. Download the app today.">
     <meta name="keywords" content="Tom Wahl's rewards, Tom Wahls loyalty program, free cheeseburger Rochester, Tom Wahls app, Tom Wahl's points, Tom Wahls free food, Rochester burger rewards, Western New York restaurant rewards, Tom Wahls birthday reward">
@@ -15,7 +24,7 @@
     <meta property="og:title" content="Tom Wahl's Rewards — Earn Free Cheeseburgers & Exclusive Deals">
     <meta property="og:description" content="Earn 2 points per $1 at any Tom Wahl's. Get a FREE cheeseburger after your first $10 purchase! Redeem for hot dogs, fries, Junker Plates & more.">
     <meta property="og:url" content="https://mmcke4.github.io/rewards.html">
-    <meta property="og:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta property="og:image" content="https://mmcke4.github.io/assets/tomwahlslogo.png">
     <meta property="og:site_name" content="Tom Wahl's">
     <meta property="og:locale" content="en_US">
 
@@ -23,7 +32,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Tom Wahl's Rewards — Free Burgers, Points & Perks">
     <meta name="twitter:description" content="Earn 2 points per $1 at Tom Wahl's. Get a FREE cheeseburger after $10! Download the app to start earning.">
-    <meta name="twitter:image" content="https://mmcke4.github.io/assets/TomWahlsLogo.png">
+    <meta name="twitter:image" content="https://mmcke4.github.io/assets/tomwahlslogo.png">
 
     <!-- Structured Data: Loyalty Program -->
     <script type="application/ld+json">
@@ -48,7 +57,7 @@
                 "@type": "Organization",
                 "name": "Tom Wahl's",
                 "url": "https://mmcke4.github.io/",
-                "logo": "https://mmcke4.github.io/assets/TomWahlsLogo.png",
+                "logo": "https://mmcke4.github.io/assets/tomwahlslogo.png",
                 "foundingDate": "1955",
                 "description": "Rochester's favorite burger destination since 1955. Home of the Wahlburger, ground steak cheeseburgers, and homemade root beer.",
                 "areaServed": {"@type": "State", "name": "New York"},
@@ -56,13 +65,16 @@
             },
             "description": "Earn 2 points per dollar spent at any Tom Wahl's. Redeem for free cheeseburgers, hot dogs, fries, ice cream, Wahlburgers, chicken tenders, Junker Plates and more. Birthday rewards, exclusive offers and member-only deals.",
             "offers": [
-                {"@type": "Offer", "name": "Free Hot Dog", "description": "Redeem 150 points for a free hot dog"},
-                {"@type": "Offer", "name": "Free Regular Fry", "description": "Redeem 150 points for a free regular french fry"},
-                {"@type": "Offer", "name": "Free Ice Cream", "description": "Redeem 150 points for a free regular ice cream"},
-                {"@type": "Offer", "name": "Free Cheeseburger", "description": "Redeem 250 points for a free cheeseburger"},
-                {"@type": "Offer", "name": "Free Wahlburger", "description": "Redeem 250 points for a free Wahlburger"},
-                {"@type": "Offer", "name": "Free 55 Junker Plate", "description": "Redeem 400 points for a free 55 Junker Plate"},
-                {"@type": "Offer", "name": "Free Fish Dinner", "description": "Redeem 500 points for a free fish dinner"}
+                {"@type": "Offer", "name": "Free Hot Dog", "description": "Redeem 200 points for a free hot dog"},
+                {"@type": "Offer", "name": "Free Regular Fry", "description": "Redeem 200 points for a free regular french fry"},
+                {"@type": "Offer", "name": "Free Medium Ice Cream", "description": "Redeem 200 points for a free regular ice cream"},
+                {"@type": "Offer", "name": "Free Cheeseburger", "description": "Redeem 275 points for a free cheeseburger"},
+                {"@type": "Offer", "name": "Free Wahlburger", "description": "Redeem 300 points for a free Wahlburger"},
+                {"@type": "Offer", "name": "Free Chicken Sandwich", "description": "Redeem 300 points for a free Chicken Sandwich"},
+                {"@type": "Offer", "name": "Free 5pc Tenders", "description": "Redeem 350 points for a free 5pc Chicken Tenders"},
+                {"@type": "Offer", "name": "Free Kid's Meal's", "description": "Redeem 350 points for a free Kid's Meal's"},
+                {"@type": "Offer", "name": "Free 55 Junker Plate", "description": "Redeem 525 points for a free 55 Junker Plate"},
+                {"@type": "Offer", "name": "Free Fish Dinner", "description": "Redeem 600 points for a free fish dinner"}
             ]
         }
     }
@@ -502,7 +514,7 @@
         .app-cta h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 12px; }
         .app-cta p { opacity: 0.75; max-width: 480px; margin: 0 auto 28px; font-size: 1rem; }
         .app-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-        .app-buttons a img { height: 48px; }
+        .app-buttons a img { height: 48px; width: auto; }
 
         @media(max-width:600px){
             .rewards-hero{padding:40px 20px 48px}
@@ -512,6 +524,7 @@
             .how-card{padding:28px 24px}
             .how-card h2{font-size:1.3rem}
             .earn-section h2,.tier-inner h2,.benefits-section h2,.faq-inner h2{font-size:1.25rem}
+            .earn-grid{grid-template-columns:1fr}
             .app-cta h2{font-size:1.3rem}
             .app-cta p{font-size:.9rem}
             .tier-item img{width:100px;height:100px}
@@ -524,7 +537,7 @@
 <nav class="nav">
     <div class="nav-inner">
         <a href="/index.html" class="nav-logo">
-            <img src="/assets/TomWahlsLogo.png" alt="Tom Wahl's Logo">
+            <img src="/assets/tomwahlslogo.webp" width="252" height="216" alt="Tom Wahl's Logo">
         </a>
         <div class="nav-links">
             <div class="nav-dropdown">
@@ -568,19 +581,19 @@
         <a href="https://mmcke4.github.io/" style="color:white;text-decoration:underline;">Home</a> &rsaquo; Rewards Program
     </nav>
     <!--<div class="hero-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 9 7 20a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2l.5-11"/><path d="M16.5 11.5h1a2.5 2.5 0 0 1 0 5h-1.4"/><path d="M5 9c0-2.2 1.8-3.5 3.5-2.8C9 4 13 4 13.5 6.2 15.2 5.5 17 6.8 17 9"/><path d="M10 13v5M13.5 13v5" opacity=".55"/></svg>
         Tom Wahl's Rewards Program
     </div>-->
     <h1>Eat More.<br>Earn More.<br>Get Free Food.</h1>
-    <p>Join today and earn a <strong>FREE Cheeseburger</strong> after your first $10 purchase at any of our 7 Rochester, NY area. Earn 2 points for every dollar spent!</p>
+    <p>Join today and earn a <strong>FREE Cheeseburger</strong> after your first $10+ purchase at any location. Earn 2 points for every dollar spent!</p>
     <p style="font-size:0.9rem;margin-bottom:16px;">Download the app to get started — it's the fastest way to join!</p>
     <div class="hero-ctas">
         <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790" class="btn btn-white" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
             App Store
         </a>
         <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1" class="btn btn-white" target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.67c-.38-.53-.55-1.29-.55-2.28V2.61c0-.99.17-1.75.55-2.28L14.1 11.7 3.18 23.67zm1.72 1.1L17.37 13.5l-3.1-3.1L4.9 24.77zm17.28-11.63c.49.28.82.77.82 1.36 0 .59-.33 1.08-.82 1.36l-3.2 1.85-3.43-3.43 3.43-3.43 3.2 1.85v.44zM4.9-.77L14.27 13.6l3.1-3.1L4.9-.77z"/></svg>
+            <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 13.7 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm12.3 7.5L5.7 3.4l7.6 7.6 2.6-1.7Zm4.4 1.5c.4.3.7.7.7 1.2s-.3.9-.7 1.2l-2.6 1.5-2.9-2.7 2.9-2.7 2.6 1.5ZM5.7 20.6l10.2-5.9-2.6-1.7-7.6 7.6Z"/></svg>
             Google Play
         </a>
         <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k&template=1" class="btn btn-ghost" target="_blank" rel="noopener">Or Enroll Online</a>
@@ -606,12 +619,12 @@
             <div class="step">
                 <div class="step-number">3</div>
                 <h3>Get Rewards</h3>
-                <p>Redeem points for free menu items, from hot dogs to Junker Plates!</p>
+                <p>Redeem points for free menu items, see available rewards below!</p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
                 <h3>Enjoy Perks</h3>
-                <p>Birthday rewards, exclusive offers, and early access to new items.</p>
+                <p>Birthday rewards, exclusive offers, and announcements about new items.</p>
             </div>
         </div>
     </div>
@@ -632,29 +645,30 @@
     <div class="earn-grid">
         <div class="earn-card">
             <div class="earn-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <path d="M16 10a4 4 0 01-8 0"/>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 10a8 8 0 0 1 16 0Z"/>
+                    <path d="M9 6.5h.01M12.5 5.5h.01M15.5 7h.01"/>
+                    <path d="M3.5 13.5c1.4 1.1 2.9 1.1 4.3 0s2.9-1.1 4.3 0 2.9 1.1 4.3 0 2.9-1.1 4.3 0"/>
+                    <path d="M4.5 17h15v.5a3 3 0 0 1-3 3h-9a3 3 0 0 1-3-3Z"/>
                 </svg>
             </div>
             <h3>In-Store</h3>
-            <p>Open the app and tap "CHECK IN" to scan your QR code at the register.</p>
+            <p>Open the app and scan your QR code at the register.</p>
         </div>
         <div class="earn-card">
             <div class="earn-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
                     <line x1="12" y1="18" x2="12.01" y2="18"/>
                     <path d="M9 6h6"/>
                 </svg>
             </div>
             <h3>On The App</h3>
-            <p>Order through the app and your points are automatically added.</p>
+            <p>Order through the app and your points are automatically awarded.</p>
         </div>
         <div class="earn-card">
             <div class="earn-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
                     <line x1="8" y1="21" x2="16" y2="21"/>
                     <line x1="12" y1="17" x2="12" y2="21"/>
@@ -671,57 +685,57 @@
 <!-- REWARD TIERS -->
 <section class="tier-section" id="rewards-tiers">
     <div class="tier-inner">
-        <h2>Get Your Favorites for FREE</h2>
+        <h2><svg aria-hidden="true" focusable="false" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-5px;margin-right:6px"><path d="M7 10 6 4.5M10.3 10l-.2-6.5M13.8 10l.5-6M17 10l1.3-4.5"/><path d="M5 10h14l-1.5 10.2a2 2 0 0 1-2 1.8H8.5a2 2 0 0 1-2-1.8L5 10Z"/><path d="M8 14c2.4 1.4 5.6 1.4 8 0" opacity=".6"/></svg>Get Your Favorites for FREE</h2>
         <p class="tier-subtitle">Redeem your points for these delicious rewards</p>
         <div class="tier-grid">
             <div class="tier-item">
-                <img src="/assets/rewards/reward-hot-dog.png" alt="Hot Dog">
-                <div class="tier-points">150 PTS</div>
+                <img src="/assets/rewards/reward-hot-dog.webp" alt="Hot Dog" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">200 PTS</div>
                 <h4>FREE Hot Dog</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-fries.png" alt="French Fry">
-                <div class="tier-points">150 PTS</div>
+                <img src="/assets/rewards/reward-fries.webp" alt="French Fry" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">200 PTS</div>
                 <h4>FREE Regular Fry</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-ice-cream.png" alt="Ice Cream">
-                <div class="tier-points">150 PTS</div>
+                <img src="/assets/rewards/reward-ice-cream.webp" alt="Ice Cream" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">200 PTS</div>
                 <h4>FREE Ice Cream</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-cheeseburger.png" alt="Cheeseburger">
-                <div class="tier-points">250 PTS</div>
+                <img src="/assets/rewards/reward-cheeseburger.webp" alt="Cheeseburger" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">275 PTS</div>
                 <h4>FREE Cheeseburger</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-wahlburger.png" alt="Wahlburger">
-                <div class="tier-points">250 PTS</div>
+                <img src="/assets/rewards/reward-wahlburger.webp" alt="Wahlburger" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">300 PTS</div>
                 <h4>FREE Wahlburger</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-grilled-chicken.png" alt="Chicken Sandwich">
-                <div class="tier-points">250 PTS</div>
+                <img src="/assets/rewards/reward-grilled-chicken.webp" alt="Chicken Sandwich" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">300 PTS</div>
                 <h4>FREE Chicken Sandwich</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-chicken-fingers.png" alt="5pc Tenders">
-                <div class="tier-points">300 PTS</div>
+                <img src="/assets/rewards/reward-chicken-fingers.webp" alt="5pc Tenders" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">350 PTS</div>
                 <h4>FREE 5pc Tenders</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-fun-meal-cb-core.png" alt="Fun Meal">
-                <div class="tier-points">300 PTS</div>
+                <img src="/assets/rewards/reward-fun-meal-cb-core.webp" alt="Fun Meal" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">350 PTS</div>
                 <h4>FREE Kid's Meal</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-junker-core-reward.png" alt="55 Junker Plate">
-                <div class="tier-points">400 PTS</div>
+                <img src="/assets/rewards/reward-junker-core-reward.webp" alt="55 Junker Plate" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">525 PTS</div>
                 <h4>FREE Junker Plate</h4>
             </div>
             <div class="tier-item">
-                <img src="/assets/rewards/reward-fish-dinner.png" alt="Fish Dinner">
-                <div class="tier-points">500 PTS</div>
+                <img src="/assets/rewards/reward-fish-dinner.webp" alt="Fish Dinner" width="600" height="480" loading="lazy" decoding="async">
+                <div class="tier-points">600 PTS</div>
                 <h4>FREE Fish Dinner</h4>
             </div>
         </div>
@@ -734,10 +748,12 @@
     <div class="benefits-grid">
         <div class="benefit-card">
             <div class="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 2L6 20h12L12 2z"/>
-                    <line x1="4" y1="20" x2="20" y2="20"/>
-                    <circle cx="12" cy="2" r="1.5" fill="currentColor" stroke="none"/>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 1.6s1.3 1.5 1.3 2.4a1.3 1.3 0 0 1-2.6 0c0-.9 1.3-2.4 1.3-2.4Z" fill="currentColor" stroke="none"/>
+                    <path d="M12 7.5V5.6"/>
+                    <path d="M5.5 14a6.5 6.5 0 0 1 13 0"/>
+                    <path d="M4.5 14h15l-1.5 6.8a1.6 1.6 0 0 1-1.6 1.2h-8.8a1.6 1.6 0 0 1-1.6-1.2L4.5 14Z"/>
+                    <path d="M9.5 14.5 9 21.5M14.5 14.5l.5 7" opacity=".5"/>
                 </svg>
             </div>
             <h4>Birthday Reward</h4>
@@ -745,7 +761,7 @@
         </div>
         <div class="benefit-card">
             <div class="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <rect x="5" y="2" width="14" height="20" rx="2"/>
                     <line x1="12" y1="18" x2="12.01" y2="18"/>
                     <polyline points="9 10 11 12 15 8"/>
@@ -756,7 +772,7 @@
         </div>
         <div class="benefit-card">
             <div class="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
                 </svg>
             </div>
@@ -765,14 +781,14 @@
         </div>
         <div class="benefit-card">
             <div class="benefit-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/>
                     <path d="M13.73 21a2 2 0 01-3.46 0"/>
                     <line x1="12" y1="2" x2="12" y2="4"/>
                 </svg>
             </div>
             <h4>First To Know</h4>
-            <p>Exclusive offers, new menu items, and insider info.</p>
+            <p>Exclusive offers, new items, and insider info.</p>
         </div>
     </div>
 </section><div class="checker-stripe"></div>
@@ -786,140 +802,133 @@
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How does Tom Wahl's Rewards Program Work?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Once you become a member, you will earn 2 points per $1 spent at any Tom Wahl's location. Earn points automatically when you order in our app and online via tomwahls.com. You must check in to earn points and redeem rewards, open your Tom Wahl's app &amp; either; tap the "CHECK-IN" icon and share your code, scan your QR code at the register, or provide the phone number associated with your account at checkout.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How do I Sign Up for Rewards?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">We recommend downloading Tom Wahl's Mobile app for the best experience. Find it in the Apple App Store (iOS) and Google Play (Android). Alternatively, guests can enroll online using this link: click <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k%3d&template=1" style="color:var(--red);font-weight:600;">here</a>.</div>
+            <div class="faq-answer">We recommend downloading the Tom Wahl's mobile app for the best experience. Find it in the Apple App Store (iOS) and Google Play (Android). Alternatively, guests can enroll online using this link: <a href="https://tomwahls.myguestaccount.com/en-us/guest/enroll?card-template=ktYylJhNj2k%3d&template=1" style="color:var(--red);font-weight:600;">click here</a>.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How do I Earn a Free Cheeseburger?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">New members who spend their first $10+ at any Tom Wahl's location will automatically receive a Free Cheeseburger! After your visit, check your email for confirmation!</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Does Tom Wahl's Mobile App ask for Location Information?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Yes, however, sharing your location information is not required. Location information is used to locate restaurants nearest to you and help make your search quick and easy.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Do I need a smartphone to participate?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Our mobile app is the best way to participate. To earn points in the restaurant without a mobile device, you will need to provide the phone number associated with the account. Non-App users can manage their account online using this link: <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--red);font-weight:600;">click here</a>.</div>
+            <div class="faq-answer">Tom Wahl's' mobile app is the best way to participate. To earn points in the restaurant without a mobile device, you will need to provide the phone number associated with the account. Non-App users can manage their account online using this link: <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--red);font-weight:600;">click here</a>.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 What can I redeem points for?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Points can be redeemed for most of your favorite menu items like Milkshakes, Cheeseburgers, Junker Plates, and more. To see the full list of current rewards, <a href="#rewards-tiers" style="color:var(--red);font-weight:600;">click here</a>. Or visit the Reward Yourself section in the app or online to redeem your points.</div>
+            <div class="faq-answer">Points can be redeemed for most of your favorite menu items like Cheeseburgers, Fries, Milkshakes, Junker Plates, and more. To see the full list of current rewards, <a href="#rewards-tiers" style="color:var(--red);font-weight:600;">click here</a>. Or visit the Reward Yourself section in the app or online to redeem your points.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 I Forgot to Check-In. Can I get Points for a Previous Order?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Absolutely! App users should submit a points request using the "Points Request" <a href="https://www.tomwahls.com/points-request.cfm" style="color:var(--red);font-weight:600;">link</a> found in the left side menu. Click the menu icon located in the upper left corner of the Mobile App welcome page to view. Alternatively, you can email us directly at <a href="mailto:rewards@tomwahls.com" style="color:var(--red);font-weight:600;">rewards@tomwahls.com</a> with a picture of your receipt along with all requested information. Please allow 48 hours for points to be added to your account.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How Do I Know How Many Points or Rewards I Have Earned?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Your account balances are located on the welcome screen once you are logged into your account on the Mobile App. In the Guest Account Portal, you can find this in the Summary of Accounts section after logging in.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How do I Redeem a Reward?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">In-store during checkout, provide your QR/Check-in code from the Mobile App, OR provide the phone number linked to your rewards account. While ordering online or with the Mobile App, you will be shown a summary of applicable rewards when you review your order. Choose "Apply Reward" to apply eligible rewards. Further, while signed in to your account, open the settings menu and click on "Rewards".</div>
+            <div class="faq-answer">In-store during checkout, provide your QR/Check-in code from the Mobile App, OR provide the phone number linked to your rewards account. While ordering online or with the Mobile App, you will be shown a summary of applicable rewards when you review your order. Select the reward to redeem and don't forget to hit "Apply"!. Further, while signed in to your account, open the settings menu and click on "Rewards" to see what you have avaialble.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 I have Multiple Rewards. Can I Use More than One on a Single Order?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Absolutely! However, coupons cannot be used in addition to redeemed rewards.</div>
+            <div class="faq-answer">Absolutely! However, <b>coupons</b> cannot be used in addition to redeemed rewards.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Will My Points Expire?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Nope, your points will not expire! Once you redeem your points for a reward, you have 30 days to use that reward. In limited cases, certain promotions may place an expiration date on points awarded via the promotion.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Do my Rewards Expire?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Rewards purchased with points typically expire after 30 days. Promotional offers expire in different time frames depending on the promotion. A summary of current rewards is found in the Mobile App (See "My Rewards") and the Guest Account Portal (See "Summary of Accounts").</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 How Long Does it Take for Points to Appear in My Account?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Please allow up to 24 hours for points to be added to your account once you have checked out in the restaurant, on the app, or online. Generally speaking, you'll see them in your account much quicker!</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
-                How Long Do I Have to Use My Rewards after Redeeming Points?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">Once you redeem your points for a reward, you will have 30 days to redeem them.</div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Will I Earn Points on Delivery Fees or Third-Party Platforms?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">No, you cannot earn points on delivery fees or for orders placed via third-party delivery platforms, such as DoorDash, Grubhub, Uber Eats/Postmates.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Can I Earn Points on Gift Card Purchases?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">The purchase of a gift card will not earn you points. However, spending a pre-loaded gift card will earn you points.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Can I use the Mobile App to Pay?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">You can save a credit or debit card to your rewards account, and use this payment method for food orders  you place in the mobile app or online. Once added, this payment method will appear in the checkout flow.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 I have a Gift Card. Can I save it to my Rewards Account to use as Payment?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Gift cards cannot be stored as a payment method linked to your Rewards account at this time. However, you can pay with your gift card at checkout when ordering in-store, online, or via the Mobile App.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 Besides Points, are there Other Ways to get Deals and Discounts?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Our best deals are reserved for our Rewards members! From time to time, we will provide exclusive offers and promotions. You will receive notifications based on your communications preferences regarding promotional opportunities. If you're not receiving any notifications, you may need to update your communication preferences in the Mobile App or Guest Account Portal. Contact us at <a href="mailto:rewards@tomwahls.com" style="color:var(--red);font-weight:600;">rewards@tomwahls.com</a> if you need assistance.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
                 My Question Hasn't Been Answered. What Should I Do?
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-answer">Please reach out! Email us directly at <a href="mailto:rewards@tomwahls.com" style="color:var(--red);font-weight:600;">rewards@tomwahls.com</a>.</div>
         </div>
@@ -931,8 +940,8 @@
     <h2>Get the Tom Wahl's App</h2>
     <p>The best way to join, earn rewards, order ahead, and get exclusive deals — all from your phone.</p>
     <div class="app-buttons">
-        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790"><img src="assets/Download_on_the_App_Store.png" alt="Download on the App Store"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1"><img src="assets/Get_ It_ On_Google_Play.webp" alt="Get it on Google Play"></a>
+        <a href="https://apps.apple.com/us/app/tom-wahls/id6449795790"><img src="/assets/app-store-badge.webp" alt="Download on the App Store" width="480" height="142" loading="lazy" decoding="async"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.paytronix.client.android.app.tomwahls&pli=1"><img src="/assets/google-play-badge.webp" alt="Get it on Google Play" width="480" height="142" loading="lazy" decoding="async"></a>
     </div>
     <p style="margin-top:20px;opacity:0.5;font-size:0.9rem;">Already a member? <a href="https://tomwahls.myguestaccount.com/en-us/guest/accountlogin" style="color:var(--white);text-decoration:underline;">Log in here</a></p>
 </section>
@@ -944,10 +953,10 @@
             <h4>Who We Are</h4>
             <p>Rochester's favorite burger destination since 1955. Specializing in Cheeseburgers, Plates & Homemade Root Beer!</p>
             <div class="social-icons">
-                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.png" alt="Facebook"></a>
-                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.png" alt="Instagram"></a>
-                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.png" alt="Twitter"></a>
-                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.png" alt="TikTok"></a>
+                <a href="https://facebook.com/tomwahls"><img src="/assets/facebook.webp" alt="Facebook" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://instagram.com/tomwahls"><img src="/assets/instagram.webp" alt="Instagram" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://twitter.com/tomwahls"><img src="/assets/twitter.webp" alt="Twitter" width="512" height="512" loading="lazy" decoding="async"></a>
+                <a href="https://tiktok.com/@tomwahls"><img src="/assets/tiktok.webp" alt="TikTok" width="512" height="512" loading="lazy" decoding="async"></a>
             </div>
         </div>
         <div>
