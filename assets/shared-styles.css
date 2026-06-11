@@ -106,7 +106,7 @@ img { max-width: 100%; height: auto; display: block; }
     .page-hero h1 { font-size: 1.5rem; }
     .page-hero p { font-size: 0.75rem; } /* 0.95rem */
     /* Footer scale-down for narrow screens */
-    .footer { padding: 36px 20px 20px; }
+    .footer { padding: 20px 20px 20px; }
     .footer h4 { font-size: 0.95rem; margin-bottom: 12px; }
     .footer p, .footer a { font-size: 0.75rem; line-height: 1.7; } /* 0.85rem; line-height: 1.7; */
     .footer-bottom { font-size: 0.75rem; }
